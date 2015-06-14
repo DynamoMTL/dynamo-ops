@@ -1,0 +1,405 @@
+// Break points
+$mobile: "only screen and (max-width : 767px)";
+$tablet: "only screen and (max-width : 1300px)";
+$desktop: "only screen and (max-width : 1301px)";
+
+// Imports
+
+@import
+  'libs/normalize',
+  'libs/web-fonts';
+
+@include web-fonts(("Merriweather": ("400", "400 italic", "700", "700 italic")));
+@include web-fonts(("Lato": ("400", "400 italic")));
+@include web-fonts(("Old Standard TT": ("400", "400 italic", "700")));
+@include web-fonts(("PT Mono": ("400")));
+@include web-fonts(("Vollkorn": ("400")));
+
+// Fonts
+
+$body_font: "Merriweather";
+$blog_font: $body_font;
+$quote_font: "Vollkorn";
+$heading_font: "Merriweather";
+$meta_font: "PT Mono";
+$button_highlight: #F8EED3;
+
+// Colors
+
+$bg_main: #e1e1e1;
+$no_title_bg: #fff;
+$tutorial_bg: $bg_main;
+$code_bg: #605e5f;
+$text_color: $code_bg;
+$heading_color: #222;
+
+
+// Mixins
+
+@mixin cols($count, $gap...) {
+  @if length($gap) == 0 {
+    $gap: 2em;
+  }
+  -moz-column-count: $count;
+  -moz-column-gap: $gap;
+  -webkit-column-count: $count;
+  -webkit-column-gap: $gap;
+}
+
+@mixin inner-padding() {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+
+// General elements
+
+body {
+  background: $bg_main;
+  font-family: $body_font, "Helvetica", "Arial";
+  font-size: 16px;
+  font-weight: 400;
+  color: $text_color;
+  line-height: 1.8;
+}
+
+img, iframe {
+  max-width: 100%;
+}
+
+h1 {
+  font-size: 2.8em;
+}
+
+h2 {
+  font-size: 1.8em;
+}
+
+h3 {
+  font-size: 1.4em;
+}
+
+h4 {
+  font-size: 1.2em;
+}
+
+h1, h2, h3, h4 {
+  line-height: 1.3;
+  font-family: $heading_font, "serif";
+  color: $heading_color;
+  a {
+    color: $heading_color;
+  }
+}
+
+h1, h2 {
+  max-width: 50%;
+
+  @media #{$tablet} {
+    max-width: 100%;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: $text_color;
+  -webkit-transition: background-color 0.3s ease 0s;
+  -moz-transition: background-color 0.3s ease 0s;
+  -o-transition: background-color 0.3s ease 0s;
+  transition: background-color 0.3s ease 0s;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 0.8em;
+  a {
+    display: inline-block;
+    background: lighten($bg_main, 5%);
+    &:hover {
+      background: $button_highlight;
+    }
+  }
+}
+
+blockquote {
+  margin-left: 0px;
+  margin-right: 0px;
+  font-family: $quote_font;
+  font-style: italic;
+  font-size: 1.8em;
+  line-height: 1.2;
+}
+
+pre {
+  white-space: pre-wrap;
+  @include inner-padding();
+  padding: 1em;
+  background: $code_bg;
+  color: $bg_main;
+  font-size: 0.9em;
+  font-family: $meta_font;
+  margin-bottom: 1em;
+  code {
+    overflow-wrap: break-word;
+  }
+}
+
+.button {
+  display: inline-block;
+  padding: 0.2em 1em;
+  border: 1px solid $text_color;
+  font-family: $meta_font;
+  &:hover {
+    background: $button_highlight;
+  }
+}
+
+// Content elements
+
+#header{
+  padding: 5em 2em 8em 2em;
+  font-family: $meta_font;
+  color: #fff;
+  a {
+    color: #fff;
+  }
+  .logo {
+    font-size: 5em;
+    display: block;
+    line-height: 1.3;
+  }
+  .sub-logo {
+    display: block;
+    font-size: 1.2em;
+    line-height: 1.5;
+    padding-left: 4px;
+  }
+
+  @media #{$mobile} {
+    padding: 2em 1em;
+  }
+}
+
+#container {
+  width: 100%;
+  padding-bottom: 61px;
+  @include inner-padding();
+}
+
+#content {
+  width: 100%;
+}
+
+article {
+  width: 100%;
+
+  &.list-view {
+    padding: 8em 2em;
+    @include inner-padding();
+    width: 100%;
+
+    @media #{$mobile} {
+      padding: 4em 1em;
+    }
+
+    .article-content {
+      width: 50%;
+      @include inner-padding();
+      padding-right: 0.5em;
+
+      @media #{$desktop} {
+        width: 70%;
+      }
+
+      @media #{$tablet} {
+        width: 100%;
+      }
+    }
+
+    &.col {
+      .article-content {
+        padding-right: 0;
+        width: 100%;
+      }
+    }
+
+    &.no-title {
+      background: $no_title_bg;
+
+      .date {
+        margin-bottom: 2em;
+      }
+    }
+
+    &.tutorial {
+      background: $tutorial_bg;
+    }
+  }
+}
+
+.date {
+  font-family: $meta_font;
+}
+
+.date a,
+.page-single .date {
+  font-weight: bold;
+  display: inline-block;
+  height: 30px;
+  line-height: 30px;
+  border-top: 1px solid $text_color;
+  border-bottom: 1px solid $text_color;
+}
+
+
+// Columns
+
+.col-2 {
+  @include cols(2);
+}
+
+.col-3 {
+  @include cols(3);
+}
+
+.col-4 {
+  @include cols(4, 1em);
+}
+
+.col-2,
+.col-3,
+.col-4 {
+  @media #{$desktop} {
+    @include cols(2, 2em);
+}
+
+  @media #{$tablet} {
+    @include cols(1);
+  }
+}
+
+// Single page
+.page-single {
+  padding: 0 2em 5em 2em;
+  width: 60%;
+  box-sizing: border-box;
+
+  @media #{$tablet} {
+    width: 100%;
+  }
+
+  @media #{$mobile} {
+    padding: 0 1em;
+  }
+
+  &.col {
+    width: 100%;
+  }
+
+  &.tutorial {
+    width: 100%;
+    p, h1, h2, h3, h4, h5, .date {
+      margin-left: 100px;
+      margin-right: 100px;
+
+      @media #{$tablet} {
+        margin-left: 50px;
+        margin-right: 50px;
+      }
+
+      @media #{$mobile} {
+        margin-left: 0px;
+        margin-right: 0px;
+      }
+    }
+    pre {
+      margin: 1em -2em 2em -2em;
+      padding: 1em 9em;
+
+      @media #{$tablet} {
+        padding: 1em 5.5em;
+      }
+
+      @media #{$mobile} {
+        margin: 1em -1em 2em -1em;
+        padding: 1.3em;
+      }
+    }
+  }
+}
+
+.comments {
+  padding: 5em 2em;
+  background: $code_bg;
+  width: 40%;
+  box-sizing: border-box;
+  position: fixed;
+  bottom: 0px;
+  right: 0;
+
+  &.full-width {
+    position: relative;
+    width: 100%;
+    margin-top: 6em;
+
+    #disqus_thread {
+      width: 50%;
+
+      @media #{$tablet} {
+        width: 100%;
+      }
+    }
+  }
+
+  @media #{$tablet} {
+    position: relative;
+    width: 100%;
+    margin-top: 6em;
+  }
+
+  @media #{$mobile} {
+    margin-top: 4em;
+    padding: 3em 1em;
+  }
+}
+
+#footer {
+  padding: 2em 2em 1em 2em;
+  box-sizing: border-box;
+  width: 100%;
+  font-size: 0.7em;
+  background: $code_bg;
+  color: #fff;
+  text-align: right;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+
+@media #{$mobile} {
+  h1 {
+    font-size: 2.3em;
+  }
+  blockquote {
+    font-size: 1.2em;
+  }
+}
+
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 30px;
+  height: 0;
+  overflow: hidden;
+  border: 5px solid $code_bg;
+  iframe,
+  object,
+  embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}

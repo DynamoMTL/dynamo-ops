@@ -1,0 +1,38 @@
+%html{ :lang => "en", "xml:lang" => "en", :xmlns => 'http://www.w3.org/1999/xhtml' }
+  %head
+    %meta{ "http-equiv" => "content-type", "content" => "text/html; charset=utf-8" }
+    %meta{ "name" => "viewport", "content" => "width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1"}
+    - if @description
+      %meta{ "name" => "description", "content" => @description }
+    - if @keywords
+      %meta{ "name" => "keywords", "content" => @keywords }
+    %title= @title
+    %link{ :href => "/css/main.css", :media => "screen", :rel => "stylesheet", :type => "text/css" }
+    %link{ :href => "/articles.xml", :rel => "alternate", :type => "application/atom+xml" }
+  %body{ :class => @body_class }
+    #container
+      #header
+        - if @heading
+          %a.logo{ :href => '/' }= @heading
+        - if @subtitle
+          %a.sub-logo{ :href => '/' }= @subtitle
+      = yield
+      #footer
+        %p
+          &copy 2015 - Guy Nathan -
+          %a{ :href => 'mailto: nathan@guynathan.com'}
+            email
+          %span
+            |
+          %a{ :href => "https://twitter.com/nathan_dao" }
+            twitter
+          %span
+            |
+          %a{ :href => "https://github.com/nathandao" }
+            github
+          %span
+            |
+          %a{ :href => "https://www.linkedin.com/in/nathandao" }
+            linkedin
+
+    .analytics= haml :analytics, :layout => false
