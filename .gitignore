@@ -3,3 +3,6 @@
 .bundle
 .DS_Store
 .sass-cache
+.ruby-version
+.node-version
+.phantom-version
