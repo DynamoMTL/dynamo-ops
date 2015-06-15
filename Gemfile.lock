@@ -26,6 +26,8 @@ GEM
       sass (>= 3.1)
       sinatra (~> 1.4)
       tilt (~> 1.4)
+    nesta-plugin-jekyll-metadata (0.0.3)
+      nesta (>= 0.9.12)
     rack (1.6.1)
     rack-protection (1.5.3)
       rack
@@ -53,3 +55,4 @@ PLATFORMS
 DEPENDENCIES
   mr-sparkle
   nesta
+  nesta-plugin-jekyll-metadata
