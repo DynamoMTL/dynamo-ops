@@ -1,0 +1,50 @@
+---
+prose:
+  rooturl: 'content/pages'
+  metadata:
+    content/pages:
+      - name: "link text"
+        field:
+          element: "text"
+          label: "Title"
+          value: ""
+          type: "text"
+      - name: "date"
+        field:
+          element: "text"
+          label: "Date"
+          placeholder: "(Sunday, October 12, 2014)"
+          value: ""
+          type: "text"
+      - name: "summary"
+        field:
+          element: "text"
+          label: "Summary"
+          value: ""
+          type: "text"
+      - name: "description"
+        field:
+          element: "text"
+          label: "Description(meta)"
+          value: ""
+          type: "text"
+      - name: "keywords"
+        field:
+          element: "text"
+          label: "Keywords(meta)"
+          placeholder: "breakfast, lunch, dinner"
+          value: ""
+          type: "text"
+      - name: "flags"
+        field:
+          element: "text"
+          label: "Flags"
+          value: ""
+          placeholder: "link, draft"
+          type: "text"
+      - name: "published"
+        field:
+          element: "hidden"
+          value: "true"
+
+
