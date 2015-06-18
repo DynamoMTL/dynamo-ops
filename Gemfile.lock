@@ -56,3 +56,4 @@ DEPENDENCIES
   mr-sparkle
   nesta
   nesta-plugin-jekyll-metadata
+  sinatra
