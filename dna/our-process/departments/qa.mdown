@@ -1,0 +1,47 @@
+---
+published: true
+---
+
+##Department's summary, role, and philosophy
+
+Dynamo's QA department has fuzzy borders, but basically, its role is to assess an project’s functionality with an aim to uncover flaws in its operation and design (usually, this means bugs).
+
+The fuzzy borders are dependent largely on the varying momentum and parameters of each individual project. Some projects with large budgets and expansive feature sets require in-depth testing and analysis. Other projects with narrower scopes are better-suited to small-scale assessment of core features. As such, QA staff should be (or should become) comfortable with ambiguity, shifting priorities, and multiple concurrent project milieus.
+
+##Department's process and workflow (i.e. inception, weekly iterations, etc.)
+
+This is an area that is currently seeing a lot of change, as QA grows its strategies and tactics to provide stability and agility to the whole Dynamo team. As it stands now, some projects have recurring weekly QA, benchmarked by time estimates, while some projects are more likely to have unscheduled, ad-hoc QA as new features and bug fixes are built. In practice, most active projects include a mix of both routine and ad-hoc QA.
+
+##Department's tools / framework / techniques - must know (i.e. CSS);
+
+For a basic QA role, an individual should be familiar and comfortable with using various contemporary platforms (operating systems, browsers, mobile devices, etc.) but is not required to have in-depth knowledge of any individual technological subset.
+
+##Department's tools / framework / techniques - nice to have;
+
+The QA department makes extensive use of GitHub, so it’s great to be familiar with the concept of version control systems (VCS). This includes ideas such as repositories, branches, wikis, labels, milestones, and issues. In addition, knowledge of GitHub-flavored Markdown syntax is beneficial, as the GitHub web interface is optimized for leveraging this technology.
+
+Recently, the department has undertaken an effort to implement Selenium for automation of various (usually simple and repetitive) QA tasks. In theory, this will allow for rapid test runs in a number of browsers and devices. Selenium is built to work with multiple programming languages, so it’s good to have some familiarity with coding. Selenium also has some robust testing capabilities that require little or no coding (for example, the Firefox add-on Selenium IDE).
+
+Understanding the power and scope of basic spreadsheet applications (Numbers, Excel, Google Sheets, etc.) is a wonderful bonus. Virtually anything can be conceptualized and documented in a column/row format. To go one step further, the usefulness of spreadsheets can be further leveraged with rudimentary understanding of formulas for performing automatic calculations within a spreadsheet.
+
+Lastly, there are a number of ideas that are helpful to understand in order to grasp the fundamentals and implications of the work of every team member. These include ideas pertaining to standard database operations: Create, Read, Update, Destroy (CRUD), approaches to database/end-user interaction protocols such as representational state transfer (REST), etc. 
+
+Environments are an important consideration, as projects almost always have pre-launch versions, where testing can be conducted prior to releasing a project or an update into "the wild”. Such testing environments are typically named conventionally with keywords such as “staging” or “appraisal”.
+
+More general notions such as abstraction are key, as is familiarity with the duality (target/value, etc.) underpinning all of information science.
+
+##Department's resources (To Learn, Stay in Loop, etc);
+
+There are currently no standard resources, but general resources include other team members and the Internet (yes, that includes a lot!).
+
+##Department's flagship project (one or two)
+
+Nil.
+
+##Department's general tools (i.e. Basecamp)
+
+Every department at Dynamo makes use of Google Apps for things like email (Gmail), meetings (Hangouts), calendar management, etc.
+
+We also all use Slack for real-time communication (internal and client-facing) and Basecamp for the majority of client interactions, records, and asset-sharing.
+
+Other tools come and go in our endless drive for ever-more badassery, but those mentioned above tend to show the most staying power.
