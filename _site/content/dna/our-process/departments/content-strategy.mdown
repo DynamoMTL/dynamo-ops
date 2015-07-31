@@ -1,0 +1,16 @@
+Use this document as reference for copywriting: 
+https://docs.google.com/document/d/1TCkAxmkrzG460eODcsayvPK-v37YeEv8H3ezi4S0uwQ/edit?usp=sharing
+
+##Department's summary, role, and philosophy
+
+##Department's process and workflow (i.e. inception, weekly iterations, etc.)
+
+##Department's tools / framework / techniques - must know (i.e. CSS);
+
+##Department's tools / framework / techniques - nice to have;
+
+##Department's resources (To Learn, Stay in Loop, etc); 
+
+##Department's flagship project (one or two)
+
+##Department's general tools (i.e. Basecamp)

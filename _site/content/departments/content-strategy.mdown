@@ -1,0 +1,57 @@
+## Content Strategy
+
+## Department's summary, role, and philosophy
+Dynamo’s approach to Content Strategy informs design, development, and content development & management (copy and images) to be used in websites we build. With content strategy techniques, we understand our clients' business context; user’s characteristics and behaviour; and ultimately inform the development of a website taking these aspects into consideration. 
+
+Content Strategy walks hand-in-hand with Web Analytics, enabling us to set objectives for success through metrics aligned with customers characteristics, business goals and content organization.
+
+## Department's process and workflow (i.e. inception, weekly iterations, etc.)
+Content Strategy has a plethora of resources and techniques that can be used in the context of a digital project. Here's an extensive, yet not definitive, map of how the content strategy ecosystem that we're pulling techniques from: 
+
+
+
+In a nutshell, these are the techniques we work with on a regular basis in Dynamo's projects:
+
+### Content Audit
+We go over the existing content, looking for patterns, gaps, and opportunities for content development that could optimize our clients' website.
+
+### User personas, User tests, Interviews
+We use these two techniques to inform our team about important characteristics of your customers, and we are able to bring a critical perspective that determines the development of the main pages in your website from a conversion standpoint.
+
+### Wireframes & Site map
+Considering the previous steps, we’re able to foresee the initial design of your web pages, and lay it out in a wireframe format. We're also able to predict how the web pages will be organized relation to one another in our site map.
+
+### Analytics planning and protocol
+In our analytics planning and protocol stage, we determine the micro and macro conversions that must be measured, and how we will achieve this with the use of web analytics best practices.
+
+### Content inventory & management
+Finally, we build an inventory of the content that already exists (in the case of a redesign), needs to be rebuilt, or developed from scratch based on the guidelines developed throughout the previous steps.
+
+### Content development & copywriting
+Along with the content inventory, we start a copy deck with which we guide the professionals responsible for content development (i.e. copywriter,  photographer, videographer, etc.).
+
+##Department's tools / framework / techniques - must know (i.e. CSS):
+Prismic, Gliffy, Google Drive Bundle (Docs, Spreadsheets, etc.), Axure, Contentful, Gather Content, Trello, Mailchimp, Google Analytics, Optimizely.
+
+##Department's tools / framework / techniques - nice to have:
+**Skills and Techniques**: analytical, strategic planning and design, project management, training and presenting skills, understanding of technical integration, user experience skills, and content marketing skills. 
+
+##Department's resources (To Learn, Stay in Loop, etc):
+_Blogs and links_
+[A List Apart](http://alistapart.com/)
+[Gather Content](https://blog.gathercontent.com/)
+[Incisive](http://incisive.nu/)
+[The content strategist](http://contently.com/strategist/)
+[Story Needle](http://storyneedle.com/)
+
+_Books_
+[Content Strategy for the Web](http://contentstrategy.com/), Kristina Halvorson and Melissa Rach
+[Managing enterprise content: A unified content strategy](http://www.managingenterprisecontent.com/), by Ann Rockley and Charles Cooper
+[Content strategy for mobile](http://www.abookapart.com/products/content-strategy-for-mobile), by Karen McGrane
+[The elements of content strategy](http://www.abookapart.com/products/the-elements-of-content-strategy), by Erin Kissane
+
+##Department's flagship project (one or two)
+- [Glossier](glossier.com)
+- [Purible](www.purible.com)
+- [Airware](www.airware.com)
+- [Shop Hers](http://shop-hers.com/)
