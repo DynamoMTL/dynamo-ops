@@ -54,8 +54,8 @@ gulp.task 'serve', [ 'build' ], ->
   # Start a watch for rebuilds
   gulp.watch [ '_sass/*.scss' ], [ 'css' ]
   gulp.watch [
-    'index.html'
-    '_layouts/*.html'
+    'index.slim'
+    '_layouts/*'
     '_includes/*'
     '_posts/*'
   ], [ 'jekyll-rebuild' ]
