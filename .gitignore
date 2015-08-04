@@ -6,4 +6,5 @@
 .ruby-version
 .node-version
 .phantom-version
+*.log
 _site/*
