@@ -6,3 +6,4 @@
 .ruby-version
 .node-version
 .phantom-version
+_site/*
