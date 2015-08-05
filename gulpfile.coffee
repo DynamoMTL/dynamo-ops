@@ -96,7 +96,7 @@ gulp.task 'serve', [ 'build' ], ->
   browserSync.init server: baseDir: './_site'
   gulp.watch [ '_sass/**/*.scss', '_sass/**/*.sass' ], [ 'css' ]
   gulp.watch [ '_scripts/**/*.js', '_scripts/**/*.coffee' ], [ 'js' ]
-  gulp.watch [ '_images/svg/**/*.svg' ], [ 'svg' ]
+  gulp.watch [ '_images/svg/**/*.svg' ], [ 'jekyll-rebuild' ]
   gulp.watch [
     'index.slim'
     '_layouts/*'
