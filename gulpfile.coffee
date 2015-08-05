@@ -4,6 +4,7 @@ minifyCss = require('gulp-minify-css')
 notify = require('gulp-notify')
 sass = require('gulp-ruby-sass')
 bower = require('gulp-bower')
+svgstore = require('gulp-svgstore')
 browserSync = require('browser-sync')
 webpack = require('webpack-stream')
 
@@ -12,6 +13,7 @@ config =
   sassPath: './_sass'
   fontsPath: './_fonts'
   imagesPath: './_images'
+  scriptsPath: './_scripts'
   bowerDir: './bower_components'
   assetsDir: './assets'
   outputDir: './_site'
@@ -25,6 +27,7 @@ gulp.task 'bower', ->
 # Jekyll
 gulp.task 'jekyll-build', [
   'fonts'
+  'svg'
   'css'
   'js'
   'bower'
@@ -40,6 +43,18 @@ gulp.task 'jekyll-rebuild', [ 'jekyll-build' ], ->
 gulp.task 'fonts', ->
   gulp.src(config.fontsPath + '/**.*').pipe(gulp.dest(config.assetsDir + '/fonts'))
 
+# Images
+
+# SVG
+gulp.task 'svg', ->
+  gulp
+    .src(config.imagesPath + '/svg/**/*.svg')
+    .pipe(svgstore())
+    .pipe(gulp.dest(config.assetsDir + '/images/svg'))
+  gulp
+    .src(config.imagesPath + '/svg/**/*.svg')
+    .pipe(gulp.dest(config.assetsDir + '/images/svg'))
+
 # CSS
 gulp.task 'css', ->
   sass(config.sassPath + '/app.sass',
@@ -51,7 +66,7 @@ gulp.task 'css', ->
 
 # JS
 gulp.task 'js', ->
-  gulp.src('./_scripts/entry.coffee')
+  gulp.src(config.scriptsPath + '/entry.coffee')
     .pipe(webpack({
       output:
         filename: "bundle.js",
@@ -70,6 +85,7 @@ gulp.task 'js', ->
 gulp.task 'build', [
   'bower'
   'fonts'
+  'svg'
   'css'
   'js'
   'jekyll-build'
@@ -80,6 +96,7 @@ gulp.task 'serve', [ 'build' ], ->
   browserSync.init server: baseDir: './_site'
   gulp.watch [ '_sass/**/*.scss', '_sass/**/*.sass' ], [ 'css' ]
   gulp.watch [ '_scripts/**/*.js', '_scripts/**/*.coffee' ], [ 'js' ]
+  gulp.watch [ '_images/svg/**/*.svg' ], [ 'svg' ]
   gulp.watch [
     'index.slim'
     '_layouts/*'
