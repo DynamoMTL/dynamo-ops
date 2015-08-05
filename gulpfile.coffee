@@ -44,7 +44,7 @@ gulp.task 'css', ->
     compass: true).pipe(minifyCss()).pipe(gulp.dest(config.assetDir + '/css')).pipe(gulp.dest(config.outputDir + '/assets/css')).pipe browserSync.stream()
 
 gulp.task 'js', ->
-  gulp.src(config.assetDir + '/scripts/entry.coffee')
+  gulp.src('./_scripts/entry.coffee')
     .pipe(webpack({
       output:
         filename: "bundle.js",
