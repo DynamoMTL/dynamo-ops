@@ -4,22 +4,32 @@ minifyCss = require('gulp-minify-css')
 notify = require('gulp-notify')
 sass = require('gulp-ruby-sass')
 bower = require('gulp-bower')
+svgstore = require('gulp-svgstore')
 browserSync = require('browser-sync')
+webpack = require('webpack-stream')
 
+# Paths
 config =
   sassPath: './_sass'
+  fontsPath: './_fonts'
+  imagesPath: './_images'
+  scriptsPath: './_scripts'
   bowerDir: './bower_components'
-  assetDir: './assets'
+  assetsDir: './assets'
   outputDir: './_site'
 
 messages = jekyllBuild: '<span style="color: grey">Running:</span> $ jekyll build'
 
+# Bower
 gulp.task 'bower', ->
   bower().pipe gulp.dest(config.bowerDir)
 
+# Jekyll
 gulp.task 'jekyll-build', [
+  'fonts'
+  'svg'
   'css'
-  'icons'
+  'js'
   'bower'
 ], (done) ->
   browserSync.notify messages.jekyllBuild
@@ -29,30 +39,64 @@ gulp.task 'jekyll-rebuild', [ 'jekyll-build' ], ->
   browserSync.reload()
   return
 
-gulp.task 'icons', ->
-  gulp.src(config.bowerDir + '/fontawesome/fonts/**.*').pipe(gulp.dest(config.assetDir + '/fonts')).pipe gulp.dest(config.outputDir + '/assets/fonts')
+# Fonts
+gulp.task 'fonts', ->
+  gulp.src(config.fontsPath + '/**.*').pipe(gulp.dest(config.assetsDir + '/fonts'))
 
+# Images
+
+# SVG
+gulp.task 'svg', ->
+  gulp
+    .src(config.imagesPath + '/svg/**/*.svg')
+    .pipe(svgstore())
+    .pipe(gulp.dest(config.assetsDir + '/images/svg'))
+  gulp
+    .src(config.imagesPath + '/svg/**/*.svg')
+    .pipe(gulp.dest(config.assetsDir + '/images/svg'))
+
+# CSS
 gulp.task 'css', ->
-  sass(config.sassPath + '/main.scss',
+  sass(config.sassPath + '/app.sass',
     style: 'compressed'
     loadPath: [
       config.sassPath
-      config.bowerDir + '/normalize.scss/'
-      config.bowerDir + '/fontawesome/scss'
     ]
-    compass: true).pipe(minifyCss()).pipe(gulp.dest(config.assetDir + '/css')).pipe(gulp.dest(config.outputDir + '/assets/css')).pipe browserSync.stream()
+    compass: true).pipe(minifyCss()).pipe(gulp.dest(config.assetsDir + '/css')).pipe(gulp.dest(config.outputDir + '/assets/css')).pipe browserSync.stream()
 
+# JS
+gulp.task 'js', ->
+  gulp.src(config.scriptsPath + '/entry.coffee')
+    .pipe(webpack({
+      output:
+        filename: "bundle.js",
+      watch: false
+      resolve:
+        extensions: ['', '.js', '.coffee']
+      module:
+        loaders: [
+          { test: /\.coffee$/, loader: "coffee-loader" }
+        ],
+    }))
+    .pipe(gulp.dest(config.assetsDir + '/scripts'))
+    .pipe browserSync.stream()
+
+# Build
 gulp.task 'build', [
   'bower'
-  'icons'
+  'fonts'
+  'svg'
   'css'
+  'js'
   'jekyll-build'
 ]
 
+# Server
 gulp.task 'serve', [ 'build' ], ->
   browserSync.init server: baseDir: './_site'
-  # Start a watch for rebuilds
-  gulp.watch [ '_sass/*.scss' ], [ 'css' ]
+  gulp.watch [ '_sass/**/*.scss', '_sass/**/*.sass' ], [ 'css' ]
+  gulp.watch [ '_scripts/**/*.js', '_scripts/**/*.coffee' ], [ 'js' ]
+  gulp.watch [ '_images/svg/**/*.svg' ], [ 'jekyll-rebuild' ]
   gulp.watch [
     'index.slim'
     '_layouts/*'
@@ -61,4 +105,5 @@ gulp.task 'serve', [ 'build' ], ->
   ], [ 'jekyll-rebuild' ]
   return
 
+# Task
 gulp.task 'default', [ 'serve' ]
