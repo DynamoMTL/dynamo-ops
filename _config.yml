@@ -12,6 +12,8 @@ url: "http://yourdomain.com" # the base hostname & protocol for your site
 slim:
   pretty: true
 
+permalink: /:categories/:title/
+
 # Build settings
 markdown: kramdown
 

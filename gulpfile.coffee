@@ -101,7 +101,7 @@ gulp.task 'serve', [ 'build' ], ->
     'index.slim'
     '_layouts/*'
     '_includes/*'
-    '_posts/*'
+    '_posts/**/*'
   ], [ 'jekyll-rebuild' ]
   return
 
