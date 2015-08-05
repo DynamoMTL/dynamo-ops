@@ -49,6 +49,7 @@ gulp.task 'js', ->
     .pipe(webpack({
       output:
         filename: "bundle.js",
+      watch: false
       resolve:
         extensions: ['', '.js', '.coffee']
       module:
@@ -56,7 +57,8 @@ gulp.task 'js', ->
           { test: /\.coffee$/, loader: "coffee-loader" }
         ],
     }))
-    .pipe(gulp.dest(config.outputDir + '/assets/scripts/'))
+    .pipe(gulp.dest(config.assetDir + '/scripts'))
+    .pipe browserSync.stream()
 
 gulp.task 'build', [
   'bower'
@@ -69,7 +71,7 @@ gulp.task 'build', [
 gulp.task 'serve', [ 'build' ], ->
   browserSync.init server: baseDir: './_site'
   gulp.watch [ '_sass/*.scss' ], [ 'css' ]
-  gulp.watch [ '_scripts/*.js', '_scripts/*.js' ], [ 'js' ]
+  gulp.watch [ '_scripts/*.js', '_scripts/*.coffee' ], [ 'js' ]
   gulp.watch [
     'index.slim'
     '_layouts/*'
