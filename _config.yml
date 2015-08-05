@@ -14,3 +14,6 @@ slim:
 
 # Build settings
 markdown: kramdown
+
+# gulp & bower
+exclude: [gulpfile.coffee, package.json, node_modules, bower.json, bower_components]

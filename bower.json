@@ -1,0 +1,13 @@
+{
+  "name": "dynamo-ops",
+  "version": "0.0.0",
+  "homepage": "https://github.com/dynamomtl/dynamo-ops",
+  "authors": [
+    "Simon Walsh <simon@walsh.si>"
+  ],
+  "license": "MIT",
+	"dependencies": {
+	  "fontawesome": "~4.3.0",
+	  "normalize.scss": "~3.0.2"
+	}
+}
