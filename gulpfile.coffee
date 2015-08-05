@@ -20,6 +20,7 @@ gulp.task 'bower', ->
 
 gulp.task 'jekyll-build', [
   'css'
+  'js'
   'icons'
   'bower'
 ], (done) ->
@@ -48,7 +49,6 @@ gulp.task 'js', ->
     .pipe(webpack({
       output:
         filename: "bundle.js",
-      watch: true,
       resolve:
         extensions: ['', '.js', '.coffee']
       module:
@@ -68,8 +68,8 @@ gulp.task 'build', [
 
 gulp.task 'serve', [ 'build' ], ->
   browserSync.init server: baseDir: './_site'
-  # Start a watch for rebuilds
   gulp.watch [ '_sass/*.scss' ], [ 'css' ]
+  gulp.watch [ '_scripts/*.js', '_scripts/*.js' ], [ 'js' ]
   gulp.watch [
     'index.slim'
     '_layouts/*'
