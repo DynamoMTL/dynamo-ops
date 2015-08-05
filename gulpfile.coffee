@@ -5,6 +5,7 @@ notify = require('gulp-notify')
 sass = require('gulp-ruby-sass')
 bower = require('gulp-bower')
 browserSync = require('browser-sync')
+webpack = require('webpack-stream')
 
 config =
   sassPath: './_sass'
@@ -42,10 +43,26 @@ gulp.task 'css', ->
     ]
     compass: true).pipe(minifyCss()).pipe(gulp.dest(config.assetDir + '/css')).pipe(gulp.dest(config.outputDir + '/assets/css')).pipe browserSync.stream()
 
+gulp.task 'js', ->
+  gulp.src('./_scripts/entry.coffee')
+    .pipe(webpack({
+      output:
+        filename: "bundle.js",
+      watch: true,
+      resolve:
+        extensions: ['', '.js', '.coffee']
+      module:
+        loaders: [
+          { test: /\.coffee$/, loader: "coffee-loader" }
+        ],
+    }))
+    .pipe(gulp.dest(config.outputDir + '/assets/scripts/'))
+
 gulp.task 'build', [
   'bower'
   'icons'
   'css'
+  'js'
   'jekyll-build'
 ]
 
