@@ -19,3 +19,13 @@ markdown: kramdown
 
 # gulp & bower
 exclude: [gulpfile.coffee, package.json, node_modules, bower.json, bower_components]
+
+# gems
+# gems:
+#   - jekyll-archives
+
+# jekyll-archives:
+#   enabled: all
+#   layout: home
+#   permalinks:
+#     category: '/:name/'
