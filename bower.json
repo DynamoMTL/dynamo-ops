@@ -6,5 +6,7 @@
     "Simon Walsh <simon@walsh.si>"
   ],
   "license": "MIT",
-	"dependencies": {}
+  "dependencies": {
+    "normalize.css": "~3.0.3"
+  }
 }
