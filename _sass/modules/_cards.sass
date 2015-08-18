@@ -1,0 +1,94 @@
+//
+//
+// Cards
+//
+//
+
+//
+// General
+//
+.m-cards
+  padding: 0
+  margin: 0
+  width: 100%
+  @include display-flex(inline-flex)
+  @include flex-wrap(wrap)
+  @include align-items(stretch)
+
+//
+// Card
+//
+.m-cards-el
+  width: 50%
+  white-space: normal
+  @include justify-content(center)
+  @include align-content(stretch)
+  @include display-flex(flex)
+  list-style: none
+  padding: $v-sp--m8
+  color: $v-white
+  // &.m-cards-el--wide
+  //   width: 100%
+  .m-cards-el-inner
+    background-color: $v-pink
+    color: white
+  &:nth-child(2n)
+    .m-cards-el-inner
+      background-color: $v-yellow
+      color: $v-blue
+  &:nth-child(3n)
+    .m-cards-el-inner
+      background-color: $v-blue
+      color: $v-white
+  &:nth-child(4n)
+    .m-cards-el-inner
+      background-color: $v-green
+      color: $v-white
+  &:nth-child(5n)
+    .m-cards-el-inner
+      background-color: $v-gray
+      color: $v-blue
+
+.m-cards-el-inner
+  position: relative
+  width: 100%
+  min-height: 100%
+  padding: $v-sp $v-sp $v-sp--p9 $v-sp
+
+.m-cards-el-name
+  margin-top: 0
+  max-width: 66%
+
+.m-cards-el-number
+  font-family: $v-t-sans--bold
+  position: absolute
+  top: $v-sp
+  right: $v-sp
+  margin-top: 5px
+
+// Links
+.m-cards-el-links
+  padding: 0
+  list-style: none
+  li
+    display: inline-block
+    margin: $v-sp--m6 0
+    &::after
+      content: "/"
+      display: inline-block
+      margin: 0 $v-sp--m6
+    &:last-child
+      &::after
+        display: none
+
+// Tags
+.m-cards-el-tags
+  position: absolute
+  bottom: $v-sp--m4
+  left: $v-sp
+  font-family: $v-t-sans--bold
+  padding: 0
+  list-style: none
+  li
+    display: inline-block
+    margin: $v-sp--m6 0

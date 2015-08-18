@@ -3,7 +3,7 @@ layout: post
 title: "Title of the Post"
 published: true
 tags: ipsum dolor magnam
-category: at-the-office
+categories: at-the-office
 order: 1
 ---
 

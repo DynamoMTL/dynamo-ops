@@ -74,6 +74,8 @@ GEM
     sliq (0.0.2)
       liquid (~> 2.5.5)
       slim (~> 2.1.0)
+    susy (2.2.5)
+      sass (>= 3.3.0, < 3.5)
     temple (0.6.10)
     tilt (2.0.1)
     timers (4.0.1)
@@ -90,3 +92,4 @@ DEPENDENCIES
   jekyll
   jekyll-slim
   slim
+  susy

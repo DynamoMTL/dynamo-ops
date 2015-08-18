@@ -14,6 +14,7 @@ config =
   fontsPath: './_fonts'
   imagesPath: './_images'
   scriptsPath: './_scripts'
+  includesDir: './_includes'
   bowerDir: './bower_components'
   assetsDir: './assets'
   outputDir: './_site'
@@ -51,6 +52,7 @@ gulp.task 'svg', ->
     .src(config.imagesPath + '/svg/**/*.svg')
     .pipe(svgstore())
     .pipe(gulp.dest(config.assetsDir + '/images/svg'))
+    .pipe(gulp.dest(config.includesDir))
   gulp
     .src(config.imagesPath + '/svg/**/*.svg')
     .pipe(gulp.dest(config.assetsDir + '/images/svg'))

@@ -1,15 +1,3 @@
-doctype html
-html
-  head
-    / Meta
-    title Whatever
-    meta name="description" content="Skin first. Makeup second. Smile always. Introducing Glossier, beauty products for real life."
-    link rel="stylesheet" href="assets/css/app.css"/
-
-  body class="test"
-    p
-      | {{ content }}
-    p
-      | Another test and another and another
-
-    script src="assets/scripts/bundle.js" type="text/javascript"
+% include head.slim
+.l-content {{ content }}
+% include footer.slim

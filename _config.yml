@@ -21,3 +21,5 @@ markdown: kramdown
 exclude: [gulpfile.coffee, package.json, node_modules, bower.json, bower_components]
 
 # gems
+# require:
+# - foo

@@ -3,3 +3,19 @@
 // Mixins
 //
 //
+
+//
+// Layout
+//
+@mixin vertical-align($type)
+  display: inline-block
+  vertical-align: #{$type}
+
+//
+// Typo
+//
+@function rem($target, $context: $v-t-size--base)
+  @if ($target == 0)
+    @return 0
+  @else
+    @return #{$target / $context}rem

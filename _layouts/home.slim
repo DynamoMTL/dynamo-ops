@@ -1,12 +1,30 @@
-doctype html
-html
-  head
-    / Meta
-    title Whatever
-    link rel="stylesheet" href="assets/css/app.css"/
-
-  body class="test"
-    p
-      | {{ content }}
-
-    script src="assets/scripts/bundle.js" type="text/javascript"
+% include head.slim
+.l-wrap
+  .l-sec.s-home-hero
+    .l-cont
+      h1 Welcome
+      p Dynamo is a team of designers, developers & UX specialists. We design sites that build brands, web applications that save money, and mobile apps that attract new customers.
+      p Located in the Mile-Ex, Montreal (QC)
+  .l-sec
+    .l-cont
+      ul.m-cards
+        {% assign ordered = site.categories | sort %}
+        {% for category in ordered %}
+          li.m-cards-el class="{% if category.last.size > 5 %}m-cards-el--wide{% endif %}"
+            .m-cards-el-inner
+              h2.t-h2--sans.m-cards-el-name.t-capital
+                a href="/categories/{{ category | first}}"
+                  | {{ category | first | replace: '-', ' ' }}
+              .m-cards-el-number
+                | {{ category | last | size }} articles
+              ul.m-cards-el-links
+                {% for post in category.last %}
+                  li.t-h2--serif
+                    a href="{{ post.url }}" data-tags="[{{ post.tags | join: ',' }}]" {{ post.title }}
+                {% endfor %}
+              ul.m-cards-el-tags
+                li #tag
+                li #another
+                li #last
+        {% endfor %}
+% include footer.slim

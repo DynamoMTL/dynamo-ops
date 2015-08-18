@@ -7,8 +7,17 @@
 //
 // Typography
 //
+
+// Serif
 $v-t-serif: 'TiemposTextWeb-Regular', Georgia, Times New Roman, serif
-$v-t-sans: 'Larsseit', Helvetica, Arial sans-serif, sans-serif
+
+// Serif
+$v-t-sans--normal: 'Larsseit', Helvetica, Arial sans-serif, sans-serif
+$v-t-sans--thin: 'Larsseit-Thin', Helvetica, Arial sans-serif, sans-serif
+$v-t-sans--light: 'Larsseit-Light', Helvetica, Arial sans-serif, sans-serif
+$v-t-sans--bold: 'Larsseit-Bold', Helvetica, Arial sans-serif, sans-serif
+
+// Units
 $v-t-size--base: 12px
 
 //
@@ -16,6 +25,13 @@ $v-t-size--base: 12px
 //
 $v-black: #000000
 $v-white: #FFFFFF
+$v-blue: #2f0ff2
+$v-blue--light: lighten($v-blue, 15%)
+$v-blue--extraLight: lighten($v-blue, 45%)
+$v-gray: #d7e1f7
+$v-pink: #ff7bac
+$v-yellow: #def20f
+$v-green: #23d899
 
 //
 // Spacing
@@ -69,6 +85,11 @@ $v-delay--p1: 0.25s
 $v-delay--p2: 0.33s
 $v-delay--p3: 0.40s
 $v-delay--p4: 0.50s
+
+//
+// Grid
+//
+$susy: (columns: 12, gutters: 1/4, math: fluid, output: float, gutter-position: inside)
 
 //
 // Breakpoints
