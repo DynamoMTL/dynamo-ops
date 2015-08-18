@@ -8,6 +8,7 @@
   "license": "MIT",
   "dependencies": {
     "normalize.css": "~3.0.3",
-    "susy": "~2.2.5"
+    "susy": "~2.2.5",
+    "lodash": "~3.10.1"
   }
 }

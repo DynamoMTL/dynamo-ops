@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Title of the Post"
+title: "At Your Desk"
 published: true
 tags: ipsum dolor magnam
 categories: at-the-office

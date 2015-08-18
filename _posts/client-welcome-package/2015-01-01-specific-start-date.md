@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Title of the Post"
+title: "Specific Start Date"
 published: true
 tags: ipsum dolor magnam
 category: client-welcome-package

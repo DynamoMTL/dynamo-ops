@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Title of the Post"
+title: "Vision & Mission"
 published: true
 tags: ipsum dolor magnam
 category: guiding-principles

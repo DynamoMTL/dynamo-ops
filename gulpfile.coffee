@@ -81,6 +81,7 @@ gulp.task 'js', ->
         ],
     }))
     .pipe(gulp.dest(config.assetsDir + '/scripts'))
+    .pipe(gulp.dest(config.outputDir + '/assets/scripts'))
     .pipe browserSync.stream()
 
 # Build

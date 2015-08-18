@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Title of the Post"
+title: "Time Off & Holidays"
 published: true
 tags: ipsum dolor magnam
 category: hr-department

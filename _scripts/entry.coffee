@@ -1,4 +1,22 @@
-require('./log')
+#
+#
+# Main
+#
+#
 
-hello = require('./say')
-hello.greet()
+#
+# Requires
+#
+require("../bower_components/lodash/lodash")
+
+#
+# jQuery
+#
+$ ->
+  console.log "jQuery is ready"
+
+  #
+  # Tags
+  #
+  Tags = require('./modules/tags')
+  Tags.generate()

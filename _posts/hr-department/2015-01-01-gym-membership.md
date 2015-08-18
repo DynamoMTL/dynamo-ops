@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Title of the Post"
+title: "Gym Membership"
 published: true
 tags: ipsum dolor magnam
 category: hr-department

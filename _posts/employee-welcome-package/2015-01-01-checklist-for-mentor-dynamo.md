@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Title of the Post"
+title: "Checklist for Mentor & Dynamo"
 published: true
 tags: ipsum dolor magnam
 category: employee-welcome-package

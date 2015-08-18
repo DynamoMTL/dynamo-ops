@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Title of the Post"
+title: "Compensation"
 published: true
 tags: ipsum dolor magnam
 category: hr-department

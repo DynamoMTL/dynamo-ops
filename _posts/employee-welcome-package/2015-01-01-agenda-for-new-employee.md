@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Title of the Post"
+title: "Agenda for New Employee"
 published: true
 tags: ipsum dolor magnam
 category: employee-welcome-package
