@@ -1,0 +1,41 @@
+
+/ <h1 class="category">{{ page.title }}</h1>
+
+/ <ul class="posts">
+/   {% for post in site.categories[page.category] %}
+/     <div>{{ post.date | date_to_html_string }}</div>
+/     <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+/     <div class="categories">Filed under {{ post.categories | category_links }}</div>
+/  {% endfor %}
+/ </ul>
+
+
+% include head.slim
+.l-wrap
+  .l-sec.m-hero
+    .l-cont
+      h1.t-h1--sans
+        | {{ page.category | replace: '-', ' ' }}
+      p.t-h2--serif Dynamo is a team of designers, developers & UX specialists. We design sites that build brands, web applications that save money, and mobile apps that attract new customers.
+      p.t-h2--serif Located in the Mile-Ex, Montreal (QC)
+  / .l-sec
+  /   .l-cont
+  /     ul.m-cards
+  /       {% assign ordered_cats = site.categories | sort %}
+  /       {% for category in ordered_cats %}
+  /         li.m-cards-el class="{% if category.last.size > 5 %}m-cards-el--wide{% endif %}"
+  /           .m-cards-el-inner
+  /             h2.t-h2--sans.m-cards-el-name.t-capital
+  /               a href="/categories/{{ category | first}}"
+  /                 | {{ category | first | replace: '-', ' ' }}
+  /             .m-cards-el-number
+  /               | {{ category | last | size }} articles
+  /             ul.m-cards-el-links
+  /               {% assign ordered_posts = category.last | sort:'order' %}
+  /               {% for post in ordered_posts %}
+  /                 li.t-h2--serif
+  /                   a href="{{ post.url }}" data-tags="{{ post.tags | join: ',' }}" {{ post.title }}
+  /               {% endfor %}
+  /             ul.m-cards-el-tags
+  /       {% endfor %}
+% include footer.slim
