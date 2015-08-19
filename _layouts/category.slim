@@ -6,22 +6,20 @@
       .l-col--oneHalf.m-hero-a
         h1.t-h1--sans.t-capital
           | {{ page.category | replace: '-', ' ' }}
-        .m-hero-intro
-          {% for post in ordered_posts %}
-            {% if (post.intro) %}
-              p {{ post.content }}
-            {% endif %}
-          {% endfor %}
+        {% for post in ordered_posts %}
+          {% if (post.intro) %}
+            .m-hero-intro {{ post.content }}
+          {% endif %}
+        {% endfor %}
         ul.m-tags-target
       .l-col--oneHalf.m-hero-b
         ol.m-hero-links
           {% for post in ordered_posts %}
             {% if (post.intro == blank or post.intro == false) %}
-              li
+              li.t-h2--serif
                 a href="{{ site.baseurl }}{{ post.url }}" data-tags="{{ post.tags | join: ',' }}" {{ post.title }}
             {% endif %}
           {% endfor %}
-
   .l-sec
     .l-cont
       ul.m-posts
