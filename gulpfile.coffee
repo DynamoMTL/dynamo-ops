@@ -7,6 +7,7 @@ bower = require('gulp-bower')
 svgstore = require('gulp-svgstore')
 browserSync = require('browser-sync')
 webpack = require('webpack-stream')
+ghPages = require('gulp-gh-pages')
 
 # Paths
 config =
@@ -107,6 +108,11 @@ gulp.task 'serve', [ 'build' ], ->
     '_posts/**/*'
   ], [ 'jekyll-rebuild' ]
   return
+
+# Staging
+gulp.task 'staging', [ 'build' ], ->
+  return gulp.src(config.outputDir + '/**/*')
+    .pipe(ghPages())
 
 # Task
 gulp.task 'default', [ 'serve' ]
