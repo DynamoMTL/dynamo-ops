@@ -11,7 +11,7 @@
         ol.m-hero-links
           {% for post in ordered_posts %}
             li
-              a href="{{ post.url }}" data-tags="{{ post.tags | join: ',' }}" {{ post.title }}
+              a href="{{ site.baseurl }}{{ post.url }}" data-tags="{{ post.tags | join: ',' }}" {{ post.title }}
           {% endfor %}
 
   .l-sec
@@ -21,7 +21,7 @@
           div
             | {{ post.date | date_to_html_string }}
           div
-            a href="{{ post.url }}"
+            a href="{{ site.baseurl }}{{ post.url }}"
               | {{ post.title }}
           div
             | {{ post.excerpt }}

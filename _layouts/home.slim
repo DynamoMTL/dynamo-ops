@@ -13,7 +13,7 @@
           li.m-cards-el.m-tags-parent class="{% if category.last.size > 5 %}m-cards-el--wide{% endif %}"
             .m-cards-el-inner
               h2.t-h2--sans.m-cards-el-name.t-capital
-                a href="/categories/{{ category | first}}"
+                a href="{{ site.baseurl }}/categories/{{ category | first}}"
                   | {{ category | first | replace: '-', ' ' }}
               .m-cards-el-number
                 | {{ category | last | size }} articles
@@ -21,7 +21,7 @@
                 {% assign ordered_posts = category.last | sort:'order' %}
                 {% for post in ordered_posts %}
                   li.t-h2--serif
-                    a href="{{ post.url }}" data-tags="{{ post.tags | join: ',' }}" {{ post.title }}
+                    a href="{{ site.baseurl }}{{ post.url }}" data-tags="{{ post.tags | join: ',' }}" {{ post.title }}
                 {% endfor %}
               ul.m-tags-target
         {% endfor %}
