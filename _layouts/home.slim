@@ -10,7 +10,7 @@
       ul.m-cards
         {% assign ordered_cats = site.categories | sort %}
         {% for category in ordered_cats %}
-          li.m-cards-el class="{% if category.last.size > 5 %}m-cards-el--wide{% endif %}"
+          li.m-cards-el.m-tags-parent class="{% if category.last.size > 5 %}m-cards-el--wide{% endif %}"
             .m-cards-el-inner
               h2.t-h2--sans.m-cards-el-name.t-capital
                 a href="/categories/{{ category | first}}"
@@ -23,6 +23,6 @@
                   li.t-h2--serif
                     a href="{{ post.url }}" data-tags="{{ post.tags | join: ',' }}" {{ post.title }}
                 {% endfor %}
-              ul.m-cards-el-tags
+              ul.m-tags-target
         {% endfor %}
 % include footer.slim
