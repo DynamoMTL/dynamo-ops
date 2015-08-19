@@ -31,23 +31,38 @@
   //   width: 100%
   .m-cards-el-inner
     background-color: $v-pink
-    color: white
+    color: $v-white
+    .m-cards-el-name
+      &::after
+        background-color: $v-white
   &:nth-child(2n)
     .m-cards-el-inner
       background-color: $v-yellow
       color: $v-blue
+    .m-cards-el-name
+      &::after
+        background-color: $v-blue
   &:nth-child(3n)
     .m-cards-el-inner
       background-color: $v-blue
       color: $v-white
+    .m-cards-el-name
+      &::after
+        background-color: $v-white
   &:nth-child(4n)
     .m-cards-el-inner
       background-color: $v-green
       color: $v-white
+    .m-cards-el-name
+      &::after
+        background-color: $v-white
   &:nth-child(5n)
     .m-cards-el-inner
       background-color: $v-gray
       color: $v-blue
+    .m-cards-el-name
+      &::after
+        background-color: $v-blue
 
 .m-cards-el-inner
   position: relative
@@ -58,6 +73,13 @@
 .m-cards-el-name
   margin-top: 0
   max-width: 66%
+  &::after
+    content: ''
+    display: block
+    width: 50%
+    height: 2px
+    background-color: $v-blue
+    margin: $v-sp--m2 0
 
 .m-cards-el-number
   font-family: $v-t-sans--bold
