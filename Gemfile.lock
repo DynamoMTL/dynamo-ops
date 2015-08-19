@@ -48,9 +48,6 @@ GEM
     jekyll-slim (0.10.0)
       jekyll (~> 2.0)
       sliq
-    jgd (1.6.2)
-      jekyll (>= 1.5.1)
-      trollop (= 2.0)
     kramdown (1.8.0)
     liquid (2.5.5)
     listen (2.10.1)
@@ -85,7 +82,6 @@ GEM
       hitimes
     toml (0.1.2)
       parslet (~> 1.5.0)
-    trollop (2.0)
     yajl-ruby (1.1.0)
 
 PLATFORMS
@@ -95,6 +91,5 @@ DEPENDENCIES
   compass
   jekyll
   jekyll-slim
-  jgd
   slim
   susy
