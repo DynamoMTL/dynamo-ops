@@ -1,29 +1,39 @@
 % include head.slim
+{% assign ordered_posts = site.categories[page.category] | sort:'order' %}
 .l-wrap
   .l-sec.m-hero
     .l-cont.m-tags-parent
       .l-col--oneHalf.m-hero-a
         h1.t-h1--sans.t-capital
           | {{ page.category | replace: '-', ' ' }}
+        .m-hero-intro
+          {% for post in ordered_posts %}
+            {% if (post.intro) %}
+              p {{ post.content }}
+            {% endif %}
+          {% endfor %}
         ul.m-tags-target
       .l-col--oneHalf.m-hero-b
-        {% assign ordered_posts = site.categories[page.category] | sort:'order' %}
         ol.m-hero-links
           {% for post in ordered_posts %}
-            li
-              a href="{{ site.baseurl }}{{ post.url }}" data-tags="{{ post.tags | join: ',' }}" {{ post.title }}
+            {% if (post.intro == blank or post.intro == false) %}
+              li
+                a href="{{ site.baseurl }}{{ post.url }}" data-tags="{{ post.tags | join: ',' }}" {{ post.title }}
+            {% endif %}
           {% endfor %}
 
   .l-sec
     .l-cont
       ul.m-posts
         {% for post in ordered_posts %}
-          div
-            | {{ post.date | date_to_html_string }}
-          div
-            a href="{{ site.baseurl }}{{ post.url }}"
-              | {{ post.title }}
-          div
-            | {{ post.excerpt }}
+          {% if (post.intro == blank or post.intro == false) %}
+            div
+              | {{ post.date | date_to_html_string }}
+            div
+              a href="{{ site.baseurl }}{{ post.url }}"
+                | {{ post.title }}
+            div
+              | {{ post.excerpt }}
+          {% endif %}
         {% endfor %}
 % include footer.slim

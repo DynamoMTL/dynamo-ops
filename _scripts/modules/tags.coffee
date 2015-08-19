@@ -24,7 +24,6 @@ Tags =
         tags = $this.data("tags").split(",")
         tmp = _.union(tmp, tags)
       )
-      console.log "$target", $target
       _.each(tmp, (tag) ->
         el = "<li>#{tag}</li>"
         $target.append(el)

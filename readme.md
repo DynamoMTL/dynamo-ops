@@ -43,3 +43,20 @@ See: http://jekyllrb.com/docs/frontmatter/
 All the attachments that you want to include in a post (images, pdf, etc.) need to be added in the `uploads` folder. They can be added to a subfolder in there as well, for sake of structure.
 
 We added a filter to help you reference those files easily. It can be used like this: `![My helpful screenshot]({{ "flag.png" | uploads_url }})`, where `uploads_url` will build the path to the assets.
+
+
+**Excerpts**
+
+To specifiy which parts of the content is gonna populate the excerpts (listing pages, search pages, etc.), you need to add the following commentary in the post's content:
+
+```
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates illum, reiciendis doloribus voluptas
+consequatur cupiditate quas, vero eligendi error facere ipsam aliquam repellat et ipsum voluptatibus sequi! In, magni, aperiam!
+
+<!--more-->
+
+Voluptates illum, reiciendis doloribus voluptas consequatur cupiditate quas, vero eligendi error facere
+ipsam aliquam repellat et ipsum voluptatibus sequi! In, magni, aperiam!
+```
+
+The `<!--more-->` comment will determine where the excerpt ends.

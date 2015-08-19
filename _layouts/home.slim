@@ -20,8 +20,10 @@
               ul.m-cards-el-links
                 {% assign ordered_posts = category.last | sort:'order' %}
                 {% for post in ordered_posts %}
-                  li.t-h2--serif
-                    a href="{{ site.baseurl }}{{ post.url }}" data-tags="{{ post.tags | join: ',' }}" {{ post.title }}
+                  {% if (post.intro == blank or post.intro == false) %}
+                    li.t-h2--serif
+                      a href="{{ site.baseurl }}{{ post.url }}" data-tags="{{ post.tags | join: ',' }}" {{ post.title }}
+                  {% endif %}
                 {% endfor %}
               ul.m-tags-target
         {% endfor %}
