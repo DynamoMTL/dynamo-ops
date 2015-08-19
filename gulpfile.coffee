@@ -47,6 +47,12 @@ gulp.task 'fonts', ->
 
 # Images
 
+# Robots
+gulp.task 'robots', ->
+  gulp
+    .src('./robots.txt')
+    .pipe(gulp.dest(config.outputDir))
+
 # SVG
 gulp.task 'svg', ->
   gulp
@@ -92,6 +98,7 @@ gulp.task 'build', [
   'svg'
   'css'
   'js'
+  'robots'
   'jekyll-build'
 ]
 
