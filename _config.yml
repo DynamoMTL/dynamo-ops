@@ -14,7 +14,8 @@ slim:
   pretty: true
 
 # Links
-baseurl: "/dynamo-ops"
+# baseurl: "/dynamo-ops"
+baseurl: ""
 permalink: /categories/:categories/:title/
 
 # Build settings
