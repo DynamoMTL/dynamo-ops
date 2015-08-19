@@ -15,7 +15,7 @@ You are welcome.
 
 ### Content creation
 
-** Posts **
+**Posts**
 
 Jekyll requires that the posts be named in the following format `YEAR-MONTH-DAY-title.md`. So for example, `2011-12-31-new-years-eve-is-awesome.md`. This however does not mean that the URL will reflect that but it really needs to be called as such to be picked up buy Jekyll as being a post and to be able to display the date.
 
@@ -38,7 +38,7 @@ intro: true (false, this is what is gonna be displayed at the top of a category 
 See: http://jekyllrb.com/docs/frontmatter/
 
 
-** Attachments **
+**Attachments**
 
 All the attachments that you want to include in a post (images, pdf, etc.) need to be added in the `uploads` folder. They can be added to a subfolder in there as well, for sake of structure.
 
