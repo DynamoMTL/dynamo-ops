@@ -2,7 +2,7 @@
 {% assign ordered_posts = site.categories[page.category] | sort:'order' %}
 / {% assign colors = "pink,yellow,green,gray" | split: "," | shuffle %}
 .l-wrap
-  .l-sec.m-hero.m-hero--colors class="m-hero--{{colors[0]}}"
+  .l-sec.m-hero.m-hero--colors
     .l-cont.m-tags-parent
       .l-col--oneHalf.m-hero-a
         h1.t-h1--sans.t-capital
