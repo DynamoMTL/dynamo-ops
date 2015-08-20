@@ -4,5 +4,11 @@ article.m-articles-el
   div
     a href="{{ site.baseurl }}{{ post.url }}"
       | {{ post.title }}
+  {% if(page.layout == 'category') %}
   div
     | {{ post.excerpt }}
+  {% else %}
+  div
+    | {{ content }}
+  {% endif %}
+
