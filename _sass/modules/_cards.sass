@@ -30,36 +30,32 @@
   // &.m-cards-el--wide
   //   width: 100%
   .m-cards-el-inner
-    background-color: $v-pink
-    color: $v-white
+    @extend %l-theme--pink
     .m-cards-el-name
       &::after
         background-color: $v-white
   &:nth-child(2n)
     .m-cards-el-inner
-      background-color: $v-yellow
-      color: $v-blue
+      @extend %l-theme--yellow
     .m-cards-el-name
       &::after
         background-color: $v-blue
   &:nth-child(3n)
     .m-cards-el-inner
-      background-color: $v-blue
-      color: $v-white
+      @extend %l-theme--blue
     .m-cards-el-name
       &::after
         background-color: $v-white
   &:nth-child(4n)
     .m-cards-el-inner
-      background-color: $v-green
-      color: $v-white
+      @extend %l-theme--green
     .m-cards-el-name
       &::after
         background-color: $v-white
   &:nth-child(5n)
+    width: 100%
     .m-cards-el-inner
-      background-color: $v-gray
-      color: $v-blue
+      @extend %l-theme--gray
     .m-cards-el-name
       &::after
         background-color: $v-blue

@@ -20,3 +20,9 @@ $ ->
   #
   Tags = require('./modules/tags')
   Tags.generate()
+
+  #
+  # Hero
+  #
+  # Hero = require('./modules/hero')
+  # Hero.colorsRandom()

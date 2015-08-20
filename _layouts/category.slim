@@ -1,7 +1,8 @@
 % include head.slim
 {% assign ordered_posts = site.categories[page.category] | sort:'order' %}
+/ {% assign colors = "pink,yellow,green,gray" | split: "," | shuffle %}
 .l-wrap
-  .l-sec.m-hero
+  .l-sec.m-hero.m-hero--colors class="m-hero--{{colors[0]}}"
     .l-cont.m-tags-parent
       .l-col--oneHalf.m-hero-a
         h1.t-h1--sans.t-capital
@@ -23,16 +24,10 @@
           {% endfor %}
   .l-sec
     .l-cont
-      ul.m-posts
+      ul.m-articles.m-articles--list
         {% for post in ordered_posts %}
           {% if (post.intro == blank or post.intro == false) %}
-            div
-              | {{ post.date | date_to_html_string }}
-            div
-              a href="{{ site.baseurl }}{{ post.url }}"
-                | {{ post.title }}
-            div
-              | {{ post.excerpt }}
+            % include article.slim
           {% endif %}
         {% endfor %}
 % include footer.slim

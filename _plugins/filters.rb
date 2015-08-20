@@ -10,12 +10,19 @@ module Jekyll
   # Category intro remove from array
   module IntroFilter
     def without_intro(input)
-      debugger
       input.intro == blank || input.intro == false
       # input.keep_if { |post| post.intro == blank || post.intro == false }
+    end
+  end
+
+  # Shuffle array
+  module ShuffleArray
+    def shuffle(input)
+      input.shuffle
     end
   end
 end
 
 Liquid::Template.register_filter(Jekyll::UploadsFilter)
 Liquid::Template.register_filter(Jekyll::IntroFilter)
+Liquid::Template.register_filter(Jekyll::ShuffleArray)
