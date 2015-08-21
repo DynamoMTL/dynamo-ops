@@ -1,14 +1,8 @@
-article.m-articles-el
+article.m-article
   div
-    | {{ post.date | date_to_html_string }}
+    | {{ page.date | date_to_html_string }}
   div
-    a href="{{ site.baseurl }}{{ post.url }}"
-      | {{ post.title }}
-  {% if(page.layout == 'category') %}
-  div
-    | {{ post.excerpt }}
-  {% else %}
+    | {{ page.title }}
   div
     | {{ content }}
-  {% endif %}
 
