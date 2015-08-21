@@ -8,6 +8,7 @@
 # Requires
 #
 require("../bower_components/lodash/lodash")
+require("../bower_components/reading-time/src/readingTime")
 
 #
 # jQuery
@@ -25,4 +26,10 @@ $ ->
   # Hero
   #
   # Hero = require('./modules/hero')
-  # Hero.colorsRandom()
+  # Hero.init()
+
+  #
+  # Post
+  #
+  Post = require('./modules/post')
+  Post.init()

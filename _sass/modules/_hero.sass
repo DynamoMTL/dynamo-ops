@@ -49,14 +49,37 @@
       background-color: $v-blue
       margin-bottom: $v-sp--m2
 
+.m-hero-date
+  font-family: $v-t-sans--normal
+
 .m-hero-intro
   line-height: 2
+
+.m-hero-reading
+  margin-top: $v-sp--p4
 
 //
 // Links
 //
+.m-hero-b
+  ol
+    margin-left: 0
+    padding-right: 0
+    list-style-type: none
+    li
+      counter-increment: step-counter
+      &::before
+        font-family: $v-t-sans--bold
+        content: counter(step-counter) "."
+        font-size: 0.55em
+        color: inherit
+
 .m-hero-links
   margin-top: $v-sp--m6
   padding-left: $v-sp--p4
   li
     margin-bottom: $v-sp--m4
+
+.m-hero-back
+  text-align: right
+  margin-top: $v-sp--p4

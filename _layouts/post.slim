@@ -1,6 +1,28 @@
 % include head.slim
 .l-wrap
+  .l-sec.m-hero
+    .l-cont
+      .l-col--oneHalf.m-hero-a
+        time.m-hero-date
+          | {{ page.date | date_to_string }}
+        h1.t-h1--sans.t-capital
+          | {{ page.title }}
+        ul.m-tags-target
+          {% for tag in page.tags %}
+            li {{ tag }}
+          {% endfor %}
+        .m-hero-reading
+          | Reading time:&nbsp;
+          span.t-bold
+      .l-col--oneHalf.m-hero-b
+        .m-hero-back
+          a href="{{ site.baseurl }}/categories/{{ page.categories[0] }}"
+            | Back to&nbsp;
+            span.t-capital.t-bold
+              | {{ page.categories[0] | replace: '-', ' '}}
   .l-sec
     .l-cont
-      % include article.slim
+      article.m-article
+        | {{ content }}
+        .m-article-reading
 % include footer.slim

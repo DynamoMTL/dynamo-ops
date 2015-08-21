@@ -11,7 +11,10 @@
 //
 // Headings
 //
-// h1, h2, h3, h4, h5
+h1, h2, h3, h4, h5
+  font-family: $v-t-sans--bold
+  letter-spacing: 1px
+
 .t-h1--sans
   font-family: $v-t-sans--bold
   font-size: rem(30px)
@@ -31,16 +34,10 @@
   @extend .t-h2--sans
   font-family: $v-t-serif
 
-// .t-h3
-//   font-size: rem(21px)
-//   line-height: rem(30px)
-
-// .t-h4
-//   font-size: rem(18px)
-//   line-height: rem(24px)
-
-// .t-h5
-//   font-size: rem(13px)
+.t-h3--sans
+  @extend .t-h1--sans
+  font-size: rem(16px)
+  line-height: rem(16px)
 
 //
 // Helpers
