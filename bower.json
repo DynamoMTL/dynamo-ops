@@ -9,6 +9,7 @@
   "dependencies": {
     "normalize.css": "~3.0.3",
     "susy": "~2.2.5",
-    "lodash": "~3.10.1"
+    "lodash": "~3.10.1",
+    "reading-time": "~1.0.0"
   }
 }

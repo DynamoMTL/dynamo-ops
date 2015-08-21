@@ -45,6 +45,13 @@ All the attachments that you want to include in a post (images, pdf, etc.) need 
 We added a filter to help you reference those files easily. It can be used like this: `![My helpful screenshot]({{ "flag.png" | uploads_url }})`, where `uploads_url` will build the path to the assets.
 
 
+**Links**
+
+If you want to link to an outside page, you can do so using this helper: `[Name of Link](http://example.com)`. You can append `{:target="_blank"}` to this helper to get the link to open in a new tab/window like so : `[Name of Link](http://example.com){:target="_blank"}`.
+
+If you want to link to a blog post on the site, you need to use a liquid helper as such `[This is an example of a link to another blog post]({% post_url at-the-office/2015-01-01-coffee %})`, where `at-the-office` is a sub-folder (if necessary) and `2015-01-01-coffee` the full name of the post.
+
+
 **Excerpts**
 
 To specifiy which parts of the content is gonna populate the excerpts (listing pages, search pages, etc.), you need to add the following commentary in the post's content:

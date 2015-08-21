@@ -1,0 +1,61 @@
+//
+//
+// Article
+//
+//
+
+//
+// General
+//
+.m-article
+  padding: 0
+  margin: 0
+  p:first-child
+    font-size: rem(18px)
+    line-height: 1.5
+    margin: $v-sp 0 $v-sp--p4 0
+    &:first-line
+      text-transform: uppercase
+
+.m-article-reading
+  display: none
+
+//
+// Headings
+//
+h2
+  margin-top: $v-sp--p2
+  @extend .t-h2--sans
+
+h3
+  margin-top: $v-sp--p2
+  @extend .t-h3--sans
+
+//
+// Code
+//
+.m-article
+  .highlight
+    padding: $v-sp
+    font-size: 0.9rem
+    background-color: rgba($v-black, 0.1)
+
+//
+// Quotes
+//
+.m-article
+  blockquote
+    border-left: 2px solid rgba($v-black, 0.1)
+    margin-left: 0
+    margin-right: 0
+    padding: 0 $v-sp
+    p
+      font-size: 1rem !important
+
+//
+// Links
+//
+.m-article
+  a
+    text-decoration: underline
+

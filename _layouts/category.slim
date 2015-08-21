@@ -1,8 +1,7 @@
 % include head.slim
 {% assign ordered_posts = site.categories[page.category] | sort:'order' %}
-/ {% assign colors = "pink,yellow,green,gray" | split: "," | shuffle %}
 .l-wrap
-  .l-sec.m-hero.m-hero--colors
+  .l-sec.m-hero
     .l-cont.m-tags-parent
       .l-col--oneHalf.m-hero-a
         h1.t-h1--sans.t-capital
@@ -22,12 +21,28 @@
                 a href="{{ site.baseurl }}{{ post.url }}" data-tags="{{ post.tags | join: ',' }}" {{ post.title }}
             {% endif %}
           {% endfor %}
-  .l-sec
-    .l-cont
-      ul.m-articles.m-articles--list
-        {% for post in ordered_posts %}
-          {% if (post.intro == blank or post.intro == false) %}
-            % include article.slim
-          {% endif %}
-        {% endfor %}
+
+  ul.s-cat-articles
+    {% for post in ordered_posts %}
+      {% if (post.intro == blank or post.intro == false) %}
+        li.l-sec
+          article.l-cont
+            .l-col--oneThird.s-cat-articles-a
+              time.t-bold
+                | {{ post.date | date_to_string }}
+              h2.t-h2--sans.t-capital
+                a.m-cta-combo href="{{ site.baseurl }}{{ post.url }}"
+                  | {{ post.title }}
+                  svg.i-svg-arrow
+                    use(xlink:href="#arrow")
+              ul.m-tags-target
+                {% for tag in post.tags %}
+                  li {{ tag }}
+                {% endfor %}
+            .l-col--twoThird.s-cat-articles-b
+              p.t-bold
+                | Article {{ forloop.index | minus: 1 }} of {{ forloop.length | minus: 1 }}
+              | {{ post.excerpt }}
+      {% endif %}
+    {% endfor %}
 % include footer.slim

@@ -8,14 +8,14 @@
   .l-sec.s-home-cards
     .l-cont
       ul.m-cards
-        {% assign ordered_cats = site.categories | sort %}
         {% for category in ordered_cats %}
-          / li.m-cards-el.m-tags-parent class="{% if category.last.size > 5 %}m-cards-el--wide{% endif %}"
           li.m-cards-el.m-tags-parent
             .m-cards-el-inner
               h2.t-h2--sans.m-cards-el-name.t-capital
-                a href="{{ site.baseurl }}/categories/{{ category | first}}"
+                a.m-cta-combo href="{{ site.baseurl }}/categories/{{ category | first }}"
                   | {{ category | first | replace: '-', ' ' }}
+                  svg.i-svg-arrow
+                    use(xlink:href="#arrow")
               .m-cards-el-number
                 a href="{{ site.baseurl }}/categories/{{ category | first}}"
                   | {{ category | last | size }} articles

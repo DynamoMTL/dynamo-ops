@@ -1,10 +1,13 @@
+{% assign ordered_cats = site.categories | sort %}
 doctype html
 html
   head
     title Whatever
     meta name="description" content=""
     link rel="stylesheet" href="{{ site.baseurl }}/assets/css/app.css"
-  body ng-class="s-{{ page.layout }}"
+    / javascript:
+    /   window.cats = {{ ordered_cats | jsonify }}
+  body class="s-{{ page.layout }}"
     div style="display:none;"
       % include svg.svg
     % include header.slim

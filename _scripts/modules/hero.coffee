@@ -8,15 +8,32 @@ Hero =
   #
   # Globals
   #
-  $hero: $('.m-hero--colors')
+  $hero: $('.m-hero')
+  cats: []
 
   #
-  # Random colors
+  # Build Cats index
   #
-  colorsRandom: ->
+  buildCats: ->
+    _.each(window.cats, (cat, key) ->
+      console.log key % 1
+      console.log key % 2
+      console.log key % 3
+    )
+
+  #
+  # Colors
+  #
+  colors: ->
     if @$hero.length > 0
-      color = _.shuffle(['pink', 'yellow', 'blue', 'green', 'gray'])[0]
-      @$hero.addClass("m-hero--#{color}")
+      console.log "test"
+
+  #
+  # Init
+  #
+  init: ->
+    @buildCats()
+    @colors()
 
 #
 # Export
