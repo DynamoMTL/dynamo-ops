@@ -1,5 +1,3 @@
-(Temp)
-
 ### Running the server
 
 To run the project after checkout:
@@ -13,9 +11,12 @@ To run an already checked out project:
 
 You are welcome.
 
+
 ### Content creation
 
 **Posts**
+
+All the posts reside in the folder called `_posts` on the root of the app. You will also see that the content is organized in subfolders that each bear the same same as the category in which the article resides. This is optional but should be respected if possible.
 
 Jekyll requires that the posts be named in the following format `YEAR-MONTH-DAY-title.md`. So for example, `2011-12-31-new-years-eve-is-awesome.md`. This however does not mean that the URL will reflect that but it really needs to be called as such to be picked up buy Jekyll as being a post and to be able to display the date.
 
@@ -67,3 +68,8 @@ ipsam aliquam repellat et ipsum voluptatibus sequi! In, magni, aperiam!
 ```
 
 The `<!--more-->` comment will determine where the excerpt ends.
+
+
+**Prose**
+
+To use Prose to edit your files, just go here and authenticate: http://prose.io/#DynamoMTL/dynamo-ops
