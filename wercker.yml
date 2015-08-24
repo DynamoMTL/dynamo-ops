@@ -1,5 +1,5 @@
 ---
-box: wercker/rvm
+box: rvm
 build:
     steps:
         - install-packages:
