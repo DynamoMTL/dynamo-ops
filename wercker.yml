@@ -8,7 +8,7 @@ build:
         - npm-test
         - script:
           name: bower install
-          code: bower install
+          code: node node_modules/bower/bin/bower install
         - script:
           name: generate production site
           code: |-
