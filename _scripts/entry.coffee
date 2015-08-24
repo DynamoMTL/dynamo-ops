@@ -14,8 +14,6 @@ require("../bower_components/reading-time/src/readingTime")
 # jQuery
 #
 $ ->
-  console.log "jQuery is ready"
-
   #
   # Tags
   #

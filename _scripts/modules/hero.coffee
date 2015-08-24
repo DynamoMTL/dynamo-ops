@@ -32,7 +32,6 @@ Hero =
     if @$hero.length > 0
       ctx = @
       catName = ctx.$hero.data("cat-name")
-      console.log ctx.cats
       ctx.$hero.addClass("m-hero--#{ctx.cats[catName].color}")
 
   #
