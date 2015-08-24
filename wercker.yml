@@ -1,10 +1,8 @@
 ---
-box: ruby
+box: mwallasch/docker-ruby-node
 
 build:
     steps:
-        - install-packages:
-          packages: nodejs
         - bundle-install
         - npm-install
         - npm-test
