@@ -10,7 +10,7 @@
 .m-hero
   padding-top: $v-sp--p9
   padding-bottom: $v-sp--p4
-  @extend %l-theme--yellow
+  // @extend %l-theme--yellow
 
 .m-hero-a,
 .m-hero-b
@@ -19,18 +19,28 @@
 // Themes
 .m-hero--pink
   @extend %l-theme--pink
+  .m-tags-target::before
+    background-color: $v-white
 
 .m-hero--yellow
   @extend %l-theme--yellow
+  .m-tags-target::before
+    background-color: $v-blue
 
 .m-hero--blue
   @extend %l-theme--blue
+  .m-tags-target::before
+    background-color: $v-white
 
 .m-hero--green
   @extend %l-theme--green
+  .m-tags-target::before
+    background-color: $v-white
 
 .m-hero--gray
   @extend %l-theme--gray
+  .m-tags-target::before
+    background-color: $v-blue
 
 //
 // Main
@@ -46,7 +56,7 @@
       display: block
       width: 50%
       height: 2px
-      background-color: $v-blue
+      // background-color: $v-blue
       margin-bottom: $v-sp--m2
 
 .m-hero-date

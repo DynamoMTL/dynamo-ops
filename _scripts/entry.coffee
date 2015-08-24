@@ -14,8 +14,6 @@ require("../bower_components/reading-time/src/readingTime")
 # jQuery
 #
 $ ->
-  console.log "jQuery is ready"
-
   #
   # Tags
   #
@@ -25,8 +23,8 @@ $ ->
   #
   # Hero
   #
-  # Hero = require('./modules/hero')
-  # Hero.init()
+  Hero = require('./modules/hero')
+  Hero.init()
 
   #
   # Post

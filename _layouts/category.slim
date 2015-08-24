@@ -1,7 +1,7 @@
 % include head.slim
 {% assign ordered_posts = site.categories[page.category] | sort:'order' %}
 .l-wrap
-  .l-sec.m-hero
+  .l-sec.m-hero data-cat-name="{{ page.category }}"
     .l-cont.m-tags-parent
       .l-col--oneHalf.m-hero-a
         h1.t-h1--sans.t-capital
