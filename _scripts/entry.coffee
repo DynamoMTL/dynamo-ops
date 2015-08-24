@@ -25,8 +25,8 @@ $ ->
   #
   # Hero
   #
-  # Hero = require('./modules/hero')
-  # Hero.init()
+  Hero = require('./modules/hero')
+  Hero.init()
 
   #
   # Post
