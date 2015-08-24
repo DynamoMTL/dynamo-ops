@@ -8,14 +8,8 @@
 // General
 //
 .m-article
-  padding: 0
+  padding: 0 $v-sp--p10
   margin: 0
-  p:first-child
-    font-size: rem(18px)
-    line-height: 1.5
-    margin: $v-sp 0 $v-sp--p4 0
-    &:first-line
-      text-transform: uppercase
 
 .m-article-reading
   display: none
@@ -23,12 +17,13 @@
 //
 // Headings
 //
+[id*="title-"]
+  margin-top: $v-sp--p4
+
 h2
-  margin-top: $v-sp--p2
   @extend .t-h2--sans
 
 h3
-  margin-top: $v-sp--p2
   @extend .t-h3--sans
 
 //
@@ -45,12 +40,19 @@ h3
 //
 .m-article
   blockquote
-    border-left: 2px solid rgba($v-black, 0.1)
-    margin-left: 0
-    margin-right: 0
-    padding: 0 $v-sp
+    text-align: center
+    margin: $v-sp--p6 (-$v-sp--p10)
     p
-      font-size: 1rem !important
+      font-size: 2rem !important
+
+//
+// Images
+//
+.m-article
+  img
+    display: block
+    margin: 0 auto
+    max-width: 100%
 
 //
 // Links
@@ -59,3 +61,10 @@ h3
   a
     text-decoration: underline
 
+//
+// Lists
+//
+ul, ol
+  margin: $v-sp 0
+  li
+    margin-bottom: $v-sp--m4
