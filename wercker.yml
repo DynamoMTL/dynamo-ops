@@ -4,7 +4,7 @@ box: ruby
 build:
     steps:
         - install-packages:
-          packages: node
+          packages: nodejs
         - bundle-install
         - npm-install
         - npm-test
