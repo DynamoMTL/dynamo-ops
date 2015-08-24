@@ -1,9 +1,8 @@
 ---
-box: ruby
+box: wercker/rvm
+
 build:
     steps:
-        - rvm-use:
-          version: ruby-2.1.5
         - install-packages:
           packages: node
         - bundle-install
@@ -17,6 +16,7 @@ build:
         - script:
           name: jekyll doctor
           code: bundle exec jekyll doctor
+
 deploy :
   steps :
     - script:
