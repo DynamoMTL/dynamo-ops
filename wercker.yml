@@ -1,7 +1,9 @@
 ---
-box: wercker/rvm
+box: ruby
 build:
     steps:
+        - rvm-use:
+          version: ruby-2.1.5
         - install-packages:
           packages: node
         - bundle-install
