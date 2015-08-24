@@ -7,6 +7,9 @@ build:
         - npm-install
         - npm-test
         - script:
+          name: bower install
+          code: bower install
+        - script:
           name: generate production site
           code: |-
             node node_modules/gulp/bin/gulp build
