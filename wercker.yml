@@ -6,9 +6,7 @@ build:
         - bundle-install
         - npm-install
         - npm-test
-        - script:
-          name: bower install
-          code: node node_modules/bower/bin/bower install
+        - bower-install
         - script:
           name: generate production site
           code: |-
