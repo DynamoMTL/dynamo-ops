@@ -1,5 +1,5 @@
 ---
-box: wercker/rvm
+box: ruby
 
 build:
     steps:
