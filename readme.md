@@ -28,6 +28,7 @@ Each post needs metadata up at the very of the document. Here are the ones that 
 ---
 layout: post
 title: The title of the article (will be capitalized on the site)
+date: YYYY-MM-DD (this will override the date in the name of the file, it is recommanded to change the date here when updating the content and keep the filename date as the creation date)
 published: true (or false)
 category: name-of-the-category (should have only one)
 tags: subject-a subject-b subject-c (list separated by spaces)

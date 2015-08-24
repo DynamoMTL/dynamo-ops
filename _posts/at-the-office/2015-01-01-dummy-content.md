@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Dummy Content"
+date: 2015-08-24
 published: true
 tags: ipsum dolor magnam
 categories: at-the-office
