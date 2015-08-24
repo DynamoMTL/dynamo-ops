@@ -1,0 +1,33 @@
+---
+box: ruby
+build:
+    steps:
+        - install-packages
+          packages: node
+        - bundle-install
+        - npm install
+        - npm test
+        - script:
+          name: generate production site
+          code: |-
+            bundle exec gulp build
+            ls -l ./_site
+        - script:
+          name: jekyll doctor
+          code: bundle exec jekyll doctor
+deploy :
+  steps :
+    - script:
+        name: Configure git
+        code: |-
+          git config --global user.email "pleasemailus@wercker.com"
+          git config --global user.name "wercker"
+
+          rm -rf .git
+    - script:
+        name: Deploy to github pages
+        code: |-
+          git init
+          git add .
+          git commit -m "deploy commit from $WERCKER_STARTED_BY"
+          git push -f $GIT_REMOTE master:gh-pages
