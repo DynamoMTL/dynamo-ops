@@ -12,7 +12,7 @@ build:
           name: generate production site
           code: |-
             node node_modules/gulp/bin/gulp build-prod
-            ls -l ./_prod
+            ls -l ./_production
         - script:
           name: jekyll doctor
           code: bundle exec jekyll doctor
