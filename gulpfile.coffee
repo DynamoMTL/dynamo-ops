@@ -19,6 +19,7 @@ config =
   bowerDir: './bower_components'
   assetsDir: './assets'
   outputDir: './_site'
+  prodDir: './_prod'
 
 messages = jekyllBuild: '<span style="color: grey">Running:</span> $ jekyll build'
 
@@ -101,6 +102,13 @@ gulp.task 'build', [
   'robots'
   'jekyll-build'
 ]
+
+gulp.task 'build-prod', [
+  'build'
+], (done) ->
+  gulp
+    .src(config.outputDir + '/**/*')
+    .pipe(gulp.dest(config.prodDir))
 
 # Server
 gulp.task 'serve', [ 'build' ], ->
