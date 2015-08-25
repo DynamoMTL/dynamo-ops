@@ -19,7 +19,7 @@ build:
 
 deploy :
   steps :
-     - gh-pages:
+    - gh-pages:
       token: $GIT_TOKEN
       domain: dynamomtl.github.io/dynamo-ops
       basedir: _production
