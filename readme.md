@@ -74,3 +74,7 @@ The `<!--more-->` comment will determine where the excerpt ends.
 **Prose**
 
 To use Prose to edit your files, just go here and authenticate: http://prose.io/#DynamoMTL/dynamo-ops
+
+
+### Site URL
+http://www.dynaops.com.s3-website-us-east-1.amazonaws.com/ (Temp)
