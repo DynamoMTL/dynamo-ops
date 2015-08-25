@@ -9,7 +9,7 @@ To run the project after checkout:
 To run an already checked out project:
 - `bundle exec gulp serve`
 
-You are welcome.
+You are welcome!
 
 
 ### Content creation
