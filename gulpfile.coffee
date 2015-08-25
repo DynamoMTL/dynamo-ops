@@ -19,7 +19,7 @@ config =
   bowerDir: './bower_components'
   assetsDir: './assets'
   outputDir: './_site'
-  prodDir: './_prod'
+  prodDir: './_production'
 
 messages = jekyllBuild: '<span style="color: grey">Running:</span> $ jekyll build'
 
