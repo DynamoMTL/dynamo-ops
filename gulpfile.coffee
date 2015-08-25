@@ -103,12 +103,16 @@ gulp.task 'build', [
   'jekyll-build'
 ]
 
+gulp.task 'jekyll-prod',
+  (done)->
+    return cp.spawn('bundle', ['exec', 'jekyll', 'build', '--destination=' + config.prodDir], { stdio: 'inherit' })
+    .on('close', done)
+
 gulp.task 'build-prod', [
   'build'
+  'jekyll-prod'
 ], (done) ->
-  gulp
-    .src(config.outputDir + '/**/*')
-    .pipe(gulp.dest(config.prodDir))
+  return
 
 # Server
 gulp.task 'serve', [ 'build' ], ->
