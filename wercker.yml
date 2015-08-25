@@ -11,8 +11,8 @@ build:
         - script:
           name: generate production site
           code: |-
-            node node_modules/gulp/bin/gulp build
-            ls -l ./_site
+            node node_modules/gulp/bin/gulp build-prod
+            ls -l ./_prod
         - script:
           name: jekyll doctor
           code: bundle exec jekyll doctor
