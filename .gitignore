@@ -11,4 +11,4 @@ bower_components/*
 assets/*
 .phantom-version
 *.log
-._site
+_site
