@@ -11,5 +11,8 @@
     "susy": "~2.2.5",
     "lodash": "~3.10.1",
     "reading-time": "~1.0.0"
+  },
+  "devDependencies": {
+    "sass-toolkit": "~2.9.0"
   }
 }

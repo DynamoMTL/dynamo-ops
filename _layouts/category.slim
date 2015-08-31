@@ -31,10 +31,8 @@
               time.t-bold
                 | {{ post.date | date_to_string }}
               h2.t-h2--sans.t-capital
-                a.m-cta-combo href="{{ site.baseurl }}{{ post.url }}"
+                a href="{{ site.baseurl }}{{ post.url }}"
                   | {{ post.title }}
-                  svg.i-svg-arrow
-                    use(xlink:href="#arrow")
               ul.m-tags-target
                 {% for tag in post.tags %}
                   li {{ tag }}

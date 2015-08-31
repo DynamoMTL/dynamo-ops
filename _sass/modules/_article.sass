@@ -8,7 +8,7 @@
 // General
 //
 .m-article
-  padding: 0 $v-sp--p10
+  padding: 0 $v-sp--p12
   margin: 0
 
 .m-article-reading
@@ -19,6 +19,7 @@
 //
 [id*="title-"]
   margin-top: $v-sp--p4
+  color: $v-blue
 
 h2
   @extend .t-h2--sans
@@ -40,8 +41,11 @@ h3
 //
 .m-article
   blockquote
+    color: $v-blue
     text-align: center
-    margin: $v-sp--p6 (-$v-sp--p10)
+    margin: $v-sp--p6 auto
+    width: 140%
+    margin-left: -20%
     p
       font-size: 2rem !important
 
@@ -52,14 +56,20 @@ h3
   img
     display: block
     margin: 0 auto
-    max-width: 100%
+    max-width: 140%
+    width: 140%
+    margin-left: -20%
 
 //
 // Links
 //
 .m-article
-  a
-    text-decoration: underline
+  p
+    a
+      border-bottom: 2px solid $v-black
+      &:hover, &:active
+        color: $v-blue
+        border-color: $v-blue
 
 //
 // Lists

@@ -74,6 +74,7 @@
 .m-cards-el-name
   margin-top: 0
   max-width: 60%
+  line-height: 1.2
   &::after
     content: ''
     display: block
@@ -81,13 +82,14 @@
     height: 2px
     background-color: $v-blue
     margin: $v-sp--m2 0
+  a
+    @extend %t-links--noUnder
 
 .m-cards-el-number
   font-family: $v-t-sans--bold
   position: absolute
   top: $v-sp
   right: $v-sp
-  // margin-top: 5px
 
 // Links
 .m-cards-el-links
