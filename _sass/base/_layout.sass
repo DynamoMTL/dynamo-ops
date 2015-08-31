@@ -8,7 +8,11 @@
 // General
 //
 .l-wrap
-.l-page
+  @include transition(opacity $v-delay ease-in-out 0s)
+  opacity: 0
+  .is-loaded &
+    opacity: 1
+
 
 //
 // Sections

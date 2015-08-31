@@ -28,7 +28,7 @@
         li.l-sec
           article.l-cont
             .l-col--oneThird.s-cat-articles-a
-              time.t-bold
+              time.t-bold.t-p--m2
                 | {{ post.date | date_to_string }}
               h2.t-h2--sans.t-capital
                 a href="{{ site.baseurl }}{{ post.url }}"
@@ -38,7 +38,7 @@
                   li {{ tag }}
                 {% endfor %}
             .l-col--twoThird.s-cat-articles-b
-              p.t-bold
+              p.t-bold.t-p--m2
                 | Article {{ forloop.index | minus: 1 }} of {{ forloop.length | minus: 1 }}
               | {{ post.excerpt }}
       {% endif %}

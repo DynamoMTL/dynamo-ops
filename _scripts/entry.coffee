@@ -14,6 +14,13 @@ require("../bower_components/reading-time/src/readingTime")
 # jQuery
 #
 $ ->
+
+  #
+  # Page
+  #
+  Page = require('./modules/page')
+  Page.init()
+
   #
   # Tags
   #
