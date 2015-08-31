@@ -24,6 +24,7 @@ Hero =
       ctx.cats[cat[0]] =
         color: ctx.theme[pos]
     )
+    console.log ctx.cats
 
   #
   # Colors

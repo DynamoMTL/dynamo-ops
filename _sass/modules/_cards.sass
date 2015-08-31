@@ -28,26 +28,30 @@
   padding: $v-sp--m8
   color: $v-white
   margin-bottom: 0
-  // &.m-cards-el--wide
-  //   width: 100%
   .m-cards-el-inner
     @extend %l-theme--pink
     .m-cards-el-name
       &::after
         background-color: $v-white
-  &:nth-child(2n)
+  &:nth-child(5n - 4)
+    .m-cards-el-inner
+      @extend %l-theme--pink
+      .m-cards-el-name
+        &::after
+          background-color: $v-white
+  &:nth-child(5n - 3)
     .m-cards-el-inner
       @extend %l-theme--yellow
     .m-cards-el-name
       &::after
         background-color: $v-blue
-  &:nth-child(3n)
+  &:nth-child(5n - 2)
     .m-cards-el-inner
       @extend %l-theme--blue
     .m-cards-el-name
       &::after
         background-color: $v-white
-  &:nth-child(4n)
+  &:nth-child(5n - 1)
     .m-cards-el-inner
       @extend %l-theme--green
     .m-cards-el-name
@@ -107,3 +111,4 @@
     bottom: $v-sp--m4
     left: $v-sp
     max-width: 66%
+    margin-bottom: 0
