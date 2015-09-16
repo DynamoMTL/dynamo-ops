@@ -46,10 +46,4 @@ prose:
               value: 'onboarding'
             - name: 'What We Do'
               value: 'what-we-do'
-    _posts/at-the-office
-      - name: 'category'
-        element: 'hidden'
-        value: 'at-the-office'
-
-
 
