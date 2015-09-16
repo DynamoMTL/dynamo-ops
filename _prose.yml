@@ -1,3 +1,55 @@
 ---
 prose:
   rooturl: '_posts'
+  metadata:
+    _posts:
+      - name: 'layout'
+        field:
+          element: 'hidden'
+          value: 'post'
+      - name: 'title'
+        field:
+          element: 'text'
+          label: 'title'
+      - name: 'published'
+        field:
+          element: 'checkbox'
+          label: 'published'
+      - name: 'tags'
+        field:
+          element: 'text'
+          label: 'tags'
+          help: 'list of tags separated by a space'
+          placeholder: 'bi-weekly something fun'
+      - name: 'order'
+        field:
+          element: 'number'
+          label: 'order'
+      - name: 'category'
+        field:
+          element: 'select'
+          label: 'category'
+          options:
+            - name: 'At The Office'
+              value: 'at-the-office'
+            - name: 'Client Welcome Package'
+              value: 'client-welcome-package'
+            - name: 'Employee Welcome Package'
+              value: 'employee-welcome-package'
+            - name: 'Guiding Principles'
+              value: 'guiding-principles'
+            - name: 'How We Manage Projects'
+              value: 'how-we-manage-projects'
+            - name: 'HR Department'
+              value: 'hrt-department'
+            - name: 'Onboarding'
+              value: 'onboarding'
+            - name: 'What We Do'
+              value: 'what-we-do'
+    _posts/at-the-office
+      - name: 'category'
+        element: 'hidden'
+        value: 'at-the-office'
+
+
+
