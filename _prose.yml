@@ -11,6 +11,12 @@ prose:
         field:
           element: 'text'
           label: 'title'
+      - name: 'date'
+        field:
+          element: 'text'
+          label: 'date'
+          help: 'Date to overide the file name date'
+          placeholder: '2014-10-23'
       - name: 'published'
         field:
           element: 'checkbox'
@@ -25,7 +31,7 @@ prose:
         field:
           element: 'number'
           label: 'order'
-      - name: 'category'
+      - name: 'categories'
         field:
           element: 'select'
           label: 'category'
