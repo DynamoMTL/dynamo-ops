@@ -7,10 +7,6 @@ prose:
         field:
           element: 'hidden'
           value: 'post'
-      - name: 'title'
-        field:
-          element: 'text'
-          label: 'title'
       - name: 'date'
         field:
           element: 'text'
