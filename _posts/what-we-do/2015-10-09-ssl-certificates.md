@@ -59,7 +59,26 @@ At this point, you've got your private key (.key) stashed away, and you've now g
 
 ### Cloud 66
 
+To use your shiny new SSL certificate on Cloud66, you'll have to provision the SSL add-in to the corresponding stack. When prompted, enter the contents of the `.key` file in in the "Certificate Key" field, the contents of the `.crt` file in the "SSL Certificate" field, and the contents of the `.ca-bundle` file in the "Intermediate Certificate" field.
+
 ### Heroku
 
+Installing your SSL certificate on Heroku is a bit more complicated. The first step is to provision an SSL endpoint via the Heroku Toolbelt, using the following template:
+
+```shell
+~/ $ heroku certs:add domain.crt domain.key domain.ca-bundle —app my-app-1234
+```
+
+This will assign an endpoint URL along the lines of `example-1234.herokussl.com`, but visiting this URL will not reveal your website—indeed, your browser should emit a scary mismatched-certificate warning. This is expected, and indeed desireable: it demonstrates that Heroku is attempting to use your SSL certificate to establish the connection with your browser.
+
+To complete the setup, you'll need to add a couple DNS records. For the root domain, add an `ALIAS` or `ANAME` record with `example-1234.herokussl.com` as the target. For a subdomain, like `www.`, add a `CNAME` record.
+
+For more information on configuring DNS records, see the TBD guide to [[DNSMadeEasy]] (TBD).
+
 ### Load Balancers
-SSL termination shenanigans.
+
+To be added.
+
+### Amazon S3 & CloudFront
+
+To be added.
