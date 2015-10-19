@@ -11,27 +11,27 @@ prose:
       - name: 'date'
         field:
           element: 'text'
-          label: 'date'
+          label: 'Date'
           help: 'Date to overide the file name date'
           placeholder: '2014-10-23'
       - name: 'published'
         field:
           element: 'checkbox'
-          label: 'published'
+          label: 'Published'
       - name: 'tags'
         field:
           element: 'text'
-          label: 'tags'
-          help: 'list of tags separated by a space'
+          label: 'Tags'
+          help: 'List of tags separated by a space'
           placeholder: 'bi-weekly something fun'
       - name: 'order'
         field:
           element: 'number'
-          label: 'order'
+          label: 'Order'
       - name: 'categories'
         field:
           element: 'select'
-          label: 'category'
+          label: 'Category'
           options:
             - name: 'At The Office'
               value: 'at-the-office'
