@@ -14,10 +14,6 @@ prose:
           label: 'Date'
           help: 'Date to overide the file name date'
           placeholder: '2014-10-23'
-      - name: 'published'
-        field:
-          element: 'checkbox'
-          label: 'Published'
       - name: 'tags'
         field:
           element: 'text'
