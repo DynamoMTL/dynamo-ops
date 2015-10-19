@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "Dummy Content"
-date: 2015-08-24
+title: Dummy Content
+date: "Sun Aug 23 2015 20:00:00 GMT-0400 (EDT)"
 published: true
 tags: ipsum dolor magnam
-categories: at-the-office
+categories: "at-the-office"
 order: 9
 ---
 
@@ -41,7 +41,11 @@ function(){
 
 #### Title H3
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa quod aliquam magni, doloremque eum unde debitis voluptatem asperiores suscipit. `Natus consequuntur a facilis minima, laboriosam, soluta magnam mollitia nam voluptatibus!Lorem ipsum dolor sit amet, consectetur adipisicing elit.` Ipsa quod aliquam magni, doloremque eum unde debitis voluptatem asperiores suscipit. Natus consequuntur a facilis minima, laboriosam, soluta magnam mollitia nam voluptatibus!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa quod aliquam magni, doloremque eum unde debitis voluptatem asperiores suscipit. Natus consequuntur a facilis minima, laboriosam, soluta magnam mollitia nam voluptatibus!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa quod aliquam magni, doloremque eum unde debitis voluptatem asperiores suscipit. Natus consequuntur a facilis minima, laboriosam, soluta magnam mollitia nam voluptatibus!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa quod aliquam magni, doloremque eum unde debitis voluptatem asperiores suscipit. Natus consequuntur a facilis minima, laboriosam, soluta magnam mollitia nam voluptatibus!
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa quod aliquam magni, doloremque eum unde debitis voluptatem asperiores suscipit. `Natus consequuntur a facilis minima, laboriosam, soluta magnam mollitia nam voluptatibus!Lorem ipsum dolor sit amet, consectetur adipisicing elit.` Ipsa quod aliquam magni, doloremque eum unde debitis voluptatem asperiores suscipit. Natus consequuntur a facilis minima, laboriosam, soluta magnam mollitia nam voluptatibus!Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+
+![Screen Shot 2015-10-16 at 11.22.18 AM.png]({{site.baseurl}}/uploads/Screen Shot 2015-10-16 at 11.22.18 AM.png)
+
+Ipsa quod aliquam magni, doloremque eum unde debitis voluptatem asperiores suscipit. Natus consequuntur a facilis minima, laboriosam, soluta magnam mollitia nam voluptatibus!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa quod aliquam magni, doloremque eum unde debitis voluptatem asperiores suscipit. Natus consequuntur a facilis minima, laboriosam, soluta magnam mollitia nam voluptatibus!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa quod aliquam magni, doloremque eum unde debitis voluptatem asperiores suscipit. Natus consequuntur a facilis minima, laboriosam, soluta magnam mollitia nam voluptatibus!
 
 1. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
 2. Ipsa quod aliquam magni, doloremque eum unde debitis voluptatem asperiores suscipit.
