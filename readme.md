@@ -14,6 +14,14 @@ You are welcome!
 
 ### Content creation
 
+
+**Prose**
+
+Even though all content creation can be done through a github workflow, we recommend using Prose to create / manage / edit / delete content.
+
+To use Prose to edit your files, just go here and authenticate: http://prose.io/#DynamoMTL/dynamo-ops
+
+
 **Posts**
 
 All the posts reside in the folder called `_posts` on the root of the app. You will also see that the content is organized in subfolders that each bear the same same as the category in which the article resides. This is optional but should be respected if possible.
@@ -39,12 +47,16 @@ intro: true (false, this is what is gonna be displayed at the top of a category 
 
 See: http://jekyllrb.com/docs/frontmatter/
 
+When using **Prose**, you will have the ability to add and edit metadata from the top-right menu. Look for a list icon.
+
 
 **Attachments**
 
 All the attachments that you want to include in a post (images, pdf, etc.) need to be added in the `uploads` folder. They can be added to a subfolder in there as well, for sake of structure.
 
 We added a filter to help you reference those files easily. It can be used like this: `![My helpful screenshot]({{ "flag.png" | uploads_url }})`, where `uploads_url` will build the path to the assets.
+
+When using **Prose**, you can use the wysiwyg editor to upload and reference the photos. You also have the ability to select from existing images.
 
 
 **Links**
@@ -69,11 +81,6 @@ ipsam aliquam repellat et ipsum voluptatibus sequi! In, magni, aperiam!
 ```
 
 The `<!--more-->` comment will determine where the excerpt ends.
-
-
-**Prose**
-
-To use Prose to edit your files, just go here and authenticate: http://prose.io/#DynamoMTL/dynamo-ops
 
 
 ### Site URL
