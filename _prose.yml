@@ -1,6 +1,7 @@
 ---
 prose:
   rooturl: '_posts'
+  media: 'uploads/images'
   metadata:
     _posts:
       - name: 'layout'
