@@ -1,12 +1,13 @@
 ---
 layout: post
-title: "Dummy Content"
-date: 2015-08-24
+title: Dummy Content
+date: "Sun Aug 23 2015 20:00:00 GMT-0400 (EDT)"
 published: true
 tags: ipsum dolor magnam
-categories: at-the-office
+categories: "at-the-office"
 order: 9
 ---
+
 
 Just testing if the CI is working and again and again! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa quod aliquam magni, doloremque eum unde debitis voluptatem asperiores suscipit. Natus consequuntur a facilis minima, laboriosam, soluta magnam mollitia nam voluptatibus!
 
