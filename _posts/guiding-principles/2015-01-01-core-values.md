@@ -2,7 +2,7 @@
 layout: post
 title: Core Values
 published: true
-tags: ipsum dolor magnam
+tags: values experts team care change
 category: "guiding-principles"
 order: 1
 date: ""
