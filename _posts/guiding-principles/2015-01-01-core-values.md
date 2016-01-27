@@ -9,7 +9,9 @@ categories: "at-the-office"
 ---
 
 
+
 To be clear: Our Values are what we Value, as a team. They are our guiding force when it comes to planning, creating, launching & supporting amazing things alongside amazing clients.
+<!--more-->
 
 ## Dynamo's 5 Core Values
 1. Be experts In our respective fields.
@@ -17,6 +19,3 @@ To be clear: Our Values are what we Value, as a team. They are our guiding force
 3. Take care of your team and they will take care of your company.
 4. We care about our work.
 5. We embrace change.
-
-
-
