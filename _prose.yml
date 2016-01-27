@@ -8,12 +8,6 @@ prose:
         field:
           element: 'hidden'
           value: 'post'
-      - name: 'date'
-        field:
-          element: 'text'
-          label: 'Date'
-          help: 'Date to overide the file name date'
-          placeholder: '2014-10-23'
       - name: 'tags'
         field:
           element: 'text'
