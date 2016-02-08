@@ -3,9 +3,7 @@
 // Page
 //
 //
-var Page;
-
-Page = {
+var Page = {
 
   //
   // Globals
@@ -24,6 +22,7 @@ Page = {
     }, 500);
   },
   init: function() {
+    console.log("Page.init()");
     return this.transition();
   }
 };
@@ -31,4 +30,4 @@ Page = {
 //
 // Export
 //
-module.exports = Page;
+export default Page;

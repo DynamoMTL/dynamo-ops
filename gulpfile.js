@@ -41,12 +41,12 @@ var messages = {
 // Subtasks
 //
 gulp.task('bower', function() {
-  return bower().pipe(gulp.dest(config.bowerDir));
+  bower().pipe(gulp.dest(config.bowerDir));
 });
 
 gulp.task('jekyll-build', ['fonts', 'svg', 'css', 'js', 'bower'], function(done) {
   browserSync.notify(messages.jekyllBuild);
-  return cp.spawn('jekyll', ['build'], {
+  cp.spawn('jekyll', ['build'], {
     stdio: 'inherit'
   }).on('close', done);
 });
@@ -56,20 +56,20 @@ gulp.task('jekyll-rebuild', ['jekyll-build'], function() {
 });
 
 gulp.task('fonts', function() {
-  return gulp.src(config.fontsPath + '/**.*').pipe(gulp.dest(config.assetsDir + '/fonts'));
+  gulp.src(config.fontsPath + '/**.*').pipe(gulp.dest(config.assetsDir + '/fonts'));
 });
 
 gulp.task('robots', function() {
-  return gulp.src('./robots.txt').pipe(gulp.dest(config.outputDir));
+  gulp.src('./robots.txt').pipe(gulp.dest(config.outputDir));
 });
 
 gulp.task('svg', function() {
   gulp.src(config.imagesPath + '/svg/**/*.svg').pipe(svgstore()).pipe(gulp.dest(config.assetsDir + '/images/svg')).pipe(gulp.dest(config.includesDir));
-  return gulp.src(config.imagesPath + '/svg/**/*.svg').pipe(gulp.dest(config.assetsDir + '/images/svg'));
+  gulp.src(config.imagesPath + '/svg/**/*.svg').pipe(gulp.dest(config.assetsDir + '/images/svg'));
 });
 
 gulp.task('css', function() {
-  return sass(config.sassPath + '/app.sass', {
+  sass(config.sassPath + '/app.sass', {
     style: 'compressed',
     loadPath: [config.sassPath],
     compass: true
@@ -77,7 +77,7 @@ gulp.task('css', function() {
 });
 
 gulp.task('js', function() {
-  return gulp.src(config.scriptsPath + '/entry.js').pipe(webpack({
+  gulp.src(config.scriptsPath + '/entry.js').pipe(webpack({
     output: {
       filename: "bundle.js"
     },
@@ -88,15 +88,16 @@ gulp.task('js', function() {
     module: {
       loaders: [
         {
+          test: /\.js?$/,
           loader: 'babel-loader',
-          test: '*.js',
+          exclude: /node_modules/,
           query: {
-            presets: 'es2015'
+            presets: ['es2015']
           }
         }
       ],
       stats: {
-          colors: true
+        colors: true
       },
       devtool: 'source-map'
     }
@@ -109,7 +110,7 @@ gulp.task('js', function() {
 gulp.task('build', ['bower', 'fonts', 'svg', 'css', 'js', 'robots', 'jekyll-build']);
 
 gulp.task('jekyll-prod', ['build'], function(done) {
-  return cp.spawn('bundle', ['exec', 'jekyll', 'build', '--destination=' + config.prodDir], {
+  cp.spawn('bundle', ['exec', 'jekyll', 'build', '--destination=' + config.prodDir], {
     stdio: 'inherit'
   }).on('close', done);
 });

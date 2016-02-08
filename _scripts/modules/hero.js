@@ -16,18 +16,15 @@ var Hero = {
   // Build Cats index
   //
   buildCats: function() {
-    var ctx;
-    ctx = this;
+    var ctx = this;
     _.each(window.cats, function(cat, key) {
-      var div, factor, pos;
-      factor = 5;
-      div = Math.floor(key / factor);
-      pos = key - (div * factor);
-      return ctx.cats[cat[0]] = {
+      var factor = 5,
+          div = Math.floor(key / factor),
+          pos = key - (div * factor),
+      ctx.cats[cat[0]] = {
         color: ctx.theme[pos]
       };
     });
-    return console.log(ctx.cats);
   },
 
   //
@@ -43,11 +40,11 @@ var Hero = {
   },
   init: function() {
     this.buildCats();
-    return this.colors();
+    this.colors();
   }
 };
 
 //
 // Export
 //
-module.exports = Hero;
+export default Hero;

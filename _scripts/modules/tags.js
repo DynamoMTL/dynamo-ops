@@ -38,4 +38,4 @@ var Tags = {
 //
 // Export
 //
-module.exports = Tags;
+export default Tags;

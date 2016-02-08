@@ -38,4 +38,4 @@ var Post = {
 //
 // Export
 //
-module.exports = Post;
+export default Post;
