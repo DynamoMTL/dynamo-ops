@@ -76,29 +76,16 @@ gulp.task('css', function() {
   }).pipe(minifyCss()).pipe(gulp.dest(config.assetsDir + '/css')).pipe(gulp.dest(config.outputDir + '/assets/css')).pipe(browserSync.stream());
 });
 
-gulp.task("babel-test", function () {
-  return gulp.src(config.scriptsPath + '/testes2015.js')
-    .pipe(babel())
-    .pipe(gulp.dest(config.outputDir + '/assets/scripts'));
-});
-
 gulp.task('js', function() {
-  return gulp.src(config.scriptsPath + '/entry.coffee').pipe(webpack({
+  return gulp.src(config.scriptsPath + '/entry.js').pipe(webpack({
     output: {
       filename: "bundle.js"
     },
     watch: false,
     resolve: {
-      extensions: ['', '.js', '.coffee']
+      extensions: ['', '.js']
     },
-    module: {
-      loaders: [
-        {
-          test: /\.coffee$/,
-          loader: "coffee-loader"
-        }
-      ]
-    }
+    module: {}
   })).pipe(gulp.dest(config.assetsDir + '/scripts')).pipe(gulp.dest(config.outputDir + '/assets/scripts')).pipe(browserSync.stream());
 });
 
@@ -120,7 +107,7 @@ gulp.task('serve', ['build'], function() {
     }
   });
   gulp.watch(['_sass/**/*.scss', '_sass/**/*.sass'], ['css']);
-  gulp.watch(['_scripts/**/*.js', '_scripts/**/*.coffee'], ['js']);
+  gulp.watch(['_scripts/**/*.js'], ['js']);
   gulp.watch(['_images/svg/**/*.svg'], ['jekyll-rebuild']);
   gulp.watch(['index.slim', '_layouts/*', '_includes/*', '_posts/**/*'], ['jekyll-rebuild']);
 });
