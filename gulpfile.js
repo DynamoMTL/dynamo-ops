@@ -85,7 +85,21 @@ gulp.task('js', function() {
     resolve: {
       extensions: ['', '.js']
     },
-    module: {}
+    module: {
+      loaders: [
+        {
+          loader: 'babel-loader',
+          test: '*.js',
+          query: {
+            presets: 'es2015'
+          }
+        }
+      ],
+      stats: {
+          colors: true
+      },
+      devtool: 'source-map'
+    }
   })).pipe(gulp.dest(config.assetsDir + '/scripts')).pipe(gulp.dest(config.outputDir + '/assets/scripts')).pipe(browserSync.stream());
 });
 
