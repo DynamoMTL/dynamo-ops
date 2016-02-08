@@ -10,18 +10,21 @@
   "license": "ISC",
   "homepage": "https://github.com/dynamomtl/dynamo-ops",
   "devDependencies": {
+    "babel-core": "latest",
+    "babel-loader": "latest",
+    "babel-preset-es2015": "latest",
     "bower": "latest",
     "browser-sync": "^2.7.12",
-    "coffee-loader": "^0.7.2",
-    "coffee-script": "latest",
     "gulp": "^3.9.0",
+    "gulp-babel": "^6.1.2",
     "gulp-bower": "0.0.10",
     "gulp-compass": "^2.1.0",
-    "gulp-gh-pages": "^0.5.2",
+    "gulp-eslint": "^1.1.1",
     "gulp-minify-css": "^1.2.0",
     "gulp-notify": "^2.2.0",
     "gulp-ruby-sass": "^1.0.5",
     "gulp-svgstore": "latest",
-    "webpack-stream": "^2.1.0"
+    "npm": "^3.7.1",
+    "webpack-stream": "latest"
   }
 }
