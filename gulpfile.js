@@ -7,16 +7,17 @@
 //
 // Requires
 //
-var gulp = require('gulp');
-var babel = require("gulp-babel");
-var cp = require('child_process');
-var minifyCss = require('gulp-minify-css');
-var notify = require('gulp-notify');
-var sass = require('gulp-ruby-sass');
-var bower = require('gulp-bower');
-var svgstore = require('gulp-svgstore');
-var browserSync = require('browser-sync');
-var webpack = require('webpack-stream');
+var gulp = require('gulp'),
+    babel = require("gulp-babel"),
+    cp = require('child_process'),
+    minifyCss = require('gulp-minify-css'),
+    notify = require('gulp-notify'),
+    sass = require('gulp-ruby-sass'),
+    bower = require('gulp-bower'),
+    svgstore = require('gulp-svgstore'),
+    browserSync = require('browser-sync'),
+    webpack = require('webpack-stream'),
+    eslint = require('gulp-eslint');
 
 //
 // Config
@@ -76,7 +77,14 @@ gulp.task('css', function() {
   }).pipe(minifyCss()).pipe(gulp.dest(config.assetsDir + '/css')).pipe(gulp.dest(config.outputDir + '/assets/css')).pipe(browserSync.stream());
 });
 
-gulp.task('js', function() {
+gulp.task('es-lint', function () {
+  return gulp.src([config.scriptsPath + '/**/*.js','!node_modules/**'])
+    .pipe(eslint())
+    .pipe(eslint.format())
+    .pipe(eslint.failAfterError());
+});
+
+gulp.task('js', ['es-lint'], function() {
   gulp.src(config.scriptsPath + '/entry.js').pipe(webpack({
     output: {
       filename: "bundle.js"

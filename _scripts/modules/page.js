@@ -22,7 +22,7 @@ var Page = {
     }, 500);
   },
   init: function() {
-    console.log("Page.init()");
+    console.log('Page.init()');
     return this.transition();
   }
 };

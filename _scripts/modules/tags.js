@@ -18,17 +18,17 @@ var Tags = {
       var $tags, $target, $this, tmp;
       tmp = [];
       $this = $(this);
-      $target = $this.find(".m-tags-target");
+      $target = $this.find('.m-tags-target');
       $tags = $this.find('[data-tags]');
       $tags.each(function(i) {
         var tags;
         $this = $(this);
-        tags = $this.data("tags").split(",");
+        tags = $this.data('tags').split(',');
         return tmp = _.union(tmp, tags);
       });
       return _.each(tmp, function(tag) {
         var el;
-        el = "<li>" + tag + "</li>";
+        el = '<li>' + tag + '</li>';
         return $target.append(el);
       });
     });

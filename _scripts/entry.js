@@ -7,8 +7,8 @@
 //
 // Requires
 //
-require("../bower_components/lodash/lodash");
-require("../bower_components/reading-time/src/readingTime");
+require('../bower_components/lodash/lodash');
+require('../bower_components/reading-time/src/readingTime');
 
 //
 // Imports

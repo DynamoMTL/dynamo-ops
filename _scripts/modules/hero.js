@@ -10,7 +10,7 @@ var Hero = {
   //
   $hero: $('.m-hero'),
   cats: {},
-  theme: ["pink", "yellow", "blue", "green", "gray"],
+  theme: ['pink', 'yellow', 'blue', 'green', 'gray'],
 
   //
   // Build Cats index
@@ -20,7 +20,7 @@ var Hero = {
     _.each(window.cats, function(cat, key) {
       var factor = 5,
           div = Math.floor(key / factor),
-          pos = key - (div * factor),
+          pos = key - (div * factor)
       ctx.cats[cat[0]] = {
         color: ctx.theme[pos]
       };
@@ -34,8 +34,8 @@ var Hero = {
     var catName, ctx;
     if (this.$hero.length > 0) {
       ctx = this;
-      catName = ctx.$hero.data("cat-name");
-      return ctx.$hero.addClass("m-hero--" + ctx.cats[catName].color);
+      catName = ctx.$hero.data('cat-name');
+      return ctx.$hero.addClass('m-hero--' + ctx.cats[catName].color);
     }
   },
   init: function() {
