@@ -3,7 +3,7 @@ layout: post
 title: "Product Strategy"
 published: true
 tags: ipsum dolor magnam
-categories: what-we-do
+category: what-we-do
 order: 1
 ---
 

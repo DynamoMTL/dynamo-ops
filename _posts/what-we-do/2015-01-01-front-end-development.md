@@ -4,7 +4,7 @@ title: "Front-End Development"
 date: 2015-08-24
 published: true
 tags: ipsum dolor magnam
-categories: what-we-do
+category: what-we-do
 order: 3
 ---
 

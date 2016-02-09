@@ -5,7 +5,6 @@ published: true
 tags: values experts team care change
 category: "guiding-principles"
 order: 1
-categories: "at-the-office"
 ---
 
 

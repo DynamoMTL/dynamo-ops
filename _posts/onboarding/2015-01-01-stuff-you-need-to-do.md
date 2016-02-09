@@ -4,7 +4,7 @@ title: "Stuff You Need to Do"
 date: 2015-08-24
 published: true
 tags: ipsum dolor magnam
-categories: onboarding
+category: onboarding
 order: 4
 ---
 

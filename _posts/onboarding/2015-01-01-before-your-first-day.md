@@ -3,7 +3,7 @@ layout: post
 title: "Before Your First Day"
 published: true
 tags: ipsum dolor magnam
-categories: onboarding
+category: onboarding
 order: 1
 ---
 
