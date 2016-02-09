@@ -26,4 +26,13 @@ permalink: /categories/:categories/:title/
 markdown: kramdown
 
 # Gulp & Bower
-exclude: [gulpfile.coffee, package.json, node_modules, bower.json, bower_components, Gemfile, Gemfile.lock]
+exclude: [
+  gulpfile.js,
+  package.json,
+  node_modules,
+  bower.json,
+  bower_components,
+  Gemfile,
+  Gemfile.lock,
+  wercker.yml
+]
