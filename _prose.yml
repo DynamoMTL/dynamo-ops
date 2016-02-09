@@ -18,7 +18,7 @@ prose:
         field:
           element: 'number'
           label: 'Order'
-      - name: 'categories'
+      - name: 'category'
         field:
           element: 'select'
           label: 'Category'
