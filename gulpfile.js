@@ -17,7 +17,8 @@ var gulp = require('gulp'),
     svgstore = require('gulp-svgstore'),
     browserSync = require('browser-sync'),
     webpack = require('webpack-stream'),
-    eslint = require('gulp-eslint');
+    eslint = require('gulp-eslint'),
+    uglify = require('gulp-uglify');
 
 //
 // Config
@@ -112,10 +113,16 @@ gulp.task('js', ['es-lint'], function() {
   })).pipe(gulp.dest(config.assetsDir + '/scripts')).pipe(gulp.dest(config.outputDir + '/assets/scripts')).pipe(browserSync.stream());
 });
 
+gulp.task('uglify', function() {
+  return gulp.src(config.outputDir + '/assets/scripts/**/*.js')
+    .pipe(uglify())
+    .pipe(gulp.dest(config.outputDir + '/assets/scripts'));
+});
+
 //
 // Main tasks
 //
-gulp.task('build', ['bower', 'fonts', 'svg', 'css', 'js', 'robots', 'jekyll-build']);
+gulp.task('build', ['bower', 'fonts', 'svg', 'css', 'js', 'uglify', 'robots', 'jekyll-build']);
 
 gulp.task('jekyll-prod', ['build'], function(done) {
   cp.spawn('bundle', ['exec', 'jekyll', 'build', '--destination=' + config.prodDir], {
