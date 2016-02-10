@@ -1,15 +1,13 @@
 ---
 layout: post
 title: Core Values
+description: "Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Cras justo odio, dapibus ac facilisis in, egestas eget quam."
 published: true
 tags: values experts team care change
 category: "guiding-principles"
 order: 1
 date: "2016-02-09"
 ---
-
-
-
 
 To be clear: Our Values are what we Value, as a team. They are our guiding force when it comes to planning, creating, launching & supporting amazing things alongside amazing clients.
 <!--more-->

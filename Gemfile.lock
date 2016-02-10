@@ -91,5 +91,9 @@ DEPENDENCIES
   compass
   jekyll
   jekyll-slim
+  sass
   slim
   susy
+
+BUNDLED WITH
+   1.11.2

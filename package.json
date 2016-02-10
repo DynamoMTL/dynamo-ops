@@ -26,6 +26,7 @@
     "gulp-svgstore": "latest",
     "gulp-uglify": "^1.5.2",
     "npm": "^3.7.1",
+    "susy": "^2.2.12",
     "webpack-stream": "latest"
   }
 }
