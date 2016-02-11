@@ -2,8 +2,10 @@
 doctype html
 html
   head
-    title Whatever
-    meta name="description" content=""
+    title {{ page.title }}
+    {% if page.description %}
+      meta name="description" content="{{ page.description }}"
+    {% endif %}
     link rel="stylesheet" href="{{ site.baseurl }}/assets/css/app.css"
     javascript:
       window.cats = {{ ordered_cats | jsonify }}

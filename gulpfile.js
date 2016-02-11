@@ -43,35 +43,35 @@ var messages = {
 // Subtasks
 //
 gulp.task('bower', function() {
-  bower().pipe(gulp.dest(config.bowerDir));
+  return bower().pipe(gulp.dest(config.bowerDir));
 });
 
 gulp.task('jekyll-build', ['fonts', 'svg', 'css', 'js', 'bower'], function(done) {
   browserSync.notify(messages.jekyllBuild);
-  cp.spawn('jekyll', ['build'], {
+  return cp.spawn('jekyll', ['build'], {
     stdio: 'inherit'
   }).on('close', done);
 });
 
 gulp.task('jekyll-rebuild', ['jekyll-build'], function() {
-  browserSync.reload();
+  return browserSync.reload();
 });
 
 gulp.task('fonts', function() {
-  gulp.src(config.fontsPath + '/**.*').pipe(gulp.dest(config.assetsDir + '/fonts'));
+  return gulp.src(config.fontsPath + '/**.*').pipe(gulp.dest(config.assetsDir + '/fonts'));
 });
 
 gulp.task('robots', function() {
-  gulp.src('./robots.txt').pipe(gulp.dest(config.outputDir));
+  return gulp.src('./robots.txt').pipe(gulp.dest(config.outputDir));
 });
 
 gulp.task('svg', function() {
   gulp.src(config.imagesPath + '/svg/**/*.svg').pipe(svgstore()).pipe(gulp.dest(config.assetsDir + '/images/svg')).pipe(gulp.dest(config.includesDir));
-  gulp.src(config.imagesPath + '/svg/**/*.svg').pipe(gulp.dest(config.assetsDir + '/images/svg'));
+  return gulp.src(config.imagesPath + '/svg/**/*.svg').pipe(gulp.dest(config.assetsDir + '/images/svg'));
 });
 
 gulp.task('css', function() {
-  sass(config.sassPath + '/app.sass', {
+  return sass(config.sassPath + '/app.sass', {
     style: 'compressed',
     loadPath: [config.sassPath],
     compass: true
@@ -86,7 +86,7 @@ gulp.task('es-lint', function () {
 });
 
 gulp.task('js', ['es-lint'], function() {
-  gulp.src(config.scriptsPath + '/entry.js').pipe(webpack({
+  return gulp.src(config.scriptsPath + '/entry.js').pipe(webpack({
     output: {
       filename: "bundle.js"
     },
@@ -125,7 +125,7 @@ gulp.task('uglify', function() {
 gulp.task('build', ['bower', 'fonts', 'svg', 'css', 'js', 'uglify', 'robots', 'jekyll-build']);
 
 gulp.task('jekyll-prod', ['build'], function(done) {
-  cp.spawn('bundle', ['exec', 'jekyll', 'build', '--destination=' + config.prodDir], {
+  return cp.spawn('bundle', ['exec', 'jekyll', 'build', '--destination=' + config.prodDir], {
     stdio: 'inherit'
   }).on('close', done);
 });
