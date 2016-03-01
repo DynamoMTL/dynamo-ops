@@ -30,7 +30,7 @@ var config = {
   scriptsPath: './_scripts',
   includesDir: './_includes',
   bowerDir: './bower_components',
-  assetsDir: './assets',
+  tempDir: './assets',
   outputDir: './_site',
   prodDir: './_production'
 };
@@ -43,31 +43,42 @@ var messages = {
 // Subtasks
 //
 gulp.task('bower', function() {
-  return bower().pipe(gulp.dest(config.bowerDir));
+  return bower()
+    .pipe(gulp.dest(config.bowerDir));
 });
 
-gulp.task('jekyll-build', ['fonts', 'svg', 'css', 'js', 'bower'], function(done) {
+gulp.task('jekyll-build', function(done) {
   browserSync.notify(messages.jekyllBuild);
   return cp.spawn('jekyll', ['build'], {
     stdio: 'inherit'
   }).on('close', done);
 });
 
-gulp.task('jekyll-rebuild', ['jekyll-build'], function() {
+gulp.task('jekyll-rebuild', ['build'], function() {
   return browserSync.reload();
 });
 
 gulp.task('fonts', function() {
-  return gulp.src(config.fontsPath + '/**.*').pipe(gulp.dest(config.assetsDir + '/fonts'));
+  return gulp
+    .src(config.fontsPath + '/**.*')
+    .pipe(gulp.dest(config.tempDir + '/fonts'));
 });
 
 gulp.task('robots', function() {
-  return gulp.src('./robots.txt').pipe(gulp.dest(config.outputDir));
+  return gulp
+    .src('./robots.txt')
+    .pipe(gulp.dest(config.outputDir));
 });
 
 gulp.task('svg', function() {
-  gulp.src(config.imagesPath + '/svg/**/*.svg').pipe(svgstore()).pipe(gulp.dest(config.assetsDir + '/images/svg')).pipe(gulp.dest(config.includesDir));
-  return gulp.src(config.imagesPath + '/svg/**/*.svg').pipe(gulp.dest(config.assetsDir + '/images/svg'));
+  gulp
+    .src(config.imagesPath + '/svg/**/*.svg')
+    .pipe(svgstore())
+    .pipe(gulp.dest(config.tempDir + '/images/svg'))
+    .pipe(gulp.dest(config.includesDir));
+  return gulp
+    .src(config.imagesPath + '/svg/**/*.svg')
+    .pipe(gulp.dest(config.tempDir + '/images/svg'));
 });
 
 gulp.task('css', function() {
@@ -75,48 +86,60 @@ gulp.task('css', function() {
     style: 'compressed',
     loadPath: [config.sassPath],
     compass: true
-  }).pipe(minifyCss()).pipe(gulp.dest(config.assetsDir + '/css')).pipe(gulp.dest(config.outputDir + '/assets/css')).pipe(browserSync.stream());
+  }).pipe(minifyCss())
+            .pipe(gulp.dest(config.tempDir + '/css'))
+            .pipe(gulp.dest(config.outputDir + '/assets/css'))
+            .pipe(browserSync.stream());
 });
 
 gulp.task('es-lint', function () {
-  return gulp.src([config.scriptsPath + '/**/*.js','!node_modules/**'])
+  return gulp
+    .src([config.scriptsPath + '/**/*.js','!node_modules/**'])
     .pipe(eslint())
     .pipe(eslint.format())
     .pipe(eslint.failAfterError());
 });
 
 gulp.task('js', ['es-lint'], function() {
-  return gulp.src(config.scriptsPath + '/entry.js').pipe(webpack({
-    output: {
-      filename: "bundle.js"
-    },
-    watch: false,
-    resolve: {
-      extensions: ['', '.js']
-    },
-    module: {
-      loaders: [
-        {
-          test: /\.js?$/,
-          loader: 'babel-loader',
-          exclude: /node_modules/,
-          query: {
-            presets: ['es2015']
-          }
-        }
-      ],
-      stats: {
-        colors: true
+  return gulp
+    .src(config.scriptsPath + '/entry.js')
+    .pipe(webpack({
+      output: {
+        filename: "bundle.js"
       },
-      devtool: 'source-map'
-    }
-  })).pipe(gulp.dest(config.assetsDir + '/scripts')).pipe(gulp.dest(config.outputDir + '/assets/scripts')).pipe(browserSync.stream());
+      watch: false,
+      resolve: {
+        extensions: ['', '.js']
+      },
+      module: {
+        loaders: [
+          {
+            test: /\.js?$/,
+            loader: 'babel-loader',
+            exclude: /node_modules/,
+            query: {
+              presets: ['es2015']
+            }
+          }
+        ],
+        stats: {
+          colors: true
+        },
+        devtool: 'source-map'
+      }
+    }))
+    .pipe(uglify())
+    .pipe(gulp.dest(config.tempDir + '/scripts'))
+    .pipe(gulp.dest(config.outputDir + '/assets/scripts'))
+    .pipe(browserSync.stream());
 });
 
 gulp.task('uglify', function() {
-  return gulp.src(config.outputDir + '/assets/scripts/**/*.js')
-    .pipe(uglify())
-    .pipe(gulp.dest(config.outputDir + '/assets/scripts'));
+  // return gulp
+  //   .src(config.outputDir + '/assets/scripts/**/*.js')
+  //   .pipe(uglify())
+  //   .pipe(gulp.dest(config.tempDir + '/assets/scripts'))
+  //   .pipe(gulp.dest(config.outputDir + '/assets/scripts'));
 });
 
 //

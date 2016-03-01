@@ -8,7 +8,7 @@
 .node-version
 node_modules/*
 bower_components/*
-assets/*
+assets
 .phantom-version
 *.log
 _site
