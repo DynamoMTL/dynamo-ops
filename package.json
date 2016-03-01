@@ -16,6 +16,7 @@
     "bower": "latest",
     "browser-sync": "^2.7.12",
     "eslint": "^2.2.0",
+    "flexboxgrid": "^6.3.0",
     "gulp": "^3.9.0",
     "gulp-babel": "^6.1.2",
     "gulp-bower": "0.0.10",
@@ -27,7 +28,6 @@
     "gulp-svgstore": "latest",
     "gulp-uglify": "^1.5.2",
     "npm": "^3.7.1",
-    "susy": "^2.2.12",
     "webpack-stream": "latest"
   }
 }

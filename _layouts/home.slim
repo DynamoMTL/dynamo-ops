@@ -7,9 +7,9 @@
       p.t-h2--serif Located in the Mile-Ex, Montreal (QC)
   .l-sec.s-home-cards
     .l-cont
-      ul.m-cards
+      ul.m-cards.l-row
         {% for category in ordered_cats %}
-          li.m-cards-el.m-tags-parent
+          li.m-cards-el.m-tags-parent.l-col--half
             .m-cards-el-inner
               h2.t-h2--sans.m-cards-el-name.t-capital
                 a.m-cta-combo href="{{ site.baseurl }}/categories/{{ category | first }}"

@@ -40,7 +40,10 @@
   z-index: $v-z--p6
 
 .m-header-el
-  @include vertical-align('middle')
+  @include flex-direction(column)
+  @include align-content(center)
+  > *
+    @include flex-basis(auto)
 
 // Logo
 .m-header-b
