@@ -11,18 +11,16 @@
   padding: 0
   margin: 0
   width: 100%
-  // @include display-flex(flex)
-  // @include flex-wrap(wrap)
 
 //
 // Card
 //
 .m-cards-el
-  // @include display-flex(flex)
+  @include display-flex(flex)
   width: 50%
   white-space: normal
   list-style: none
-  padding: $v-sp--m8
+  // padding: $v-sp--m8
   color: $v-white
   margin-bottom: 0
   .m-cards-el-inner
@@ -97,9 +95,10 @@
     display: inline-block
     margin: $v-sp--m6 0
     &::after
-      content: "/"
+      content: "•"
       display: inline-block
       margin: 0 $v-sp--m6
+      opacity: 0.15
     &:last-child
       &::after
         display: none
@@ -108,7 +107,7 @@
 .m-cards-el
   .m-tags-target
     position: absolute
-    bottom: $v-sp--m4
+    bottom: $v-sp
     left: $v-sp
     max-width: 66%
     margin-bottom: 0

@@ -56,11 +56,14 @@
 
 // Columns
 [class*="l-col--"]
-  @include display-flex(flex)
   @include justify-content(center)
   @include align-content(stretch)
 
-// .l-col--
+.l-col--vertical
+  @include flex-direction(column)
+
+.l-col--twelve
+  width: percentage(1/1)
 
 .l-col--three
   width: percentage(1/4)

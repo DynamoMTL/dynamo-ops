@@ -1,11 +1,11 @@
 header.m-header
   .m-header-menu.l-cont--full
     .l-row
-      .l-col--four.m-header-el.m-header-a.t-left
-        a.m-header-trigger href="{{ site.baseurl }}/" Welcome to DNA
-      .l-col--four.m-header-el.m-header-b
-        a href="{{ site.baseurl }}/"
+      .l-col--four.m-header-el.m-header-a.t-left.l-row
+        a.m-header-trigger(href="{{ site.baseurl }}/") Welcome to DNA
+      .l-col--four.m-header-el.m-header-b.l-row
+        a(href="{{ site.baseurl }}/")
           svg.i-svg-logo.i-svg--white
             use(xlink:href="#logo")
-      .l-col--four.m-header-el.m-header-c.t-right
-        a.m-header-search By Dynamo
+      .l-col--vertical.l-col--four.m-header-el.m-header-c.t-right.l-row
+        a.m-header-search(href="http://www.godynamo.com" target="_blank") By Dynamo
