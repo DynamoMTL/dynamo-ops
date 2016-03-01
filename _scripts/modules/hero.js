@@ -38,7 +38,7 @@ var Hero = {
       return ctx.$hero.addClass('m-hero--' + ctx.cats[catName].color);
     }
   },
-  init: function() {
+  init: ()=> {
     this.buildCats();
     this.colors();
   }
