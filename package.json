@@ -15,6 +15,7 @@
     "babel-preset-es2015": "latest",
     "bower": "latest",
     "browser-sync": "^2.7.12",
+    "eslint": "^2.2.0",
     "gulp": "^3.9.0",
     "gulp-babel": "^6.1.2",
     "gulp-bower": "0.0.10",
