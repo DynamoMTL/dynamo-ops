@@ -41,7 +41,6 @@ var Hero = {
   init: function() {
     this.buildCats();
     this.colors();
-    console.log('sup!');
   }
 };
 
