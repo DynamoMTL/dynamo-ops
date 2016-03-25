@@ -1,11 +1,12 @@
 ---
 layout: post
-date: ""
-tags: ""
-order: 0
-category: "at-the-office"
-published: false
+date: "2016-03-25"
+tags: contract hiring
+order: 11
+category: "hr-department"
+published: true
 ---
+
 
 ## The Hiring Process
 
@@ -102,4 +103,3 @@ For foreign workers, there is an Temporary Work Permits/Visas folder
 ### Misc Letters and Attestations
 
 For random letters/attestations (paternity leave, employment confirmation or mortgages/etc.), there is a Dynamo Letters folder in Drive.
-
