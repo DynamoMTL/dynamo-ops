@@ -8,12 +8,6 @@ prose:
         field:
           element: 'hidden'
           value: 'post'
-      - name: 'date'
-        field:
-          element: 'text'
-          label: 'Date'
-          help: 'Date that will show on the post'
-          placeholder: 'YYYY-MM-DD'
       - name: 'tags'
         field:
           element: 'text'
