@@ -1,11 +1,12 @@
 ---
 layout: post
-date: ""
-tags: ""
+date: "2016-04-04"
+tags: questions
 order: 0
 category: "at-the-office"
 published: false
 ---
+
 
 ## The Whybrary
 
@@ -16,4 +17,3 @@ Space to handle easily answered WHY questions. Such aaaazzzzz:
   - More Space! Old Mtl is cramped, smells like old water and my high hells get wrecked on the cobblestone. 
 - Why doesn't Braden just move to Montréal already? Gosh!
   - Nobody truly understands the answer to this question.
-
