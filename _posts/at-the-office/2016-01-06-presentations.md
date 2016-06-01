@@ -5,8 +5,6 @@ category: "at-the-office"
 published: true
 ---
 
-# Presentations
-
 Here stand non-exhaustive list of the presentations done within Dynamo.
 
 <!--more-->
