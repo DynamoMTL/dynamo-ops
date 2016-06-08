@@ -13,6 +13,7 @@ Here stand non-exhaustive list of the presentations done within Dynamo.
 
 * [**Dynamo**][3] by Alex Nemeroff
 * [**Have better meeting**][1] by Alix Graham-Tremblay on 01/06/2015
+* [**VIM Live Coding #1 (Beginner stuff)**][7] by CAB on 07/06/2015
 
 ## Team Share
 
@@ -38,3 +39,4 @@ attended.
 [4]: https://docs.google.com/presentation/d/1PlL0eW0X8GVp719kElZjmnQW802mqVjo_98NabtzcpE/edit#slide=id.p
 [5]: https://docs.google.com/presentation/d/1TfTCRqjbSs6pIT48v4xE37ss4RPHzdfOkmVbl1x42Wg/edit#slide=id.p4
 [6]: https://docs.google.com/presentation/d/1dnD43Q4ciw2HwhZL8_fSg6chij7ldkUk3ZbJ07sUwA0/edit#slide=id.p
+[7]: https://docs.google.com/presentation/d/17NPS80ZOOt_WunpdRN19wLcfKc4ttu1mKUC4FqbsYus/edit?usp=sharing
