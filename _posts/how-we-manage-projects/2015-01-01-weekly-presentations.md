@@ -2,7 +2,7 @@
 layout: post
 title: "Weekly Presentations"
 published: true
-tags: something carot cake
+tags: management
 category: how-we-manage-projects
 order: 6
 ---
