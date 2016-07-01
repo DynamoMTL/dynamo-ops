@@ -2,9 +2,11 @@
 layout: post
 title: "Daily Standups"
 published: true
-tags: something carot cake
+tags: standups scrum methodology
 category: how-we-manage-projects
 order: 4
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa quod aliquam magni, doloremque eum unde debitis voluptatem asperiores suscipit. Natus consequuntur a facilis minima, laboriosam, soluta magnam mollitia nam voluptatibus!
+Daily Standups are a 15 minutes gathering to share our current situation and bound with others. This is not a reporting moment.
+
+Usually, we start the session by a little shitshat for team bonding, then each participants tell what he's about to do today and ask for help if any blockers.
