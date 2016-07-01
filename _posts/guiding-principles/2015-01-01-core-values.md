@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Core Values
-description: "Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Cras justo odio, dapibus ac facilisis in, egestas eget quam."
+description: "Dynamo's 5 Core Values"
 published: true
 tags: values experts team care change
 category: "guiding-principles"
