@@ -2,9 +2,15 @@
 layout: post
 title: "Vision & Mission"
 published: true
-tags: ipsum dolor magnam
+tags: vision work
 category: guiding-principles
 order: 1
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa quod aliquam magni, doloremque eum unde debitis voluptatem asperiores suscipit. Natus consequuntur a facilis minima, laboriosam, soluta magnam mollitia nam voluptatibus!
+ We're a full-service digital design studio that's been serving up award-winning digital solutions since 1999. Our services include brand strategy, design, development, content strategy, analytics and consulting. In a nutshell, we build brands, sites and mobile apps that move boundaries.
+
+ Our clients include ADAY, Lola, Glossier, Flatiron, Shop Hers, The Reformation, DINR, OMsignal, Smart Things, Blue Bottle Coffee, and Airware.
+
+ We've worked with incredible startups backed by some of the best VCs: Google Ventures, Andreessen Horowitz, Real Ventures, First Round Capital, Thrive Capital, Index Ventures, Greylock Partners.
+
+ We actively seek work and partnerships that are a good fit, so don't hesitate to get in touch.
