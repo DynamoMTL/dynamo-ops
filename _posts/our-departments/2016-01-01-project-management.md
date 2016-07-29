@@ -1,8 +1,8 @@
 ---
 layout: post
 order: 0
-category: at-the-office
-published: false
+category: our-departments
+published: true
 ---
 ## Department: Project Management
 
