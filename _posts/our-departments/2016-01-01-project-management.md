@@ -3,6 +3,7 @@ layout: post
 order: 0
 category: our-departments
 published: true
+tags: 'management, agile, scrum'
 ---
 ## Department: Project Management
 
@@ -31,4 +32,4 @@ It’s easy to be the PM and say “we have to meet the budget because it’s wh
 If we want to make a bigger impact on the success of our projects, we have to understand what’s happening in our industry. We make it our goal to connect to our industry in ways that will allow us to learn and advance: read trade publications, follow blogs, twitter accounts, and more. 
 
 8. Be Adaptable
-Related to #6 and $7, we have to be acutely aware of our surroundings. If we have an eye on our industry and our organization, we’ll be able to sense when things are changing. We use that information to adapt practices as an individual, or on our projects. Project managers find the most success when they adapt to changes (and, yes, control them within reason), so when we see a change coming, we make it an opportunity to pivot toward success. 
+Related to #6 and $7, we have to be acutely aware of our surroundings. If we have an eye on our industry and our organization, we’ll be able to sense when things are changing. We use that information to adapt practices as an individual, or on our projects. Project managers find the most success when they adapt to changes (and, yes, control them within reason), so when we see a change coming, we make it an opportunity to pivot toward success.
