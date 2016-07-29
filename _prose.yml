@@ -39,4 +39,6 @@ prose:
               value: 'onboarding'
             - name: 'What We Do'
               value: 'what-we-do'
+            - name: 'Our Departments'
+              value: 'our-departments'
 
