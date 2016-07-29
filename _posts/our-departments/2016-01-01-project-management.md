@@ -7,11 +7,11 @@ tags: 'management, agile, scrum'
 ---
 ## Department: Project Management
 
-Artisan PBR&B whatever letterpress bushwick selfies. Wolf put a bird on it mustache williamsburg marfa photo booth thundercats, squid PBR&B vice farm-to-table. Church-key trust fund gentrify marfa. Mlkshk vinyl butcher sriracha man bun chartreuse. Hella post-ironic 3 wolf moon, green juice.
+Managing a digital project isn't just about 1's and 0's or T's and I's - it's about providing strategic leadership on all fronts, and delivering the best possible product for all stakeholders.
 
 <!--more-->
 
-Here's what our PMs do,a dn do well!
+Here's what our PMs do, and do well!
 
 1. Finish Projects on Time
 Every PM wants to be on time. Of course we can’t control every factor that will make our projects late, but if we make it a goal to get ahead of those delays, we wrap up projects on time.
