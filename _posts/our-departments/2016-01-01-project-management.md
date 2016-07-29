@@ -7,6 +7,10 @@ tags: 'management, agile, scrum'
 ---
 ## Department: Project Management
 
+Artisan PBR&B whatever letterpress bushwick selfies. Wolf put a bird on it mustache williamsburg marfa photo booth thundercats, squid PBR&B vice farm-to-table. Church-key trust fund gentrify marfa. Mlkshk vinyl butcher sriracha man bun chartreuse. Hella post-ironic 3 wolf moon, green juice.
+
+<!--more-->
+
 Here's what our PMs do,a dn do well!
 
 1. Finish Projects on Time
