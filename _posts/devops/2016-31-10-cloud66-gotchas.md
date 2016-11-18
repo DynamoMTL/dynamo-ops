@@ -1,7 +1,7 @@
 ---
 layout: post
 published: true
-category: cloud66-gotchas
+category: devops
 intro: false
 order: 0
 ---
