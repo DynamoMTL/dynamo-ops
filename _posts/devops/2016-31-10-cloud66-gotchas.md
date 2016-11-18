@@ -2,7 +2,7 @@
 layout: post
 published: true
 category: cloud66-gotchas
-intro: true
+intro: false
 order: 0
 ---
 
