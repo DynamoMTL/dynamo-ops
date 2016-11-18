@@ -1,16 +1,11 @@
 ---
 layout: post
-title: "Vision & Mission"
+title: Mission
 published: true
 tags: vision work
 category: guiding-principles
 order: 1
+intro: false
 ---
-
- We're a full-service digital design studio that's been serving up award-winning digital solutions since 1999. Our services include brand strategy, design, development, content strategy, analytics and consulting. In a nutshell, we build brands, sites and mobile apps that move boundaries.
-
- Our clients include ADAY, Lola, Glossier, Flatiron, Shop Hers, The Reformation, DINR, OMsignal, Smart Things, Blue Bottle Coffee, and Airware.
-
- We've worked with incredible startups backed by some of the best VCs: Google Ventures, Andreessen Horowitz, Real Ventures, First Round Capital, Thrive Capital, Index Ventures, Greylock Partners.
-
- We actively seek work and partnerships that are a good fit, so don't hesitate to get in touch.
+## Dynamo's Mission. a.k.a Why We're Here
+### Build a better place to work on challenging problems through good design.
