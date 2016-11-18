@@ -19,7 +19,7 @@ build:
     after-steps:
         - slack-notifier:
             url: https://hooks.slack.com/services/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
-            channel: operations
+            channel: dna
             username: wercker-bot
 
 deploy :
