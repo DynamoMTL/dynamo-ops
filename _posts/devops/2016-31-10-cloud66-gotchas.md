@@ -3,6 +3,7 @@ layout: post
 published: true
 category: cloud66-gotchas
 intro: true
+order: 0
 ---
 
 
@@ -13,5 +14,5 @@ flag in order for NGINX to propagate those changes.
 
 `cx settings set -s my_stack reconfigure.nginx true`
 
-If this is not done, we have to manually go to cloud66 and force the restart of
+If this is not done, we have to manually go to Cloud66 and force the restart of
 NGINX.
