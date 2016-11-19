@@ -16,9 +16,9 @@
     "bower": "latest",
     "browser-sync": "^2.7.12",
     "eslint": "^2.2.0",
+    "graceful-fs": "^4.1.10",
     "gulp": "^3.9.0",
     "gulp-babel": "^6.1.2",
-    "gulp-bower": "0.0.10",
     "gulp-compass": "^2.1.0",
     "gulp-eslint": "^1.1.1",
     "gulp-minify-css": "^1.2.0",
@@ -27,7 +27,14 @@
     "gulp-svgstore": "latest",
     "gulp-uglify": "^1.5.2",
     "npm": "^3.7.1",
+    "sass-toolkit": "^2.10.0",
     "susy": "^2.2.12",
     "webpack-stream": "latest"
+  },
+  "dependencies": {
+    "jquery": "^3.1.1",
+    "lodash": "^4.17.2",
+    "normalize.css": "^5.0.0",
+    "reading-time": "^1.1.0"
   }
 }

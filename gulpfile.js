@@ -13,7 +13,6 @@ var gulp = require('gulp'),
     minifyCss = require('gulp-minify-css'),
     notify = require('gulp-notify'),
     sass = require('gulp-ruby-sass'),
-    bower = require('gulp-bower'),
     svgstore = require('gulp-svgstore'),
     browserSync = require('browser-sync'),
     webpack = require('webpack-stream'),
@@ -29,7 +28,6 @@ var config = {
   imagesPath: './_images',
   scriptsPath: './_scripts',
   includesDir: './_includes',
-  bowerDir: './bower_components',
   tempDir: './assets',
   outputDir: './_site',
   prodDir: './_production'
@@ -42,10 +40,6 @@ var messages = {
 //
 // Subtasks
 //
-gulp.task('bower', function() {
-  return bower()
-    .pipe(gulp.dest(config.bowerDir));
-});
 
 gulp.task('jekyll-build', function(done) {
   browserSync.notify(messages.jekyllBuild);
@@ -145,7 +139,7 @@ gulp.task('uglify', function() {
 //
 // Main tasks
 //
-gulp.task('build', ['bower', 'fonts', 'svg', 'css', 'js', 'uglify', 'robots', 'jekyll-build']);
+gulp.task('build', ['fonts', 'svg', 'css', 'js', 'uglify', 'robots', 'jekyll-build']);
 
 gulp.task('jekyll-prod', ['build'], function(done) {
   return cp.spawn('bundle', ['exec', 'jekyll', 'build', '--destination=' + config.prodDir], {

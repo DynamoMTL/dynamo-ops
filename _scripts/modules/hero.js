@@ -3,6 +3,9 @@
 // Hero
 //
 //
+import $ from 'jquery'
+import { each } from 'lodash'
+
 var Hero = {
 
   //
@@ -16,35 +19,35 @@ var Hero = {
   // Build Cats index
   //
   buildCats: function() {
-    var ctx = this;
-    _.each(window.cats, function(cat, key) {
+    var ctx = this
+    each(window.cats, function(cat, key) {
       var factor = 5,
           div = Math.floor(key / factor),
           pos = key - (div * factor)
       ctx.cats[cat[0]] = {
         color: ctx.theme[pos]
-      };
-    });
+      }
+    })
   },
 
   //
   // Colors
   //
   colors: function() {
-    var catName, ctx;
+    var catName, ctx
     if (this.$hero.length > 0) {
-      ctx = this;
-      catName = ctx.$hero.data('cat-name');
-      return ctx.$hero.addClass('m-hero--' + ctx.cats[catName].color);
+      ctx = this
+      catName = ctx.$hero.data('cat-name')
+      return ctx.$hero.addClass('m-hero--' + ctx.cats[catName].color)
     }
   },
   init: function() {
-    this.buildCats();
-    this.colors();
+    this.buildCats()
+    this.colors()
   }
 };
 
 //
 // Export
 //
-export default Hero;
+export default Hero
