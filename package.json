@@ -36,5 +36,8 @@
     "lodash": "^4.17.2",
     "normalize.css": "^5.0.0",
     "reading-time": "^1.1.0"
+  },
+  "engines" : {
+    "node" : ">=6.9.1"
   }
 }

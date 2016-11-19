@@ -7,7 +7,6 @@
 .ruby-version
 .node-version
 node_modules/*
-bower_components/*
 assets
 .phantom-version
 *.log
