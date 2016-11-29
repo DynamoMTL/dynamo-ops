@@ -6,9 +6,6 @@ build:
         - npm-install
         - npm-test
         - script:
-          name: bower install
-          code: node node_modules/bower/bin/bower install --allow-root
-        - script:
           name: generate production site
           code: |-
             node node_modules/gulp/bin/gulp jekyll-prod
@@ -19,7 +16,7 @@ build:
     after-steps:
         - slack-notifier:
             url: https://hooks.slack.com/services/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
-            channel: operations
+            channel: dna
             username: wercker-bot
 
 deploy :

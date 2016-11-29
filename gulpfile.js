@@ -7,79 +7,84 @@
 //
 // Requires
 //
-var gulp = require('gulp'),
-    babel = require("gulp-babel"),
-    cp = require('child_process'),
-    minifyCss = require('gulp-minify-css'),
-    notify = require('gulp-notify'),
-    sass = require('gulp-ruby-sass'),
-    bower = require('gulp-bower'),
-    svgstore = require('gulp-svgstore'),
-    browserSync = require('browser-sync'),
-    webpack = require('webpack-stream'),
-    eslint = require('gulp-eslint'),
-    uglify = require('gulp-uglify');
+const gulp = require('gulp'),
+      babel = require("gulp-babel"),
+      cp = require('child_process'),
+      minifyCss = require('gulp-minify-css'),
+      notify = require('gulp-notify'),
+      sass = require('gulp-ruby-sass'),
+      svgstore = require('gulp-svgstore'),
+      browserSync = require('browser-sync'),
+      webpack = require('webpack-stream'),
+      eslint = require('gulp-eslint'),
+      uglify = require('gulp-uglify'),
+      dotenv = require('dotenv'),
+      environments = require('gulp-environments')
+
+dotenv.config()
 
 //
 // Config
 //
-var config = {
+const config = {
   sassPath: './_sass',
   fontsPath: './_fonts',
   imagesPath: './_images',
   scriptsPath: './_scripts',
   includesDir: './_includes',
-  bowerDir: './bower_components',
   tempDir: './assets',
   outputDir: './_site',
   prodDir: './_production'
-};
+}
 
-var messages = {
+const env = {
+  prod: environments.production,
+  dev: environments.development,
+}
+
+environments.current((process.env.JEKYLL_ENV === 'production') ? env.prod : env.dev)
+
+const messages = {
   jekyllBuild: '<span style="color: grey">Running:</span> $ jekyll build'
-};
+}
 
 //
 // Subtasks
 //
-gulp.task('bower', function() {
-  return bower()
-    .pipe(gulp.dest(config.bowerDir));
-});
 
 gulp.task('jekyll-build', function(done) {
-  browserSync.notify(messages.jekyllBuild);
+  browserSync.notify(messages.jekyllBuild)
   return cp.spawn('jekyll', ['build'], {
     stdio: 'inherit'
-  }).on('close', done);
-});
+  }).on('close', done)
+})
 
 gulp.task('jekyll-rebuild', ['build'], function() {
-  return browserSync.reload();
-});
+  return browserSync.reload()
+})
 
 gulp.task('fonts', function() {
   return gulp
     .src(config.fontsPath + '/**.*')
-    .pipe(gulp.dest(config.tempDir + '/fonts'));
-});
+    .pipe(gulp.dest(config.tempDir + '/fonts'))
+})
 
 gulp.task('robots', function() {
   return gulp
     .src('./robots.txt')
-    .pipe(gulp.dest(config.outputDir));
-});
+    .pipe(gulp.dest(config.outputDir))
+})
 
 gulp.task('svg', function() {
   gulp
     .src(config.imagesPath + '/svg/**/*.svg')
     .pipe(svgstore())
     .pipe(gulp.dest(config.tempDir + '/images/svg'))
-    .pipe(gulp.dest(config.includesDir));
+    .pipe(gulp.dest(config.includesDir))
   return gulp
     .src(config.imagesPath + '/svg/**/*.svg')
-    .pipe(gulp.dest(config.tempDir + '/images/svg'));
-});
+    .pipe(gulp.dest(config.tempDir + '/images/svg'))
+})
 
 gulp.task('css', function() {
   return sass(config.sassPath + '/app.sass', {
@@ -89,16 +94,16 @@ gulp.task('css', function() {
   }).pipe(minifyCss())
             .pipe(gulp.dest(config.tempDir + '/css'))
             .pipe(gulp.dest(config.outputDir + '/assets/css'))
-            .pipe(browserSync.stream());
-});
+            .pipe(browserSync.stream())
+})
 
 gulp.task('es-lint', function () {
   return gulp
     .src([config.scriptsPath + '/**/*.js','!node_modules/**'])
     .pipe(eslint())
     .pipe(eslint.format())
-    .pipe(eslint.failAfterError());
-});
+    .pipe(eslint.failAfterError())
+})
 
 gulp.task('js', ['es-lint'], function() {
   return gulp
@@ -118,7 +123,7 @@ gulp.task('js', ['es-lint'], function() {
             loader: 'babel-loader',
             exclude: /node_modules/,
             query: {
-              presets: ['es2015']
+              presets: ['latest']
             }
           }
         ],
@@ -128,41 +133,33 @@ gulp.task('js', ['es-lint'], function() {
         devtool: 'source-map'
       }
     }))
-    .pipe(uglify())
+    .pipe(env.prod(uglify()))
     .pipe(gulp.dest(config.tempDir + '/scripts'))
     .pipe(gulp.dest(config.outputDir + '/assets/scripts'))
-    .pipe(browserSync.stream());
-});
-
-gulp.task('uglify', function() {
-  // return gulp
-  //   .src(config.outputDir + '/assets/scripts/**/*.js')
-  //   .pipe(uglify())
-  //   .pipe(gulp.dest(config.tempDir + '/assets/scripts'))
-  //   .pipe(gulp.dest(config.outputDir + '/assets/scripts'));
-});
+    .pipe(browserSync.stream())
+})
 
 //
 // Main tasks
 //
-gulp.task('build', ['bower', 'fonts', 'svg', 'css', 'js', 'uglify', 'robots', 'jekyll-build']);
+gulp.task('build', ['fonts', 'svg', 'css', 'js', 'robots', 'jekyll-build'])
 
 gulp.task('jekyll-prod', ['build'], function(done) {
   return cp.spawn('bundle', ['exec', 'jekyll', 'build', '--destination=' + config.prodDir], {
     stdio: 'inherit'
-  }).on('close', done);
-});
+  }).on('close', done)
+})
 
 gulp.task('serve', ['build'], function() {
   browserSync.init({
     server: {
       baseDir: './_site'
     }
-  });
-  gulp.watch(['_sass/**/*.scss', '_sass/**/*.sass'], ['css']);
-  gulp.watch(['_scripts/**/*.js'], ['js']);
-  gulp.watch(['_images/svg/**/*.svg'], ['jekyll-rebuild']);
-  gulp.watch(['index.slim', '_layouts/*', '_includes/*', '_posts/**/*'], ['jekyll-rebuild']);
-});
+  })
+  gulp.watch(['_sass/**/*.scss', '_sass/**/*.sass'], ['css'])
+  gulp.watch(['_scripts/**/*.js'], ['js'])
+  gulp.watch(['_images/svg/**/*.svg'], ['jekyll-rebuild'])
+  gulp.watch(['index.slim', '_layouts/*', '_includes/*', '_posts/**/*'], ['jekyll-rebuild'])
+})
 
-gulp.task('default', ['serve']);
+gulp.task('default', ['serve'])

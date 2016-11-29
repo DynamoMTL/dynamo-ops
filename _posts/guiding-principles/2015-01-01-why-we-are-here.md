@@ -1,10 +1,11 @@
 ---
 layout: post
-title: "Why We Are Here"
+title: Why We Are Here
 published: true
 tags: ipsum dolor magnam
 category: guiding-principles
 order: 1
+intro: false
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa quod aliquam magni, doloremque eum unde debitis voluptatem asperiores suscipit. Natus consequuntur a facilis minima, laboriosam, soluta magnam mollitia nam voluptatibus!
+To point people to the Mission page
