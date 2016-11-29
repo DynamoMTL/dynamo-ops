@@ -3,7 +3,10 @@
 // Post
 //
 //
-var Post = {
+import $ from 'jquery'
+import readingTime from 'reading-time'
+
+const Post = {
 
   //
   // Globals
@@ -14,28 +17,20 @@ var Post = {
   // Get reading time
   //
   reading: function() {
-    var ctx;
-    ctx = this;
-    if (this.$article.length > 0) {
-      ctx.$article.readingTime({
-        readingTimeTarget: ctx.$article.find('.m-article-reading'),
-        wordsPerMinute: 250,
-        round: true,
-        lang: 'en',
-        success: null,
-        error: null
-      });
-      return setTimeout(function() {
-        return $('.m-hero-reading span').text(ctx.$article.find('.m-article-reading').text());
-      }, 0);
-    }
+    if (this.$article.length < 1) return
+    let time = readingTime(this.$article.html())
+                .text
+                .split('read')
+    return setTimeout(function() {
+      $('.m-hero-reading span').text(time[0])
+    }, 0)
   },
   init: function() {
-    return this.reading();
+    return this.reading()
   }
-};
+}
 
 //
 // Export
 //
-export default Post;
+export default Post
