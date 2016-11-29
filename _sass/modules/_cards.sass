@@ -11,21 +11,16 @@
   padding: 0
   margin: 0
   width: 100%
-  @include display-flex(inline-flex)
-  @include flex-wrap(wrap)
-  @include align-items(stretch)
 
 //
 // Card
 //
 .m-cards-el
+  @include display-flex(flex)
   width: 50%
   white-space: normal
-  @include justify-content(center)
-  @include align-content(stretch)
-  @include display-flex(flex)
   list-style: none
-  padding: $v-sp--m8
+  // padding: $v-sp--m8
   color: $v-white
   margin-bottom: 0
   .m-cards-el-inner
@@ -96,13 +91,22 @@
 .m-cards-el-links
   padding: 0
   list-style: none
+  background-color: inherit
   li
     display: inline-block
     margin: $v-sp--m6 0
+    background-color: inherit
     &::after
-      content: "/"
+      content: ""
       display: inline-block
       margin: 0 $v-sp--m6
+      border-radius: 100%
+      background-color: inherit
+      filter: brightness(90%)
+      width: 0.5rem
+      height: 0.5rem
+      position: relative
+      top: -2px
     &:last-child
       &::after
         display: none
@@ -111,7 +115,7 @@
 .m-cards-el
   .m-tags-target
     position: absolute
-    bottom: $v-sp--m4
+    bottom: $v-sp
     left: $v-sp
     max-width: 66%
     margin-bottom: 0

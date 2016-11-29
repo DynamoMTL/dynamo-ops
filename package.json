@@ -19,6 +19,7 @@
     "browser-sync": "^2.7.12",
     "dotenv": "^2.0.0",
     "eslint": "^2.2.0",
+    "flexboxgrid": "^6.3.0",
     "graceful-fs": "^4.1.10",
     "gulp": "^3.9.0",
     "gulp-babel": "^6.1.2",
@@ -32,7 +33,6 @@
     "gulp-uglify": "^1.5.2",
     "npm": "^3.7.1",
     "sass-toolkit": "^2.10.0",
-    "susy": "^2.2.12",
     "webpack-stream": "latest"
   },
   "dependencies": {

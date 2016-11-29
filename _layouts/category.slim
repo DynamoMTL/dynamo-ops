@@ -3,24 +3,25 @@
 .l-wrap
   .l-sec.m-hero data-cat-name="{{ page.category }}"
     .l-cont.m-tags-parent
-      .l-col--oneHalf.m-hero-a
-        h1.t-h1--sans.t-capital
-          | {{ page.category | replace: '-', ' ' }}
-        {% for post in ordered_posts %}
-          {% if (post.intro) %}
-            p.m-hero-intro
-              | {{ post.content | strip_html }}
-          {% endif %}
-        {% endfor %}
-        ul.m-tags-target
-      .l-col--oneHalf.m-hero-b
-        ol.m-hero-links
+      .l-row
+        .l-col--six.m-hero-a
+          h1.t-h1--sans.t-capital
+            | {{ page.category | replace: '-', ' ' }}
           {% for post in ordered_posts %}
-            {% if (post.intro == blank or post.intro == false) %}
-              li.t-h2--serif
-                a href="{{ site.baseurl }}{{ post.url }}" data-tags="{{ post.tags | join: ',' }}" {{ post.title }}
+            {% if (post.intro) %}
+              p.m-hero-intro
+                | {{ post.content | strip_html }}
             {% endif %}
           {% endfor %}
+          ul.m-tags-target
+        .l-col--six.m-hero-b
+          ol.m-hero-links
+            {% for post in ordered_posts %}
+              {% if (post.intro == blank or post.intro == false) %}
+                li.t-h2--serif
+                  a href="{{ site.baseurl }}{{ post.url }}" data-tags="{{ post.tags | join: ',' }}" {{ post.title }}
+              {% endif %}
+            {% endfor %}
 
   ul.s-cat-articles
     {% for post in ordered_posts %}

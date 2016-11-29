@@ -20,8 +20,10 @@
 //
 // Grid
 //
+
+// Container
 .l-cont
-  @include container()
+  // @include display-flex(flex)
   max-width: 1200px
   margin: 0 auto
   padding: $v-sp
@@ -46,21 +48,37 @@
   @extend .l-cont
   max-width: 800px
 
+// Row
+.l-row
+  @include display-flex(flex)
+  @include flex-wrap(wrap)
+  width: 100%
+
 // Columns
-.l-col--oneHalf
-  @include span(6 of 12)
+[class*="l-col--"]
+  @include justify-content(center)
+  @include align-content(stretch)
 
-.l-col--oneThird
-  @include span(4 of 12)
+.l-col--vertical
+  @include flex-direction(column)
 
-.l-col--twoThird
-  @include span(8 of 12)
+.l-col--twelve
+  width: percentage(1/1)
 
-.l-col--oneQuarter
-  @include span(3 of 12)
+.l-col--three
+  width: percentage(1/4)
 
-.l-col--threeQuarter
-  @include span(9 of 12)
+.l-col--four
+  width: percentage(1/3)
+
+.l-col--six
+  width: percentage(1/2)
+
+.l-col--eight
+  width: percentage(2/3)
+
+.l-col--nine
+  width: percentage(3/4)
 
 .l-col--inlineMiddle
   @include vertical-align('middle')
