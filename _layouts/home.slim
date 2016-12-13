@@ -18,7 +18,7 @@
                     use(xlink:href="#arrow")
               .m-cards-el-number
                 a href="{{ site.baseurl }}/categories/{{ category | first}}"
-                  | {{ category | last | size }} articles
+                  | {{ (category | last | size) }} articles
               ul.m-cards-el-links
                 {% assign ordered_posts = category.last | sort:'order' %}
                 {% for post in ordered_posts %}
@@ -27,6 +27,5 @@
                       a href="{{ site.baseurl }}{{ post.url }}" data-tags="{{ post.tags | join: ',' }}" {{ post.title }}
                   {% endif %}
                 {% endfor %}
-              ul.m-tags-target
         {% endfor %}
 % include footer.slim

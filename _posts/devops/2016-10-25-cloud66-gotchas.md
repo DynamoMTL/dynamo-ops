@@ -2,7 +2,6 @@
 layout: post
 published: true
 category: devops
-intro: false
 order: 0
 ---
 

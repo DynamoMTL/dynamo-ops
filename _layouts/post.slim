@@ -7,10 +7,6 @@
           | {{ page.date | date_to_string }}
         h1.t-h1--sans.t-capital
           | {{ page.title }}
-        ul.m-tags-target
-          {% for tag in page.tags %}
-            li {{ tag }}
-          {% endfor %}
         .m-hero-reading
           | Reading time:&nbsp;
           span.t-bold

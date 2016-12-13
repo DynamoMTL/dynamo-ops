@@ -1,5 +1,5 @@
 % include head.slim
-{% assign ordered_posts = site.categories[page.category] | sort:'order' %}
+% assign ordered_posts = site.categories[page.category] | sort:'order' %
 .l-wrap
   .l-sec.m-hero data-cat-name="{{ page.category }}"
     .l-cont.m-tags-parent
@@ -34,10 +34,6 @@
               h2.t-h2--sans.t-capital
                 a href="{{ site.baseurl }}{{ post.url }}"
                   | {{ post.title }}
-              ul.m-tags-target
-                {% for tag in post.tags %}
-                  li {{ tag }}
-                {% endfor %}
             .l-col--twoThird.s-cat-articles-b
               p.t-bold.t-p--m2
                 | Article {{ forloop.index | minus: 1 }} of {{ forloop.length | minus: 1 }}
