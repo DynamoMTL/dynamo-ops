@@ -19,9 +19,7 @@ const gulp = require('gulp'),
       eslint = require('gulp-eslint'),
       uglify = require('gulp-uglify'),
       dotenv = require('dotenv'),
-      environments = require('gulp-environments'),
-      fs = require('fs'),
-      jsonToYaml = require('gulp-json-to-yaml')
+      environments = require('gulp-environments')
 
 dotenv.config()
 
@@ -49,41 +47,6 @@ environments.current((process.env.JEKYLL_ENV === 'production') ? env.prod : env.
 const messages = {
   jekyllBuild: '<span style="color: grey">Running:</span> $ jekyll build'
 }
-
-const getBuckets = () => {
-  let foo = fs.readdirSync('./_buckets')
-    .map((file) => {
-      return {
-        name: file.split('.md')[0],
-        value: file.split('.md')[0]
-      }
-    })
-  console.log("foo", foo)
-  let mock = {
-    prose: {
-      metadata: {
-        _posts: [
-          {
-            name: 'category',
-            field: {
-              element: 'select',
-              label: 'Category',
-              options: []
-            }
-          }
-        ]
-      }
-    }
-  }
-  mock.prose.metadata._posts[0].field.options = foo
-  fs.writeFileSync('./foo.json', JSON.stringify(mock, null, 2) , 'utf-8')
-}
-
-gulp.task('prose-config', () => {
-  gulp.src(getBuckets())
-    .pipe(jsonToYaml())
-    .pipe(gulp.dest('./'))
-});
 
 //
 // Subtasks
@@ -196,7 +159,7 @@ gulp.task('serve', ['build'], function() {
   gulp.watch(['_sass/**/*.scss', '_sass/**/*.sass'], ['css'])
   gulp.watch(['_scripts/**/*.js'], ['js'])
   gulp.watch(['_images/svg/**/*.svg'], ['jekyll-rebuild'])
-  gulp.watch(['index.slim', '_layouts/*', '_includes/*', '_posts/**/*'], ['jekyll-rebuild'])
+  gulp.watch(['index.slim', '_layouts/*', '_includes/*', '_posts/**/*', '_buckets/**/*'], ['jekyll-rebuild'])
 })
 
 gulp.task('default', ['serve'])

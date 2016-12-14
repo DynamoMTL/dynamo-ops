@@ -2,7 +2,7 @@
 layout: post
 date: "2016-03-25"
 order: 11
-category: "hr-department"
+category: human-resources
 published: true
 ---
 

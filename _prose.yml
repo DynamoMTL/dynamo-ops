@@ -1,6 +1,6 @@
 ---
 prose:
-  rooturl: '_posts'
+  rooturl: './_posts'
   media: 'uploads'
   metadata:
     _posts:
@@ -8,45 +8,11 @@ prose:
         field:
           element: 'hidden'
           value: 'post'
-      - name: 'intro'
-        field:
-          element: 'checkbox'
-          label: 'This is the intro of a category page'
-          value: false
       - name: 'order'
         field:
           element: 'number'
           label: 'Order'
       - name: 'category'
         field:
-          element: 'select'
-          label: 'Category'
-          options:
-            - name: 'At The Office'
-              value: 'at-the-office'
-            - name: 'Client Onboarding'
-              value: 'client-onboarding'
-            - name: 'Culture'
-              value: 'culture'
-            - name: 'DevOps'
-              value: 'devops'
-            - name: 'Editorial Guide'
-              value: 'editorial-guide'
-            - name: 'Employee Onboarding'
-              value: 'employee-onboarding'
-            - name: 'Guiding Principles'
-              value: 'guiding-principles'
-            - name: 'How We Manage Projects'
-              value: 'how-we-manage-projects'
-            - name: 'Human Resources'
-              value: 'human-resources'
-            - name: 'Our Departments'
-              value: 'our-departments'
-            - name: 'Templates'
-              value: 'templates'
-            - name: 'Ventures'
-              value: 'ventures'
-            - name: 'What We Believe'
-              value: 'what-we-believe'
-            - name: 'What We Do'
-              value: 'what-we-do'
+          element: "text"
+          label: 'Category slug'

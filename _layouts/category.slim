@@ -1,7 +1,7 @@
 % include head.slim
 {% assign ordered_posts = site.categories[page.category] | sort:'order' %}
 
-{% for bucket in site.buckets %}
+{% for bucket in site.data.buckets %}
   {% if bucket.slug == page.category %}
     .l-wrap
       .l-sec.m-hero class="m-hero--{{ bucket.color }}"
@@ -11,7 +11,7 @@
               h1.t-h1--sans.t-capital
                 | {{ bucket.title }}
               p.m-hero-intro
-                | {{ bucket.content }}
+                | {{ bucket.intro }}
             .l-col--six.m-hero-b
               ol.m-hero-links
                 {% for post in ordered_posts %}

@@ -12,14 +12,11 @@ slim:
 
 # Links
 baseurl: ""
-permalink: /category/:categories/:title/
-
-# Collections
-collections:
-- buckets
+permalink: /categories/:categories/:title/
 
 # Build settings
 markdown: kramdown
+highlighter: true
 
 # Gulp & Bower
 exclude: [

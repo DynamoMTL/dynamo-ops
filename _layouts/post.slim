@@ -1,6 +1,6 @@
 % include head.slim
 
-{% for bucket in site.buckets %}
+{% for bucket in site.data.buckets %}
   {% if bucket.slug == page.category %}
     .l-wrap
       .l-sec.m-hero class="m-hero--{{ bucket.color }}"

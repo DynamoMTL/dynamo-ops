@@ -1,0 +1,71 @@
+---
+- title:  'At The Office'
+  slug:   'at-the-office'
+  color:  'yellow'
+  intro:  'Donec sed odio dui. Cras mattis consectetur purus sit amet fermentum.'
+
+- title:  'Client Onboarding'
+  slug:   'client-onboarding'
+  color:  'yellow'
+  intro:  'Donec sed odio dui. Cras mattis consectetur purus sit amet fermentum.'
+
+- title:  'Culture'
+  slug:   'culture'
+  color:  'yellow'
+  intro:  'Donec sed odio dui. Cras mattis consectetur purus sit amet fermentum.'
+
+- title:  'DevOps'
+  slug:   'devops'
+  color:  'yellow'
+  intro:  'Donec sed odio dui. Cras mattis consectetur purus sit amet fermentum.'
+
+- title:  'Editorial Guide'
+  slug:   'editorial-guide'
+  color:  'yellow'
+  intro:  'Donec sed odio dui. Cras mattis consectetur purus sit amet fermentum.'
+
+- title:  'Employee Onboarding'
+  slug:   'employee-onboarding'
+  color:  'yellow'
+  intro:  'Donec sed odio dui. Cras mattis consectetur purus sit amet fermentum.'
+
+- title:  'Guiding Principles'
+  slug:   'guiding-principles'
+  color:  'yellow'
+  intro:  'Donec sed odio dui. Cras mattis consectetur purus sit amet fermentum.'
+
+- title:  'How We Manage Projects'
+  slug:   'how-we-manage-projects'
+  color:  'yellow'
+  intro:  'Donec sed odio dui. Cras mattis consectetur purus sit amet fermentum.'
+
+- title:  'Human Resources'
+  slug:   'human-resources'
+  color:  'yellow'
+  intro:  'Donec sed odio dui. Cras mattis consectetur purus sit amet fermentum.'
+
+- title:  'Our Departments'
+  slug:   'our-departments'
+  color:  'yellow'
+  intro:  'Donec sed odio dui. Cras mattis consectetur purus sit amet fermentum.'
+
+- title:  'Templates'
+  slug:   'templates'
+  color:  'yellow'
+  intro:  'Donec sed odio dui. Cras mattis consectetur purus sit amet fermentum.'
+
+- title:  'Ventures'
+  slug:   'ventures'
+  color:  'yellow'
+  intro:  'Donec sed odio dui. Cras mattis consectetur purus sit amet fermentum.'
+
+- title:  'What We Believe'
+  slug:   'what-we-believe'
+  color:  'yellow'
+  intro:  'Donec sed odio dui. Cras mattis consectetur purus sit amet fermentum.'
+
+- title:  'What We Do'
+  slug:   'what-we-do'
+  color:  'yellow'
+  intro:  'Donec sed odio dui. Cras mattis consectetur purus sit amet fermentum.'
+
