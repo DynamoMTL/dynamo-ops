@@ -5,7 +5,7 @@
 //
 import $ from 'jquery'
 
-var Page = {
+export default {
 
   //
   // Globals
@@ -16,20 +16,13 @@ var Page = {
   // Generate the tags from strings
   //
   $doc: $(document),
-  transition: function() {
-    var ctx
-    ctx = this
-    return setTimeout(function() {
+  transition () {
+    let ctx = this
+    setTimeout(function() {
       return ctx.$body.addClass('is-loaded')
     }, 500)
   },
-  init: function() {
-    console.log('Page.init()')
+  init () {
     return this.transition()
   }
 }
-
-//
-// Export
-//
-export default Page

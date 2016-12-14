@@ -1,9 +1,9 @@
 ---
 layout: post
+title: Cloud66 Gotchas
 published: true
 category: devops
-intro: false
-order: 0
+order: 1
 ---
 
 

@@ -16,16 +16,16 @@ const Post = {
   //
   // Get reading time
   //
-  reading: function() {
+  reading () {
     if (this.$article.length < 1) return
     let time = readingTime(this.$article.html())
                 .text
                 .split('read')
-    return setTimeout(function() {
+    setTimeout(function() {
       $('.m-hero-reading span').text(time[0])
     }, 0)
   },
-  init: function() {
+  init () {
     return this.reading()
   }
 }

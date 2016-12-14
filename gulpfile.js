@@ -159,7 +159,7 @@ gulp.task('serve', ['build'], function() {
   gulp.watch(['_sass/**/*.scss', '_sass/**/*.sass'], ['css'])
   gulp.watch(['_scripts/**/*.js'], ['js'])
   gulp.watch(['_images/svg/**/*.svg'], ['jekyll-rebuild'])
-  gulp.watch(['index.slim', '_layouts/*', '_includes/*', '_posts/**/*'], ['jekyll-rebuild'])
+  gulp.watch(['index.slim', '_layouts/*', '_includes/*', '_posts/**/*', '_buckets/**/*'], ['jekyll-rebuild'])
 })
 
 gulp.task('default', ['serve'])

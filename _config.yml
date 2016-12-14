@@ -5,25 +5,18 @@ description: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque mo
 
 # Posts
 excerpt_separator: "<!--more-->"
-# defaults:
-#   -
-#     scope:
-#       path: ""
-#       type: "posts"
-#     values:
-#       layout: "post"
 
 # Slim
 slim:
   pretty: true
 
 # Links
-# baseurl: "/dynamo-ops"
 baseurl: ""
 permalink: /categories/:categories/:title/
 
 # Build settings
 markdown: kramdown
+highlighter: true
 
 # Gulp & Bower
 exclude: [
