@@ -17,48 +17,23 @@
 //
 .m-cards-el
   @include display-flex(flex)
+  @include flex-grow(1)
   width: 50%
   white-space: normal
   list-style: none
-  // padding: $v-sp--m8
   color: $v-white
   margin-bottom: 0
-  .m-cards-el-inner
-    @extend %l-theme--pink
-    .m-cards-el-name
-      &::after
-        background-color: $v-white
-  &:nth-child(5n - 4)
+
+@each $bgKey, $bgColor in $l-themes-bg
+  .m-cards-el--#{ $bgKey }
     .m-cards-el-inner
-      @extend %l-theme--pink
+      @extend %l-theme--#{ $bgKey }
       .m-cards-el-name
         &::after
-          background-color: $v-white
-  &:nth-child(5n - 3)
-    .m-cards-el-inner
-      @extend %l-theme--yellow
-    .m-cards-el-name
-      &::after
-        background-color: $v-blue
-  &:nth-child(5n - 2)
-    .m-cards-el-inner
-      @extend %l-theme--blue
-    .m-cards-el-name
-      &::after
-        background-color: $v-white
-  &:nth-child(5n - 1)
-    .m-cards-el-inner
-      @extend %l-theme--green
-    .m-cards-el-name
-      &::after
-        background-color: $v-white
-  &:nth-child(5n)
-    width: 100%
-    .m-cards-el-inner
-      @extend %l-theme--gray
-    .m-cards-el-name
-      &::after
-        background-color: $v-blue
+          background-color: map-get($l-themes-accent, $bgKey)
+
+.m-cards-el--wide
+  width: 100%
 
 .m-cards-el-inner
   position: relative
@@ -110,12 +85,3 @@
     &:last-child
       &::after
         display: none
-
-// Tags
-.m-cards-el
-  .m-tags-target
-    position: absolute
-    bottom: $v-sp
-    left: $v-sp
-    max-width: 66%
-    margin-bottom: 0

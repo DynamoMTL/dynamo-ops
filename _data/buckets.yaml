@@ -1,7 +1,7 @@
 ---
 - title:  'At The Office'
   slug:   'at-the-office'
-  color:  'yellow'
+  color:  'pink'
   intro:  'Donec sed odio dui. Cras mattis consectetur purus sit amet fermentum.'
 
 - title:  'Client Onboarding'
@@ -11,22 +11,22 @@
 
 - title:  'Culture'
   slug:   'culture'
-  color:  'yellow'
+  color:  'blue'
   intro:  'Donec sed odio dui. Cras mattis consectetur purus sit amet fermentum.'
 
 - title:  'DevOps'
   slug:   'devops'
-  color:  'yellow'
+  color:  'green'
   intro:  'Donec sed odio dui. Cras mattis consectetur purus sit amet fermentum.'
 
 - title:  'Editorial Guide'
   slug:   'editorial-guide'
-  color:  'yellow'
+  color:  'gray'
   intro:  'Donec sed odio dui. Cras mattis consectetur purus sit amet fermentum.'
 
 - title:  'Employee Onboarding'
   slug:   'employee-onboarding'
-  color:  'yellow'
+  color:  'pink'
   intro:  'Donec sed odio dui. Cras mattis consectetur purus sit amet fermentum.'
 
 - title:  'How We Manage Projects'
@@ -36,22 +36,22 @@
 
 - title:  'Human Resources'
   slug:   'human-resources'
-  color:  'yellow'
+  color:  'blue'
   intro:  'Donec sed odio dui. Cras mattis consectetur purus sit amet fermentum.'
 
 - title:  'Our Departments'
   slug:   'our-departments'
-  color:  'yellow'
+  color:  'green'
   intro:  'Donec sed odio dui. Cras mattis consectetur purus sit amet fermentum.'
 
 - title:  'Templates'
   slug:   'templates'
-  color:  'yellow'
+  color:  'gray'
   intro:  'Donec sed odio dui. Cras mattis consectetur purus sit amet fermentum.'
 
 - title:  'Ventures'
   slug:   'ventures'
-  color:  'yellow'
+  color:  'pink'
   intro:  'Donec sed odio dui. Cras mattis consectetur purus sit amet fermentum.'
 
 - title:  'What We Believe'
@@ -61,6 +61,6 @@
 
 - title:  'What We Do'
   slug:   'what-we-do'
-  color:  'yellow'
+  color:  'blue'
   intro:  'Donec sed odio dui. Cras mattis consectetur purus sit amet fermentum.'
 

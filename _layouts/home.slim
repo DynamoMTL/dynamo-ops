@@ -11,7 +11,13 @@
         {% for bucket in site.data.buckets %}
           {% assign category = site.categories[bucket.slug] %}
           {% if category %}
-            li.m-cards-el.m-tags-parent.l-col--half
+            {% assign size = category | size %}
+            {% if size > 8 %}
+              {% assign width = 'wide' %}
+            {% else %}
+              {% assign width = 'narrow' %}
+            {% endif %}
+            li.m-cards-el.l-col--half class="m-cards-el--{{ bucket.color || 'pink' }} m-cards-el--{{ width }}"
               .m-cards-el-inner
                 h2.t-h2--sans.m-cards-el-name.t-capital
                   a.m-cta-combo href="{{ site.baseurl }}/categories/{{ bucket.slug }}"
@@ -20,7 +26,7 @@
                       use(xlink:href="#arrow")
                 .m-cards-el-number
                   a href="{{ site.baseurl }}/categories/{{ bucket.slug }}"
-                    | {{ (category | size) }} articles
+                    | {{ size }} articles
                 ul.m-cards-el-links
                   {% assign ordered_posts = category | sort:'order' %}
                   {% for post in ordered_posts %}

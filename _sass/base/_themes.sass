@@ -7,32 +7,12 @@
 //
 // Colors
 //
-%l-theme--pink
-  background-color: $v-pink
-  color: $v-white
-  use
-    fill: $v-white
+$l-themes-bg: ('pink': $v-pink, 'yellow': $v-yellow, 'blue': $v-blue, 'green': $v-green, 'gray': $v-gray)
+$l-themes-accent: ('pink': $v-white, 'yellow': $v-blue, 'blue': $v-white, 'green': $v-white, 'gray': $v-blue)
 
-%l-theme--yellow
-  background-color: $v-yellow
-  color: $v-blue
-  use
-    fill: $v-blue
-
-%l-theme--blue
-  background-color: $v-blue
-  color: $v-white
-  use
-    fill: $v-white
-
-%l-theme--green
-  background-color: $v-green
-  color: $v-white
-  use
-    fill: $v-white
-
-%l-theme--gray
-  background-color: $v-gray
-  color: $v-blue
-  use
-    fill: $v-blue
+@each $bgKey, $bgColor in $l-themes-bg
+  %l-theme--#{ $bgKey }
+    background-color: $bgColor
+    color: map-get($l-themes-accent, $bgKey)
+    use
+      fill: map-get($l-themes-accent, $bgKey)
