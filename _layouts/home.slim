@@ -22,8 +22,6 @@
                   a href="{{ site.baseurl }}/categories/{{ bucket.slug }}"
                     | {{ (category | size) }} articles
                 ul.m-cards-el-links
-                  pre
-                    | {{ bucket.order }}
                   {% assign ordered_posts = category | sort:'order' %}
                   {% for post in ordered_posts %}
                     li.t-h2--serif
