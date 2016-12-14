@@ -29,11 +29,6 @@
   color:  'yellow'
   intro:  'Donec sed odio dui. Cras mattis consectetur purus sit amet fermentum.'
 
-- title:  'Guiding Principles'
-  slug:   'guiding-principles'
-  color:  'yellow'
-  intro:  'Donec sed odio dui. Cras mattis consectetur purus sit amet fermentum.'
-
 - title:  'How We Manage Projects'
   slug:   'how-we-manage-projects'
   color:  'yellow'
