@@ -1,43 +1,40 @@
 % include head.slim
-% assign ordered_posts = site.categories[page.category] | sort:'order' %
-.l-wrap
-  .l-sec.m-hero data-cat-name="{{ page.category }}"
-    .l-cont.m-tags-parent
-      .l-row
-        .l-col--six.m-hero-a
-          h1.t-h1--sans.t-capital
-            | {{ page.category | replace: '-', ' ' }}
-          {% for post in ordered_posts %}
-            {% if (post.intro) %}
-              p.m-hero-intro
-                | {{ post.content | strip_html }}
-            {% endif %}
-          {% endfor %}
-          ul.m-tags-target
-        .l-col--six.m-hero-b
-          ol.m-hero-links
-            {% for post in ordered_posts %}
-              {% if (post.intro == blank or post.intro == false) %}
-                li.t-h2--serif
-                  a href="{{ site.baseurl }}{{ post.url }}" data-tags="{{ post.tags | join: ',' }}" {{ post.title }}
-              {% endif %}
-            {% endfor %}
+{% assign ordered_posts = site.categories[page.category] | sort:'order' %}
 
-  ul.s-cat-articles
-    {% for post in ordered_posts %}
-      {% if (post.intro == blank or post.intro == false) %}
-        li.l-sec
-          article.l-cont
-            .l-col--oneThird.s-cat-articles-a
-              time.t-bold.t-p--m2
-                | {{ post.date | date_to_string }}
-              h2.t-h2--sans.t-capital
-                a href="{{ site.baseurl }}{{ post.url }}"
-                  | {{ post.title }}
-            .l-col--twoThird.s-cat-articles-b
-              p.t-bold.t-p--m2
-                | Article {{ forloop.index | minus: 1 }} of {{ forloop.length | minus: 1 }}
-              | {{ post.excerpt }}
-      {% endif %}
-    {% endfor %}
+{% for bucket in site.buckets %}
+  {% if bucket.slug == page.category %}
+    .l-wrap
+      .l-sec.m-hero class="m-hero--{{ bucket.color }}"
+        .l-cont.m-tags-parent
+          .l-row
+            .l-col--six.m-hero-a
+              h1.t-h1--sans.t-capital
+                | {{ bucket.title }}
+              p.m-hero-intro
+                | {{ bucket.content }}
+            .l-col--six.m-hero-b
+              ol.m-hero-links
+                {% for post in ordered_posts %}
+                  li.t-h2--serif
+                    a href="{{ site.baseurl }}{{ post.url }}" {{ post.title }}
+                {% endfor %}
+
+      ul.s-cat-articles
+        {% for post in ordered_posts %}
+          li.l-sec
+            article.l-cont
+              .l-col--oneThird.s-cat-articles-a
+                time.t-bold.t-p--m2
+                  | {{ post.date | date_to_string }}
+                h2.t-h2--sans.t-capital
+                  a href="{{ site.baseurl }}{{ post.url }}"
+                    | {{ post.title }}
+              .l-col--twoThird.s-cat-articles-b
+                p.t-bold.t-p--m2
+                  | Article {{ forloop.index }} of {{ forloop.length }}
+                | {{ post.excerpt }}
+        {% endfor %}
+  {% endif %}
+{% endfor %}
+
 % include footer.slim

@@ -8,24 +8,25 @@
   .l-sec.s-home-cards
     .l-cont
       ul.m-cards.l-row
-        {% for category in ordered_cats %}
-          li.m-cards-el.m-tags-parent.l-col--half
-            .m-cards-el-inner
-              h2.t-h2--sans.m-cards-el-name.t-capital
-                a.m-cta-combo href="{{ site.baseurl }}/categories/{{ category | first }}"
-                  | {{ category | first | replace: '-', ' ' }}
-                  svg.i-svg-arrow
-                    use(xlink:href="#arrow")
-              .m-cards-el-number
-                a href="{{ site.baseurl }}/categories/{{ category | first}}"
-                  | {{ (category | last | size) }} articles
-              ul.m-cards-el-links
-                {% assign ordered_posts = category.last | sort:'order' %}
-                {% for post in ordered_posts %}
-                  {% if (post.intro == blank or post.intro == false) %}
+        {% for bucket in site.buckets | sort:'order' %}
+          {% assign category = site.categories[bucket.slug] %}
+          {% if category %}
+            li.m-cards-el.m-tags-parent.l-col--half
+              .m-cards-el-inner
+                h2.t-h2--sans.m-cards-el-name.t-capital
+                  a.m-cta-combo href="{{ site.baseurl }}/categories/{{ bucket.slug }}"
+                    | {{ bucket.title }}
+                    svg.i-svg-arrow
+                      use(xlink:href="#arrow")
+                .m-cards-el-number
+                  a href="{{ site.baseurl }}/categories/{{ bucket.slug }}"
+                    | {{ (category | size) }} articles
+                ul.m-cards-el-links
+                  {% assign ordered_posts = category | sort:'order' %}
+                  {% for post in ordered_posts %}
                     li.t-h2--serif
-                      a href="{{ site.baseurl }}{{ post.url }}" data-tags="{{ post.tags | join: ',' }}" {{ post.title }}
-                  {% endif %}
-                {% endfor %}
+                      a href="{{ site.baseurl }}{{ post.url }}" {{ post.title }}
+                  {% endfor %}
+          {% endif %}
         {% endfor %}
 % include footer.slim

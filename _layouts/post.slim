@@ -1,24 +1,29 @@
 % include head.slim
-.l-wrap
-  .l-sec.m-hero data-cat-name="{{ page.categories[0] }}"
-    .l-cont
-      .l-col--oneHalf.m-hero-a
-        time.m-hero-date
-          | {{ page.date | date_to_string }}
-        h1.t-h1--sans.t-capital
-          | {{ page.title }}
-        .m-hero-reading
-          | Reading time:&nbsp;
-          span.t-bold
-      .l-col--oneHalf.m-hero-b
-        .m-hero-back
-          a href="{{ site.baseurl }}/categories/{{ page.categories[0] }}"
-            | Back to&nbsp;
-            span.t-capital.t-bold
-              | {{ page.categories[0] | replace: '-', ' '}}
-  .l-sec
-    .l-cont
-      article.m-article
-        | {{ content }}
-        .m-article-reading
+
+{% for bucket in site.buckets %}
+  {% if bucket.slug == page.category %}
+    .l-wrap
+      .l-sec.m-hero class="m-hero--{{ bucket.color }}"
+        .l-cont
+          .l-col--oneHalf.m-hero-a
+            time.m-hero-date
+              | {{ page.date | date_to_string }}
+            h1.t-h1--sans.t-capital
+              | {{ page.title }}
+            .m-hero-reading
+              | Reading time:&nbsp;
+              span.t-bold
+          .l-col--oneHalf.m-hero-b
+            .m-hero-back
+              a href="{{ site.baseurl }}/categories/{{ bucket.slug }}"
+                | Back to&nbsp;
+                span.t-capital.t-bold
+                  | {{ bucket.title }}
+      .l-sec
+        .l-cont
+          article.m-article
+            | {{ content }}
+            .m-article-reading
+  {% endif %}
+{% endfor %}
 % include footer.slim

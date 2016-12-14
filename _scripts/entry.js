@@ -14,7 +14,6 @@
 import $ from 'jquery'
 
 import Page from './modules/page'
-import Hero from './modules/hero'
 import Post from './modules/post'
 
 //
@@ -22,6 +21,5 @@ import Post from './modules/post'
 //
 $(function() {
   Page.init()
-  Hero.init()
   Post.init()
 });
