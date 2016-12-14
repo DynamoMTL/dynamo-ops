@@ -24,13 +24,10 @@
   color: $v-white
   margin-bottom: 0
 
-@each $bgKey, $bgColor in $l-themes-bg
-  .m-cards-el--#{ $bgKey }
+@each $key, $color in $l-themes
+  .m-cards-el--#{ $key }
     .m-cards-el-inner
-      @extend %l-theme--#{ $bgKey }
-      .m-cards-el-name
-        &::after
-          background-color: map-get($l-themes-accent, $bgKey)
+      @extend %l-theme--#{ $key }
 
 .m-cards-el--wide
   width: 100%
@@ -50,7 +47,7 @@
     display: block
     width: 50%
     height: 2px
-    background-color: $v-blue
+    background-color: $v-white
     margin: $v-sp--m2 0
   a
     @extend %t-links--noUnder
