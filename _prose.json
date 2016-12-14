@@ -1,0 +1,32 @@
+{
+  "prose": {
+    "rooturl": "_posts",
+    "media": "uploads",
+    "metadata": {
+      "_posts": [
+        {
+          "name": "layout",
+          "field": {
+            "element": "hidden",
+            "value": "post"
+          }
+        },
+        {
+          "name": "intro",
+          "field": {
+            "element": "checkbox",
+            "label": "This is the intro of a category page",
+            "value": false
+          }
+        },
+        {
+          "name": "order",
+          "field": {
+            "element": "number",
+            "label": "Order"
+          }
+        }
+      ]
+    }
+  }
+}
