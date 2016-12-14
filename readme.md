@@ -1,4 +1,4 @@
-### Running the server
+## Running the server
 
 To run the project after checkout:
 - `bundle install`
@@ -10,9 +10,13 @@ To run an already checked out project:
 
 You are welcome!
 
+## Site URL
 
-### Content creation
+The live version of the site can be found at http://dna.godynamo.com.
 
+## Content creation
+
+### Easy (wysiwyg)
 
 **Prose**
 
@@ -20,6 +24,18 @@ Even though all content creation can be done through a github workflow, we recom
 
 To use Prose to edit your files, just go here and authenticate: http://prose.io/#DynamoMTL/dynamo-ops
 
+
+**Posts**
+
+When using **Prose**, you will have the ability to add and edit metadata from the top-right menu. Look for a list icon.
+
+
+**Attachments**
+
+When using **Prose**, you can use the wysiwyg editor to upload and reference the photos. You also have the ability to select from existing images.
+
+
+### Advanced (github & code)
 
 **Posts**
 
@@ -38,15 +54,22 @@ title: The title of the article (will be capitalized on the site)
 date: YYYY-MM-DD (this will override the date in the name of the file, it is recommanded to change the date here when updating the content and keep the filename date as the creation date)
 published: true (or false)
 category: name-of-the-category (should have only one)
-tags: subject-a subject-b subject-c (list separated by spaces)
 order: 1 (the order in which you want to see the post appear from 1 to n, also need to readjust the other posts)
-intro: true (false, this is what is gonna be displayed at the top of a category page, but not as a post)
 ---
 ```
 
 See: http://jekyllrb.com/docs/frontmatter/
 
-When using **Prose**, you will have the ability to add and edit metadata from the top-right menu. Look for a list icon.
+
+**Categories & Buckets**
+
+The categories, even though they are associated via the post's frontmatter, are listed and order in a yaml file at `_data/buckets.yml`.
+
+From that list,
+
+* change the title or the slug
+* you can reorder the categories (called buckets for the data part to avoid confusion in the templates)
+* add an intro to the category's page
 
 
 **Attachments**
@@ -54,8 +77,6 @@ When using **Prose**, you will have the ability to add and edit metadata from th
 All the attachments that you want to include in a post (images, pdf, etc.) need to be added in the `uploads` folder. They can be added to a subfolder in there as well, for sake of structure.
 
 We added a filter to help you reference those files easily. It can be used like this: `![My helpful screenshot]({{ "flag.png" | uploads_url }})`, where `uploads_url` will build the path to the assets.
-
-When using **Prose**, you can use the wysiwyg editor to upload and reference the photos. You also have the ability to select from existing images.
 
 
 **Links**
@@ -80,7 +101,3 @@ ipsam aliquam repellat et ipsum voluptatibus sequi! In, magni, aperiam!
 ```
 
 The `<!--more-->` comment will determine where the excerpt ends.
-
-
-### Site URL
-http://www.dynaops.com.s3-website-us-east-1.amazonaws.com/ (Temp)
