@@ -6,13 +6,8 @@
       .l-sec.m-hero class="m-hero--{{ bucket.color }}"
         .l-cont
           .l-col--oneHalf.m-hero-a
-            time.m-hero-date
-              | {{ page.date | date_to_string }}
             h1.t-h1--sans.t-capital
               | {{ page.title }}
-            .m-hero-reading
-              | Reading time:&nbsp;
-              span.t-bold
           .l-col--oneHalf.m-hero-b
             .m-hero-back
               a href="{{ site.baseurl }}/categories/{{ bucket.slug }}"

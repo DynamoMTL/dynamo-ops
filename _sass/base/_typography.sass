@@ -27,8 +27,8 @@ h1, h2, h3, h4, h5
 
 .t-h2--sans
   @extend .t-h1--sans
-  font-size: rem(20px)
-  line-height: rem(20px)
+  font-size: rem(18px)
+  line-height: rem(18px)
 
 .t-h2--serif
   @extend .t-h2--sans
@@ -78,3 +78,10 @@ p
   &:hover, &:active
     text-decoration: none
     border-bottom-color: transparent
+
+%t-p--upperBlue
+  text-transform: uppercase
+  font-family: $v-t-sans--bold
+  letter-spacing: 1px
+  font-size: rem(9px)
+  color: $v-blue
