@@ -5,34 +5,33 @@
   {% if bucket.slug == page.category %}
     .l-wrap
       .l-sec.m-hero class="m-hero--{{ bucket.color }}"
-        .l-cont
-          .l-row
-            .l-col--six.m-hero-a
+        .container
+          .row
+            .col-sm-6.m-hero-a
               h1.t-h1--sans.t-capital
                 | {{ bucket.title }}
               p.m-hero-intro
                 | {{ bucket.intro }}
-            .l-col--six.m-hero-b
+            .col-sm-6.m-hero-b
               ol.m-hero-links
                 {% for post in ordered_posts %}
-                  li.t-h2--serif
+                  li
                     a href="{{ site.baseurl }}{{ post.url }}" {{ post.title }}
                 {% endfor %}
 
-      ul.s-cat-articles
+      ul.s-cat-articles class="s-cat-articles--{{ bucket.color }}"
         {% for post in ordered_posts %}
           li.l-sec
-            article.l-cont
-              .l-col--oneThird.s-cat-articles-a
-                time.t-bold.t-p--m2
-                  | {{ post.date | date_to_string }}
-                h2.t-h2--sans.t-capital
-                  a href="{{ site.baseurl }}{{ post.url }}"
-                    | {{ post.title }}
-              .l-col--twoThird.s-cat-articles-b
-                p.t-bold.t-p--m2
-                  | Article {{ forloop.index }} of {{ forloop.length }}
-                | {{ post.excerpt }}
+            .container
+              article.row
+                .col-xs-12.s-cat-articles-a
+                  p.t-bold.t-p--m2
+                    | Article {{ forloop.index }} of {{ forloop.length }}
+                  h2.t-h2--sans.t-capital
+                    a href="{{ site.baseurl }}{{ post.url }}"
+                      | {{ post.title }}
+                .col-xs-12.s-cat-articles-b
+                  | {{ post.excerpt }}
         {% endfor %}
   {% endif %}
 {% endfor %}
