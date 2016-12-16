@@ -27,3 +27,7 @@ exclude: [
   Gemfile.lock,
   wercker.yml
 ]
+
+#
+category_meta_description_prefix: ''
+category_description_prefix: ''
