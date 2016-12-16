@@ -17,8 +17,8 @@ h1, h2, h3, h4, h5
 
 .t-h1--sans
   font-family: $v-t-sans--bold
-  font-size: rem(30px)
-  line-height: rem(30px)
+  font-size: rem(28px)
+  line-height: rem(34px)
   letter-spacing: 1px
 
 .t-h1--serif
@@ -27,8 +27,6 @@ h1, h2, h3, h4, h5
 
 .t-h2--sans
   @extend .t-h1--sans
-  font-size: rem(18px)
-  line-height: rem(18px)
 
 .t-h2--serif
   @extend .t-h2--sans
@@ -79,9 +77,12 @@ p
     text-decoration: none
     border-bottom-color: transparent
 
-%t-p--upperBlue
+%t-small--upper
   text-transform: uppercase
   font-family: $v-t-sans--bold
   letter-spacing: 1px
   font-size: rem(9px)
+
+%t-small--upperBlue
+  @extend %t-small--upper
   color: $v-blue

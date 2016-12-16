@@ -16,8 +16,8 @@
 // Card
 //
 .m-cards-el
-  @include display-flex(flex)
-  @include flex-grow(1)
+  display-flex: flex
+  flex-grow: 1
   width: 50%
   white-space: normal
   list-style: none
@@ -39,7 +39,7 @@
   padding: $v-sp
 
 .m-cards-el-index
-  @extend %t-p--upperBlue
+  @extend %t-small--upperBlue
   margin-bottom: $v-sp
 
 .m-cards-el-name
@@ -57,7 +57,7 @@
     @extend %t-links--noUnder
 
 .m-cards-el-number
-  @extend %t-p--upperBlue
+  @extend %t-small--upperBlue
   position: absolute
   bottom: $v-sp--p1
   right: $v-sp
