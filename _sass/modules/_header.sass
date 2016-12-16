@@ -8,6 +8,9 @@
 // General
 //
 .m-header
+  display: flex
+  align-items: center
+  justify-content: space-between
   width: 100%
   position: absolute
   overflow-y: hidden
@@ -15,29 +18,15 @@
   z-index: $v-z--p6
   color: $v-black
   font-family: $v-t-sans--thin
-  background: red
-
-//
-// BG
-//
-
-//
-// Top
-//
-.m-header-menu
-
-.m-header-el
-  flex-direction: column
-  align-content: center
-  align-items: flex-start
-
-// Logo
-.m-header-b
-  text-align: center
-  align-items: center
+  background: transparent
   a
-    @extend %t-links--noUnder
+    &:hover
+      border: none
 
-// Search
-.m-header-c
-  align-items: flex-end
+//
+// Elements
+//
+.m-header-a
+
+.m-header-b
+  @extend %t-small--upper

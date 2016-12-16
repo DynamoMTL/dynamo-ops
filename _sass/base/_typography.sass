@@ -79,9 +79,12 @@ p
     text-decoration: none
     border-bottom-color: transparent
 
-%t-p--upperBlue
+%t-small--upper
   text-transform: uppercase
   font-family: $v-t-sans--bold
   letter-spacing: 1px
   font-size: rem(9px)
+
+%t-small--upperBlue
+  @extend %t-small--upper
   color: $v-blue

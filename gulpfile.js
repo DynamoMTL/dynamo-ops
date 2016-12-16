@@ -88,18 +88,16 @@ gulp.task('svg', function() {
 })
 
 gulp.task('css', function() {
+  let sassConfig = {
+    style: 'expanded',
+    loadPath: [config.sassPath]
+  }
   gulp
     .src(config.sassPath + '/app.sass')
-    .pipe(sass.sync().on('error', sass.logError))
-    //   style: 'expanded',
-    //   loadPath: [config.sassPath],
-    //   compass: true
-    // })
-    // .pipe(gulp.dest(config.tempDir + '/css'))
+    .pipe(sass(sassConfig).on('error', sass.logError))
     .pipe(autoprefixer())
     .pipe(gulp.dest(config.outputDir + '/assets/css'))
     .pipe(browserSync.stream())
-    // .pipe(minifyCss())
 })
 
 gulp.task('es-lint', function () {

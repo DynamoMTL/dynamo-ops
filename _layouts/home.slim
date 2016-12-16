@@ -1,13 +1,13 @@
 % include head.slim
 .l-wrap
   .l-sec.s-home-hero
-    .l-cont
+    .container
       h1.t-h1--sans Welcome!
       p.t-h2--serif Dynamo is a team of designers, developers & UX specialists. We design sites that build brands, web applications that save money, and mobile apps that attract new customers.
       p.t-h2--serif Located in the Mile-Ex, Montreal (QC)
   .l-sec.s-home-cards
-    .l-cont
-      ul.m-cards.l-row
+    .container
+      ul.m-cards.row
         {% for bucket in site.data.buckets %}
           {% assign category = site.categories[bucket.slug] %}
           {% if category %}
@@ -17,7 +17,7 @@
             {% else %}
               {% assign width = 'narrow' %}
             {% endif %}
-            li.m-cards-el.l-col--half class="m-cards-el--{{ bucket.color || 'pink' }} m-cards-el--{{ width }}"
+            li.m-cards-el class="m-cards-el--{{ bucket.color || 'pink' }} m-cards-el--{{ width }}"
               .m-cards-el-inner
                 .m-cards-el-index
                   | {{ forloop.index }}
