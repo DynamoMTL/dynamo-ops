@@ -105,6 +105,7 @@ gulp.task('css', function() {
     .src(config.sassPath + '/app.sass')
     .pipe(sass(sassConfig).on('error', sass.logError))
     .pipe(autoprefixer())
+    .pipe(gulp.dest(config.tempDir + '/css'))
     .pipe(gulp.dest(config.outputDir + '/assets/css'))
     .pipe(browserSync.stream())
 })

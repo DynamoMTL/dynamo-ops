@@ -11,3 +11,4 @@ assets
 .phantom-version
 *.log
 _site
+_production
