@@ -12,7 +12,8 @@ const gulp = require('gulp'),
       cp = require('child_process'),
       minifyCss = require('gulp-minify-css'),
       notify = require('gulp-notify'),
-      sass = require('gulp-ruby-sass'),
+      sass = require('gulp-sass'),
+      autoprefixer = require('gulp-autoprefixer'),
       svgstore = require('gulp-svgstore'),
       browserSync = require('browser-sync'),
       webpack = require('webpack-stream'),
@@ -86,15 +87,24 @@ gulp.task('svg', function() {
     .pipe(gulp.dest(config.tempDir + '/images/svg'))
 })
 
+gulp.task('images', function() {
+  gulp
+    .src(config.imagesPath + '/raster/**/*')
+    .pipe(gulp.dest(config.tempDir + '/images/raster'))
+})
+
+
 gulp.task('css', function() {
-  return sass(config.sassPath + '/app.sass', {
-    style: 'compressed',
-    loadPath: [config.sassPath],
-    compass: true
-  }).pipe(minifyCss())
-            .pipe(gulp.dest(config.tempDir + '/css'))
-            .pipe(gulp.dest(config.outputDir + '/assets/css'))
-            .pipe(browserSync.stream())
+  let sassConfig = {
+    style: 'expanded',
+    loadPath: [config.sassPath]
+  }
+  gulp
+    .src(config.sassPath + '/app.sass')
+    .pipe(sass(sassConfig).on('error', sass.logError))
+    .pipe(autoprefixer())
+    .pipe(gulp.dest(config.outputDir + '/assets/css'))
+    .pipe(browserSync.stream())
 })
 
 gulp.task('es-lint', function () {
@@ -142,7 +152,7 @@ gulp.task('js', ['es-lint'], function() {
 //
 // Main tasks
 //
-gulp.task('build', ['fonts', 'svg', 'css', 'js', 'robots', 'jekyll-build'])
+gulp.task('build', ['fonts', 'svg', 'images', 'css', 'js', 'robots', 'jekyll-build'])
 
 gulp.task('jekyll-prod', ['build'], function(done) {
   return cp.spawn('bundle', ['exec', 'jekyll', 'build', '--destination=' + config.prodDir], {
@@ -158,7 +168,7 @@ gulp.task('serve', ['build'], function() {
   })
   gulp.watch(['_sass/**/*.scss', '_sass/**/*.sass'], ['css'])
   gulp.watch(['_scripts/**/*.js'], ['js'])
-  gulp.watch(['_images/svg/**/*.svg'], ['jekyll-rebuild'])
+  gulp.watch(['_images/**/*'], ['jekyll-rebuild'])
   gulp.watch(['index.slim', '_layouts/*', '_includes/*', '_posts/**/*', '_data/**/*'], ['jekyll-rebuild'])
 })
 
