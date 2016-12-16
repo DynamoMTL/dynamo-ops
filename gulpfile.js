@@ -12,7 +12,8 @@ const gulp = require('gulp'),
       cp = require('child_process'),
       minifyCss = require('gulp-minify-css'),
       notify = require('gulp-notify'),
-      sass = require('gulp-ruby-sass'),
+      sass = require('gulp-sass'),
+      autoprefixer = require('gulp-autoprefixer'),
       svgstore = require('gulp-svgstore'),
       browserSync = require('browser-sync'),
       webpack = require('webpack-stream'),
@@ -87,14 +88,18 @@ gulp.task('svg', function() {
 })
 
 gulp.task('css', function() {
-  return sass(config.sassPath + '/app.sass', {
-    style: 'compressed',
-    loadPath: [config.sassPath],
-    compass: true
-  }).pipe(minifyCss())
-            .pipe(gulp.dest(config.tempDir + '/css'))
-            .pipe(gulp.dest(config.outputDir + '/assets/css'))
-            .pipe(browserSync.stream())
+  gulp
+    .src(config.sassPath + '/app.sass')
+    .pipe(sass.sync().on('error', sass.logError))
+    //   style: 'expanded',
+    //   loadPath: [config.sassPath],
+    //   compass: true
+    // })
+    // .pipe(gulp.dest(config.tempDir + '/css'))
+    .pipe(autoprefixer())
+    .pipe(gulp.dest(config.outputDir + '/assets/css'))
+    .pipe(browserSync.stream())
+    // .pipe(minifyCss())
 })
 
 gulp.task('es-lint', function () {

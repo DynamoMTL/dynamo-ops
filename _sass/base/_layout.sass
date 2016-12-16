@@ -8,7 +8,8 @@
 // General
 //
 .l-wrap
-  @include transition(opacity $v-delay ease-in-out 0s)
+  transition: opacity $v-delay ease-in-out 0s
+  padding-top: $v-sp--p9
   opacity: 0
   .is-loaded &
     opacity: 1
@@ -20,65 +21,5 @@
 //
 // Grid
 //
-
-// Container
-.l-cont
-  // @include display-flex(flex)
-  max-width: 1200px
-  margin: 0 auto
-  padding: $v-sp
-
-.l-cont--full
-  @extend .l-cont
-  max-width: 100%
-
-.l-cont--m1
-  @extend .l-cont
-  max-width: 1200px
-
-.l-cont--m2
-  @extend .l-cont
-  max-width: 1200px
-
-.l-cont--m3
-  @extend .l-cont
-  max-width: 1200px
-
-.l-cont--m4
-  @extend .l-cont
-  max-width: 800px
-
-// Row
-.l-row
-  @include display-flex(flex)
-  @include flex-wrap(wrap)
-  width: 100%
-
-// Columns
-[class*="l-col--"]
-  @include justify-content(center)
-  @include align-content(stretch)
-
-.l-col--vertical
-  @include flex-direction(column)
-
-.l-col--twelve
-  width: percentage(1/1)
-
-.l-col--three
-  width: percentage(1/4)
-
-.l-col--four
-  width: percentage(1/3)
-
-.l-col--six
-  width: percentage(1/2)
-
-.l-col--eight
-  width: percentage(2/3)
-
-.l-col--nine
-  width: percentage(3/4)
-
-.l-col--inlineMiddle
-  @include vertical-align('middle')
+// NOTE: moved the grid logic to BS
+// flex grid
