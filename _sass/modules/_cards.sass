@@ -35,8 +35,12 @@
 .m-cards-el-inner
   position: relative
   width: 100%
-  min-height: 100%
-  padding: $v-sp $v-sp $v-sp--p9 $v-sp
+  min-height: 33vh
+  padding: $v-sp
+
+.m-cards-el-index
+  @extend %t-p--upperBlue
+  margin-bottom: $v-sp
 
 .m-cards-el-name
   margin-top: 0
@@ -45,18 +49,17 @@
   &::after
     content: ''
     display: block
-    width: 50%
-    height: 2px
+    width: $v-sp--p9
+    height: 3px
     background-color: $v-white
     margin: $v-sp--m2 0
   a
     @extend %t-links--noUnder
 
 .m-cards-el-number
-  @extend %t-p--m2
-  font-family: $v-t-sans--bold
+  @extend %t-p--upperBlue
   position: absolute
-  top: $v-sp--p1
+  bottom: $v-sp--p1
   right: $v-sp
 
 // Links
@@ -73,8 +76,8 @@
       display: inline-block
       margin: 0 $v-sp--m6
       border-radius: 100%
-      background-color: inherit
-      filter: brightness(90%)
+      background-color: $v-white
+      opacity: 0.25
       width: 0.5rem
       height: 0.5rem
       position: relative
