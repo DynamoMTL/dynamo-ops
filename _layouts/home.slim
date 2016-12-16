@@ -1,10 +1,8 @@
 % include head.slim
 .l-wrap
-  .l-sec.s-home-hero
+  .l-sec.m-hero.s-home-hero
     .container
-      h1.t-h1--sans Welcome!
-      p.t-h2--serif Dynamo is a team of designers, developers & UX specialists. We design sites that build brands, web applications that save money, and mobile apps that attract new customers.
-      p.t-h2--serif Located in the Mile-Ex, Montreal (QC)
+      h1.t-h1--sans Dynamo is a team of designers, developers & UX specialists. We design sites that build brands, web applications that save money, and mobile apps that attract new customers.
   .l-sec.s-home-cards
     .container
       ul.m-cards.row
@@ -30,7 +28,7 @@
                 ul.m-cards-el-links
                   {% assign ordered_posts = category | sort:'order' %}
                   {% for post in ordered_posts %}
-                    li.t-h2--serif
+                    li
                       a href="{{ site.baseurl }}{{ post.url }}" {{ post.title }}
                   {% endfor %}
           {% endif %}

@@ -87,6 +87,13 @@ gulp.task('svg', function() {
     .pipe(gulp.dest(config.tempDir + '/images/svg'))
 })
 
+gulp.task('images', function() {
+  gulp
+    .src(config.imagesPath + '/raster/**/*')
+    .pipe(gulp.dest(config.tempDir + '/images/raster'))
+})
+
+
 gulp.task('css', function() {
   let sassConfig = {
     style: 'expanded',
@@ -145,7 +152,7 @@ gulp.task('js', ['es-lint'], function() {
 //
 // Main tasks
 //
-gulp.task('build', ['fonts', 'svg', 'css', 'js', 'robots', 'jekyll-build'])
+gulp.task('build', ['fonts', 'svg', 'images', 'css', 'js', 'robots', 'jekyll-build'])
 
 gulp.task('jekyll-prod', ['build'], function(done) {
   return cp.spawn('bundle', ['exec', 'jekyll', 'build', '--destination=' + config.prodDir], {
@@ -161,7 +168,7 @@ gulp.task('serve', ['build'], function() {
   })
   gulp.watch(['_sass/**/*.scss', '_sass/**/*.sass'], ['css'])
   gulp.watch(['_scripts/**/*.js'], ['js'])
-  gulp.watch(['_images/svg/**/*.svg'], ['jekyll-rebuild'])
+  gulp.watch(['_images/**/*'], ['jekyll-rebuild'])
   gulp.watch(['index.slim', '_layouts/*', '_includes/*', '_posts/**/*', '_data/**/*'], ['jekyll-rebuild'])
 })
 
