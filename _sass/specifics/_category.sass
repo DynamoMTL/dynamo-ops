@@ -23,8 +23,13 @@
     .l-cont
       padding: 0 $v-sp--p12
 
+@each $key, $color in $l-themes
+  .s-cat-articles--#{ $key }
+    .s-cat-articles-a h2
+      color: $color
+
 .s-cat-articles-b
-  padding-left: $v-sp
+  max-width: 800px
   p
     margin-top: $v-sp--m4
     &:first-child
