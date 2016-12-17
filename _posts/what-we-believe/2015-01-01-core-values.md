@@ -8,7 +8,7 @@ order: 3
 
 There should be an intro here because otherwise it is not super nice in the category page!
 
-<!--more-->
+<!-- more -->
 
 ## Become Experts
 

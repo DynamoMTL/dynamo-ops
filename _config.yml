@@ -4,7 +4,7 @@ email: hello@godynamo.com
 description: DNA by Dynamo
 
 # Posts
-excerpt_separator: "<!--more-->"
+excerpt_separator: "<!-- more -->"
 
 # Slim
 slim:
