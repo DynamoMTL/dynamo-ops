@@ -1,7 +1,7 @@
 # Site settings
-title: Your awesome title
-email: your-email@domain.com
-description: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque molestias pariatur modi vel beatae non fugit enim delectus dicta, dignissimos voluptatum harum sunt consequatur reprehenderit nostrum rem iusto deserunt optio!
+title: DNA by Dynamo
+email: hello@godynamo.com
+description: DNA by Dynamo
 
 # Posts
 excerpt_separator: "<!--more-->"
@@ -15,8 +15,17 @@ baseurl: ""
 permalink: /categories/:categories/:title/
 
 # Build settings
-markdown: kramdown
-highlighter: true
+markdown: redcarpet
+markdown_ext:  markdown,mkdown,mkdn,mkd,md
+redcarpet:
+  extensions: [
+    "tables",
+    "autolink",
+    "strikethrough",
+    "space_after_headers",
+    "with_toc_data",
+    "fenced_code_blocks"
+  ]
 
 # Gulp & Bower
 exclude: [
@@ -27,7 +36,3 @@ exclude: [
   Gemfile.lock,
   wercker.yml
 ]
-
-#
-category_meta_description_prefix: ''
-category_description_prefix: ''
