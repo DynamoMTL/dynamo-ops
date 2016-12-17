@@ -3,22 +3,22 @@
 {% for bucket in site.data.buckets %}
   {% if bucket.slug == page.category %}
     .l-wrap
-      .l-sec.m-hero class="m-hero--{{ bucket.color }}"
-        .l-cont
-          .l-col--oneHalf.m-hero-a
-            h1.t-h1--sans.t-capital
-              | {{ page.title }}
-          .l-col--oneHalf.m-hero-b
-            .m-hero-back
-              a href="{{ site.baseurl }}/categories/{{ bucket.slug }}"
-                | Back to&nbsp;
-                span.t-capital.t-bold
-                  | {{ bucket.title }}
+      .l-sec.m-hero class="m-hero--invert m-hero--{{ bucket.color }}"
+        .container
+          .row
+            .m-hero-a.col-xs-12
+              h1.t-h1--sans.t-capital
+                | {{ page.title }}
+              .m-hero-back
+                a href="{{ site.baseurl }}/categories/{{ bucket.slug }}"
+                  | < Back to&nbsp;
+                  span
+                    | {{ bucket.title }}
       .l-sec
-        .l-cont
-          article.m-article
-            | {{ content }}
-            .m-article-reading
+        .container
+          .row
+            article.col-xs-12.m-article
+              | {{ content }}
   {% endif %}
 {% endfor %}
 % include footer.slim

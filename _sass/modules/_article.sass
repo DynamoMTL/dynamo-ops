@@ -8,11 +8,8 @@
 // General
 //
 .m-article
-  padding: 0 $v-sp--p12
+  max-width: 800px
   margin: 0
-
-.m-article-reading
-  display: none
 
 //
 // Headings
@@ -21,11 +18,12 @@
   margin-top: $v-sp--p4
   color: $v-blue
 
-h2
-  @extend .t-h2--sans
+.m-article
+  h2
+    @extend .t-h2--sans
 
-h3
-  @extend .t-h3--sans
+  h3
+    @extend .t-h3--sans
 
 //
 // Code
@@ -74,7 +72,8 @@ h3
 //
 // Lists
 //
-ul, ol
-  margin: $v-sp 0
-  li
-    margin-bottom: $v-sp--m4
+.m-article
+  ul, ol
+    margin: $v-sp 0
+    li
+      margin-bottom: $v-sp--m4

@@ -20,14 +20,18 @@
     border-bottom: 1px solid rgba($v-black, 0.1)
     &:last-child
       border-bottom: none
-    .l-cont
-      padding: 0 $v-sp--p12
 
 @each $key, $color in $l-themes
   .s-cat-articles--#{ $key }
     .s-cat-articles-a h2
       color: $color
 
+// Title
+.s-cat-articles-count
+  @extend %t-small--upper
+  opacity: 0.1
+
+// Excerpt
 .s-cat-articles-b
   max-width: 800px
   p

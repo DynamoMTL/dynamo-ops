@@ -15,3 +15,8 @@ $l-themes: ('sky': $v-sky, 'purple': $v-purple, 'pink': $v-pink, 'yellow': $v-ye
     color: $v-white
     use
       fill: $v-white
+  %l-theme--#{ $key }--invert
+    background-color: $v-white
+    color: $color
+    use
+      fill: $color
