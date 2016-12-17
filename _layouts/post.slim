@@ -2,7 +2,7 @@
 
 {% for bucket in site.data.buckets %}
   {% if bucket.slug == page.category %}
-    .l-wrap
+    article.l-wrap
       .l-sec.m-hero class="m-hero--invert m-hero--{{ bucket.color }}"
         .container
           .row
@@ -16,8 +16,10 @@
                     | {{ bucket.title }}
       .l-sec
         .container
-          .row
-            article.col-xs-12.m-article
+          .row.m-article
+            .m-article-nav.col-sm-12.col-md-3
+              ol.m-article-nav-list
+            .m-article-content.col-sm-12.col-md-9
               | {{ content }}
   {% endif %}
 {% endfor %}

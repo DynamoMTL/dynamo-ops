@@ -5,52 +5,61 @@
 //
 
 //
-// General
+// Nav
 //
-.m-article
-  max-width: 800px
+.m-article-nav
+  display: none
   margin: 0
 
-//
-// Headings
-//
-[id*="title-"]
-  margin-top: $v-sp--p4
-  color: $v-blue
+.m-article-nav-list
+  list-style-type: none
+  border-left: 2px solid $v-black
+  padding: 0 0 0 $v-sp--m2
+  margin-top: $v-sp--m5
+  li
+    @extend %t-small--upper
+    margin-bottom: $v-sp--m4
+    line-height: 1.5
 
-.m-article
+.m-article.has-nav
+  .m-article-nav
+    display: block
+
+//
+// Content
+//
+.m-article-content
+  max-width: 800px
+  margin: 0
+  & > p
+    margin-top: 0
+
+// Headings
+.m-article-content
   h2
     @extend .t-h2--sans
-
+    margin-top: $v-sp--p6
   h3
     @extend .t-h3--sans
 
-//
 // Code
-//
-.m-article
+.m-article-content
   .highlight
     padding: $v-sp
     font-size: 0.9rem
     background-color: rgba($v-black, 0.1)
 
-//
 // Quotes
-//
-.m-article
+.m-article-content
   blockquote
     color: $v-blue
-    text-align: center
+    // text-align: center
     margin: $v-sp--p6 auto
-    width: 140%
-    margin-left: -20%
     p
       font-size: 2rem !important
 
-//
 // Images
-//
-.m-article
+.m-article-content
   img
     display: block
     margin: 0 auto
@@ -58,10 +67,8 @@
     width: 140%
     margin-left: -20%
 
-//
 // Links
-//
-.m-article
+.m-article-content
   p
     a
       border-bottom: 2px solid $v-black
@@ -69,10 +76,8 @@
         color: $v-blue
         border-color: $v-blue
 
-//
 // Lists
-//
-.m-article
+.m-article-content
   ul, ol
     margin: $v-sp 0
     li
