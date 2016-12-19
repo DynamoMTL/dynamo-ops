@@ -1,7 +1,7 @@
 ---
 layout: post
 order: 6
-published: false
+published: true
 title: Meeting Rooms
 category: at-the-office
 ---
@@ -37,4 +37,3 @@ Every meeting room has a corresponding Google Calendar for you to see its availa
 * 3rd Floor Small Conference Room
 
 It is critical when booking your meetings to assign a ‘room’ to your event should you wish to use a conference room. To do this, use the tab on the right of the ‘guests’ tab marked ‘rooms’ and only the available conference rooms will appear. Once selected, you will have that space officially booked for your selected time-slot.
-
