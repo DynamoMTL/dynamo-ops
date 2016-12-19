@@ -23,4 +23,4 @@ Now, to tackle closing the studio, we have a multi-step process. Here’s our ha
 
 * Say goodbye to your colleagues (just kidding, you are the last one here and no one is listening), and lock up the door behind you. 
 
-If, for some reason, you forget to lock up the office – you’re in luck. Rod and Sam are taking the night shift starting at 4 or 5 AM (I think), just before their crossfit class. Jokes aside, closing up the studio is very important to ensure everyone’s personal belongings and work gear remains in tact.
+Closing up the studio is very important to ensure everyone’s personal belongings and work gear remains in tact.
