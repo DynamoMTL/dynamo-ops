@@ -1,10 +1,12 @@
 ---
 layout: post
 order: 2
-published: false
+published: true
 title: Your Computer
 category: at-the-office
 ---
-## A New Post
+You have been given a serious piece of machinery with more firepower than the Millenium Falcon (maybe).
 
-Enter text in [Markdown](http://daringfireball.net/projects/markdown/). Use the toolbar above, or click the **?** button for formatting help.
+<!-- more -->
+
+If you do decide to transport this beautiful hunk of metal stuff around (like to your house, the beach or Mars), please be aware that any damage occurring outside of the office is your responsibility. In other words, you break, you pay… unless it’s at the office because errant foos balls, jumping dogs and galactic floods are not your fault (probably).
