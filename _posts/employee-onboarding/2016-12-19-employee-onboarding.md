@@ -1,7 +1,7 @@
 ---
 layout: post
 order: 3
-published: false
+published: true
 title: Employee Onboarding
 category: employee-onboarding
 ---
