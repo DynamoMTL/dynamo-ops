@@ -1,7 +1,7 @@
 ---
 layout: post
 date: '2016-03-25'
-order: 0
+order: 9
 category: human-resources
 published: true
 title: Hiring Process
