@@ -5,7 +5,9 @@ published: true
 category: how-we-manage-projects
 title: Project Setup & Kickoff
 ---
-Here are some steps to complete whenever we set up and kick off a new project :
+Here are some steps to complete whenever we set up and kick off a new project.
+
+<!-- more -->
 
 ## Housekeeping 
 
