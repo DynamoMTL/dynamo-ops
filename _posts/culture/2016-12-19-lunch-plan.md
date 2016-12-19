@@ -1,7 +1,7 @@
 ---
 layout: post
 order: 2
-published: false
+published: true
 title: Lunch Plan
 category: culture
 ---
@@ -24,5 +24,3 @@ To ensure that we keep the team and the planet happy, here are a few guidelines 
 * Whatever is left in the fridge as of 4:00PM on Friday, is free for all. 
 
 Bon appetit!
-
-
