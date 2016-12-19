@@ -1,9 +1,12 @@
 ---
 layout: post
-title: "Gym Membership"
+title: Gym Membership
 published: true
 category: human-resources
 order: 1
 ---
+Dynamo and Waverly Crossfit have a partnership to encourage team members to join, have fun and get sweaty together. Waverly offers classes for all skill types, as well as many class time options. 
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa quod aliquam magni, doloremque eum unde debitis voluptatem asperiores suscipit. Natus consequuntur a facilis minima, laboriosam, soluta magnam mollitia nam voluptatibus!
+<!-- more -->
+
+Dynamo will pay 50% of the cost of the gym membership, Waverly Crossfit requires a credit card to coffer the remaining 50%.
