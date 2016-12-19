@@ -3,9 +3,9 @@ layout: post
 title: Gym Membership
 published: true
 category: human-resources
-order: 1
+order: 6
 ---
-Dynamo and Waverly Crossfit have a partnership to encourage team members to join, have fun and get sweaty together. Waverly offers classes for all skill types, as well as many class time options. 
+Dynamo and [Waverly Crossfit](http://crossfitwaverly.com/) have a partnership to encourage team members to join, have fun and get sweaty together. Waverly offers classes for all skill types, as well as many class time options. 
 
 <!-- more -->
 
