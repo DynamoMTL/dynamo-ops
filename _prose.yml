@@ -8,6 +8,10 @@ prose:
         field:
           element: 'hidden'
           value: 'post'
+      - name: 'title'
+        field:
+          element: 'text'
+          value: 'Title'
       - name: 'order'
         field:
           element: 'number'
