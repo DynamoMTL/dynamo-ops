@@ -1,9 +1,12 @@
 ---
 layout: post
-title: "Lunch Plan"
+title: Lunch Plan
 published: true
 category: human-resources
-order: 1
+order: 4
 ---
+The Dynamo lunch subsidy is another perk offered to those who would like to participate. To learn more about the program, please see Lunch Program.
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa quod aliquam magni, doloremque eum unde debitis voluptatem asperiores suscipit. Natus consequuntur a facilis minima, laboriosam, soluta magnam mollitia nam voluptatibus!
+<!-- more -->
+
+Dynamo will pay 50% of the cost of the meal plan. In turn, you allow Dynamo to deduct the remaining 50% of the cost from your bi-weekly pay.
