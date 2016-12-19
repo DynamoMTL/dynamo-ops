@@ -2,7 +2,7 @@
 layout: post
 order: 6
 published: false
-title: ''
+title: Meeting Rooms
 category: at-the-office
 ---
 Team meetings are the cornerstones of a well-organized project. Luckily, we have three beautiful conference rooms from which to choose.
