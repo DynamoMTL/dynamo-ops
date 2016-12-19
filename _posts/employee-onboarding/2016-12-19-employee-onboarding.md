@@ -1,7 +1,7 @@
 ---
 layout: post
 order: 0
-published: false
+published: true
 title: Employee Onboarding
 ---
 Trello is our primary tool used for onboarding new hires. Included in it would be their checklist of things to complete ‘before your first day’, their agenda ‘on your first day/week’.
@@ -42,4 +42,4 @@ We’ll set up a series of check-ins to see how things are going:
 * 60-Day Review
 * 90-Day Review
 
-This should serve as guidance for the new hire throughout their first few weeks at Dynamo. It is important to assure that the new hire has all the tools needed to set them up for success. 
+This should serve as guidance for the new hire throughout their first few weeks at Dynamo. It is important to assure that the new hire has all the tools needed to set them up for success.
