@@ -1,7 +1,7 @@
 ---
 layout: post
 order: 10
-published: false
+published: true
 title: Expensify
 category: human-resources
 ---
