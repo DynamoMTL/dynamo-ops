@@ -7,6 +7,8 @@ category: at-the-office
 ---
 Team meetings are the cornerstones of a well-organized project. Luckily, we have three beautiful conference rooms from which to choose.
 
+<!-- more -->
+
 ## Equipment
 
 Each room has a television that is equipped with both Highfive and AppleTV to ensure that meetings are not only productive for the people in the office, but also for our remote champions and outstanding clients. 
