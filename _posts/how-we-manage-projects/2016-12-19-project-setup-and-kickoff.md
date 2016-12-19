@@ -1,7 +1,7 @@
 ---
 layout: post
 order: 3
-published: false
+published: true
 category: how-we-manage-projects
 title: Project Setup & Kickoff
 ---
