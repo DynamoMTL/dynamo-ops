@@ -1,8 +1,9 @@
 ---
 layout: post
-order: 0
-published: true
+order: 3
+published: false
 title: Employee Onboarding
+category: employee-onboarding
 ---
 Trello is our primary tool used for onboarding new hires. Included in it would be their checklist of things to complete ‘before your first day’, their agenda ‘on your first day/week’.
 
