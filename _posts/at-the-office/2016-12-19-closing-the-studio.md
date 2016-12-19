@@ -5,9 +5,11 @@ published: true
 title: Closing the studio
 category: at-the-office
 ---
-We are the only company in the building, but as this will probably change, we are getting into the habit of closing the doors behind us. Luckily, we use [Kisi](https://getkisi.com/), a nice mobile application that allows us to open and unlock doors seamlessly (like magic)!  Simply wave your phone in front of the Kisi sensor to unlock a door. Doors will remain open between 9 AM and 6 PM. 
+We are the only company in the building, but as this will probably change, we are getting into the habit of closing the doors behind us. 
 
 <!-- more -->
+
+Luckily, we use [Kisi](https://getkisi.com/), a nice mobile application that allows us to open and unlock doors seamlessly (like magic)!  Simply wave your phone in front of the Kisi sensor to unlock a door. Doors will remain open between 9 AM and 6 PM. 
 
 Now, to tackle closing the studio, we have a multi-step process. Here’s our handy checklist: 
 
