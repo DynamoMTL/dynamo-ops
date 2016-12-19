@@ -1,8 +1,9 @@
 ---
 layout: post
-order: 0
+order: 2
 published: false
 title: Mentor Checklist
+category: employee-onboarding
 ---
 ## A New Post
 
