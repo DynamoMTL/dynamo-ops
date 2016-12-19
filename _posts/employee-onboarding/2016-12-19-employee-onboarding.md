@@ -27,20 +27,20 @@ So an employee can get a sneak peek into the who’s who at Dynamo, each team me
 
 ## The first week
 We provide a helpful checklist of the following items: 
-* Meet your mentor
-* Tour the office
-* Tour the neighborhood
-* Meet the team
-* Set up your computer
-* Set up Bamboo
-* Write your bio for the team page on our website
-* Learn how to use our coffee machine
+- Meet your mentor
+- Tour the office
+- Tour the neighborhood
+- Meet the team
+- Set up your computer
+- Set up Bamboo
+- Write your bio for the team page on our website
+- Learn how to use our coffee machine
 
 ## After your first week
 We’ll set up a series of check-ins to see how things are going:
-* First Week Review
-* 30-Day Review
-* 60-Day Review
-* 90-Day Review
+- First Week Review
+- 30-Day Review
+- 60-Day Review
+- 90-Day Review
 
 This should serve as guidance for the new hire throughout their first few weeks at Dynamo. It is important to assure that the new hire has all the tools needed to set them up for success.
