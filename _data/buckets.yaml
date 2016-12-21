@@ -6,7 +6,7 @@
 
 - title:  'What We Do'
   slug:   'what-we-do'
-  color:  'sky'
+  color:  'yellow'
   intro:  'Donec sed odio dui. Cras mattis consectetur purus sit amet fermentum.'
 
 - title:  'Ventures'
@@ -16,7 +16,7 @@
 
 - title:  'Client Onboarding'
   slug:   'client-onboarding'
-  color:  'yellow'
+  color:  'sky'
   intro:  'Donec sed odio dui. Cras mattis consectetur purus sit amet fermentum.'
 
 - title:  'How We Manage Projects'
@@ -36,7 +36,7 @@
 
 - title:  'Employee Onboarding'
   slug:   'employee-onboarding'
-  color:  'yellow'
+  color:  'green'
   intro:  'Donec sed odio dui. Cras mattis consectetur purus sit amet fermentum.'
 
 - title:  'Human Resources'
