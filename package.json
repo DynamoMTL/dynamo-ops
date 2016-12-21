@@ -30,6 +30,7 @@
     "gulp-sass": "^3.0.0",
     "gulp-svgstore": "latest",
     "gulp-uglify": "^1.5.2",
+    "kss": "^3.0.0-beta.16",
     "npm": "^3.7.1",
     "sass-toolkit": "^2.10.0",
     "webpack-stream": "latest"
