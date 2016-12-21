@@ -1,7 +1,7 @@
 ---
 layout: post
 order: 2
-published: false
+published: true
 title: Business Objectives
 category: editorial-guide
 ---
