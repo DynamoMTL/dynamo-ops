@@ -2,7 +2,7 @@
 layout: post
 title: Operations
 published: true
-category: our-departements
+category: our-departments
 order: 1
 ---
 
