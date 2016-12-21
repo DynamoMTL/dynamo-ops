@@ -26,7 +26,7 @@ order: 1
 *  Foster innovation 
 
 
-** Branding**
+**Branding**
 
 *  Develop Dynamo brand awareness and enhance brand image
 
