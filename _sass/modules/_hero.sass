@@ -18,7 +18,6 @@
     &.m-hero--invert
       @extend %l-theme--#{ $key }--invert
 
-
 //
 // Main
 //
@@ -54,12 +53,16 @@
         color: inherit
 
 .m-hero-links
-  display: inline-block
+  display: block
   text-align: left
-  margin-top: $v-sp--m6
-  padding-left: $v-sp--p4
+  margin-top: $v-sp
+  padding-left: 0
   li
     margin-bottom: $v-sp--m4
+  @include media-breakpoint-up(sm)
+    margin-top: $v-sp--m6
+    padding-left: $v-sp--p4
+    display: inline-block
 
 .m-hero-back
   @extend %t-small--upper

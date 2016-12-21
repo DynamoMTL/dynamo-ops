@@ -18,11 +18,13 @@
 .m-cards-el
   display: flex
   flex-grow: 1
-  width: 50%
   white-space: normal
   list-style: none
   color: $v-white
   margin-bottom: 0
+  width: 100%
+  @include media-breakpoint-up(lg)
+    width: 50%
 
 @each $key, $color in $l-themes
   .m-cards-el--#{ $key }
@@ -68,12 +70,13 @@
   list-style: none
   background-color: inherit
   li
-    display: inline-block
+    display: block
     margin: $v-sp--m6 0
     background-color: inherit
+    line-height: 1.5
     &::after
       content: ""
-      display: inline-block
+      display: none
       margin: 0 $v-sp--m6
       border-radius: 100%
       background-color: $v-white
@@ -85,3 +88,10 @@
     &:last-child
       &::after
         display: none
+  @include media-breakpoint-up(sm)
+    li
+      margin-bottom: $v-sp--m8
+      display: inline-block
+      &::after
+        display: inline-block
+

@@ -8,11 +8,16 @@
 // General
 //
 .l-wrap
-  padding-bottom: $v-sp--p8
   transition: opacity $v-delay ease-in-out 0s
   opacity: 0
+  padding-bottom: $v-sp--p8
   .is-loaded &
     opacity: 1
+
+.container--full
+  @include media-breakpoint-down(sm)
+    padding-left: 0
+    padding-right: 0
 
 //
 // Sections

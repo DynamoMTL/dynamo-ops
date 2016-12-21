@@ -5,11 +5,17 @@
 //
 
 //
+// GEneral
+//
+.m-article
+  padding-top: $v-sp--p4
+
+//
 // Nav
 //
 .m-article-nav
   display: none
-  margin: 0
+  margin: 0 0 $v-sp 0
 
 .m-article-nav-list
   list-style-type: none
@@ -52,11 +58,23 @@
 // Quotes
 .m-article-content
   blockquote
-    color: $v-blue
-    // text-align: center
     margin: $v-sp--p6 auto
-    p
-      font-size: 2rem !important
+    position: relative
+    font-family: $v-t-serif--italic
+    &::before, &::after
+      opacity: 0.25
+      content: '“'
+      display: block
+      position: absolute
+      top: -1.5rem
+      left: -1.5rem
+      font-size: 3rem
+    &::after
+      content: '”'
+      top: auto
+      left: auto
+      right: -1.5rem
+      bottom: -1.5rem
 
 // Images
 .m-article-content

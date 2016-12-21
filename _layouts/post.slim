@@ -3,11 +3,11 @@
 {% for bucket in site.data.buckets %}
   {% if bucket.slug == page.category %}
     article.l-wrap
-      .l-sec.m-hero class="m-hero--invert m-hero--{{ bucket.color }}"
+      .l-sec.m-hero class="m-hero--{{ bucket.color }}"
         .container
           .row
             .m-hero-a.col-xs-12
-              h1.t-h1--sans.t-capital
+              h1.t-h1--sans.t-capital alt="{{ page.title }}"
                 | {{ page.title }}
               .m-hero-back
                 a href="{{ site.baseurl }}/categories/{{ bucket.slug }}"

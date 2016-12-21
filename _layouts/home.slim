@@ -4,7 +4,7 @@
     .container
       h1.t-h1--sans Dynamo is a team of designers, developers & UX specialists. We design sites that build brands, web applications that save money, and mobile apps that attract new customers.
   .l-sec.s-home-cards
-    .container
+    .container.container--full
       ul.m-cards.row
         {% for bucket in site.data.buckets %}
           {% assign category = site.categories[bucket.slug] %}

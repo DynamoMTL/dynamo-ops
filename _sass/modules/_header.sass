@@ -27,9 +27,12 @@
 //
 // Elements
 //
-.m-header-a
-
 .m-header-b
   @extend %t-small--upper
   em
     text-transform: lowercase
+  span
+    display: none
+  @include media-breakpoint-up(sm)
+    span
+      display: inline
