@@ -1,7 +1,7 @@
 ---
 layout: post
 order: 4
-published: false
+published: true
 title: Tone & Messaging
 category: editorial-guide
 ---
