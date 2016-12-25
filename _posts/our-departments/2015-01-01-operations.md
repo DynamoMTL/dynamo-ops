@@ -5,7 +5,14 @@ published: true
 category: our-departments
 order: 1
 ---
-What is the Operations department within Dynamo? It is made up of the Director of Operations, the Office Manager, and a morphing group of team members who form various committees & task forces aiming to improve the operations of Dynamo throughout the year. <!-- more --> We expect anyone working within the confines of “Operations” to have two main goals in mind when going about their work: 1) Constantly improve the way in which Dynamo operates and 2) Constantly improve client happiness, where “client” = Dynamo. 
+What is the Operations department within Dynamo? It is made up of the Director of Operations, the Office Manager, and a morphing group of team members who form various committees & task forces aiming to improve the operations of Dynamo throughout the year. 
+
+<!-- more --> 
+
+We expect anyone working within the confines of “Operations” to have two main goals in mind when going about their work: 
+
+1. Constantly improve the way in which Dynamo operates and 
+2. Constantly improve client happiness, where "client" = Dynamo. 
 
 To the first point, the Operations department is in a constant state of change with regards to optimizing how we work, how we get things done and how we measure our effectiveness. We evaluate financials, lag indicators, leading indicators, quality of products, and budget/timing accuracies. Our aim is to constantly iterate over each of these areas as we learn more, grow more and experiment. 
 
