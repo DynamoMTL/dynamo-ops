@@ -6,9 +6,8 @@ title: Brand Personality
 category: editorial-guide
 ---
 ## Qualifiers
-
-### We are
 <!-- more -->
+### We are
 * Enthusiastic
 
 * Curious
@@ -51,7 +50,7 @@ Our visual assets should always reflect the simplicity, practicality and functio
 **Passionate & Inspiring:** We possess true excitement and love for our craft.
 **Approachable & Fun**: We are unpretentious, accessible and encouraging. 
 
-### **Brand Pillars **
+### **Brand Pillars**
 
 **Sharing**: We believe in teaching people and learning from others. 
 **Integrity**: We strive to be authentic, and to create work that abides by our principles.
