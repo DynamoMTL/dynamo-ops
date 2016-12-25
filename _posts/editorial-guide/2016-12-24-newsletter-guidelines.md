@@ -1,7 +1,7 @@
 ---
 layout: post
 order: 6
-published: false
+published: true
 title: Newsletter Guidelines
 category: editorial-guide
 ---
@@ -59,4 +59,3 @@ We have published on a monthly basis since November 2015, although now seem to b
     *  What we’re reading
 
     *  What events are on our radar
-
