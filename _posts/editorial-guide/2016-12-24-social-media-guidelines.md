@@ -1,7 +1,7 @@
 ---
 layout: post
 order: 5
-published: false
+published: true
 title: Social Media Guidelines
 category: editorial-guide
 ---
@@ -67,4 +67,3 @@ category: editorial-guide
 **Shout Outs**
 
 * Twitter
-
