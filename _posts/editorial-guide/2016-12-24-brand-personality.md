@@ -1,7 +1,7 @@
 ---
 layout: post
 order: 3
-published: false
+published: true
 title: Brand Personality
 category: editorial-guide
 ---
@@ -57,5 +57,4 @@ Our visual assets should always reflect the simplicity, practicality and functio
 **Integrity**: We strive to be authentic, and to create work that abides by our principles.
 **Practicality**: We want to keep things simple, and prioritize user experience at every turn. 
 **Generosity**: We believe in going the extra mile – for our co-workers, for our projects, for our clients
-**Quality & Value**: We always strive to do better. 
-
+**Quality & Value**: We always strive to do better.
