@@ -16,6 +16,7 @@
 // Card
 //
 .m-cards-el
+  border: 1px solid $v-white
   display: flex
   flex-grow: 1
   white-space: normal
@@ -25,14 +26,13 @@
   width: 100%
   @include media-breakpoint-up(lg)
     width: 50%
+    &:last-child
+      width: 100%
 
 @each $key, $color in $l-themes
   .m-cards-el--#{ $key }
     .m-cards-el-inner
       @extend %l-theme--#{ $key }
-
-.m-cards-el--wide
-  width: 100%
 
 .m-cards-el-inner
   position: relative
@@ -57,6 +57,8 @@
     margin: $v-sp--m2 0
   a
     @extend %t-links--noUnder
+    &:hover
+      color: $v-blue
 
 .m-cards-el-number
   @extend %t-small--upperBlue
@@ -71,7 +73,7 @@
   background-color: inherit
   li
     display: block
-    margin: $v-sp--m6 0
+    margin: $v-sp--m7 0
     background-color: inherit
     line-height: 1.5
     &::after
