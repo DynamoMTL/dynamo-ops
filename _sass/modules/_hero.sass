@@ -23,6 +23,7 @@
 //
 .m-hero-a
   .t-h1--sans
+    font-size: rem(80px)
     margin-bottom: $v-sp--m4
     margin-top: 0
 
@@ -47,16 +48,17 @@
     li
       counter-increment: step-counter
       &::before
-        font-family: $v-t-sans--bold
         content: counter(step-counter) "."
-        font-size: 0.55em
         color: inherit
+      &:hover
+        color: $v-blue
 
 .m-hero-links
   display: block
-  text-align: left
+  font-size: rem(20px)
   margin-top: $v-sp
   padding-left: 0
+  text-align: left
   li
     margin-bottom: $v-sp--m4
   @include media-breakpoint-up(sm)

@@ -1,21 +1,15 @@
 % include head.slim
 .l-wrap
   .l-sec.m-hero.s-home-hero
-    video src="https://player.vimeo.com/external/195865343.hd.mp4?s=d0f627c682a87d98d416a10db16f0dd2d5c9f549&profile_id=174" autoplay=true poster="assets/images/raster/header/video-poster.png" loop=true
     .container
-      h1.t-h1--sans We are Dynamo. We’ve worked with incredible startups and innovative companies to help build and refine their digital products. DNA provides a rare, behind-the-scenes look at how we do it. This is our playbook, and not only does it detail our processes and lessons-learned, it also provides some insight into how (and why!) we do what we do.
+      h1.t-h1--sans We’ve worked with incredible startups and innovative companies to help build and refine their digital products. DNA provides a rare, behind-the-scenes look at how we do it. 
   .l-sec.s-home-cards
-    .container.container--full
+    .container--full
       ul.m-cards.row
         {% for bucket in site.data.buckets %}
           {% assign category = site.categories[bucket.slug] %}
           {% if category %}
             {% assign size = category | size %}
-            {% if size > 8 %}
-              {% assign width = 'wide' %}
-            {% else %}
-              {% assign width = 'narrow' %}
-            {% endif %}
             li.m-cards-el class="m-cards-el--{{ bucket.color || 'pink' }} m-cards-el--{{ width }}"
               .m-cards-el-inner
                 .m-cards-el-index

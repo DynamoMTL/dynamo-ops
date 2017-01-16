@@ -7,12 +7,12 @@
       .l-sec.m-hero class="m-hero--{{ bucket.color }}"
         .container
           .row
-            .col-sm-6.col-xs-12.m-hero-a
+            .col-sm-6.col-12.m-hero-a
               h1.t-h1--sans.t-capital
                 | {{ bucket.title }}
               p.m-hero-intro
                 | {{ bucket.intro }}
-            .col-sm-6.col-xs-12.m-hero-b
+            .col-sm-6.col-12.m-hero-b
               ol.m-hero-links
                 {% for post in ordered_posts %}
                   li
@@ -24,13 +24,13 @@
           li.l-sec
             .container
               article.row
-                .col-xs-12.s-cat-articles-a
+                .col-12.s-cat-articles-a
                   p.s-cat-articles-count
                     | Article {{ forloop.index }} of {{ forloop.length }}
                   h2.t-h2--sans.t-capital
                     a href="{{ site.baseurl }}{{ post.url }}"
                       | {{ post.title }}
-                .col-xs-12.s-cat-articles-b
+                .col-12.s-cat-articles-b
                   | {{ post.excerpt }}
         {% endfor %}
   {% endif %}

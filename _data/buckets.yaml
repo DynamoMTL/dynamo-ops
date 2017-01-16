@@ -6,7 +6,7 @@
 
 - title:  'What We Do'
   slug:   'what-we-do'
-  color:  'yellow'
+  color:  'red'
   intro:  ''
 
 - title:  'Ventures'
@@ -26,37 +26,37 @@
 
 - title:  'At The Office'
   slug:   'at-the-office'
-  color:  'red'
+  color:  'green'
   intro:  ''
 
 - title:  'Our Departments'
   slug:   'our-departments'
-  color:  'green'
+  color:  'red'
   intro:  ''
 
 - title:  'Employee Onboarding'
   slug:   'employee-onboarding'
-  color:  'green'
+  color:  'purple'
   intro:  ''
 
 - title:  'Human Resources'
   slug:   'human-resources'
-  color:  'purple'
+  color:  'sky'
   intro:  ''
 
 - title:  'Culture'
   slug:   'culture'
-  color:  'sky'
+  color:  'pink'
   intro:  ''
 
 - title:  'DevOps'
   slug:   'devops'
-  color:  'red'
+  color:  'green'
   intro:  ''
 
 - title:  'Templates'
   slug:   'templates'
-  color:  'yellow'
+  color:  'red'
   intro:  ''
 
 - title:  'Editorial Guide'
