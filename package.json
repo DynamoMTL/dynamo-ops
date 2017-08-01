@@ -10,7 +10,8 @@
   "license": "ISC",
   "homepage": "https://github.com/dynamomtl/dynamo-ops",
   "scripts": {
-    "start": "gulp"
+    "start": "gulp",
+    "build": "gulp jekyll-prod"
   },
   "devDependencies": {
     "babel-cli": "^6.18.0",

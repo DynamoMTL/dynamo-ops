@@ -9,7 +9,7 @@ build:
         - script:
           name: generate production site
           code: |-
-            node node_modules/gulp/bin/gulp jekyll-prod
+            bundle exec npm run build
             ls -l ./_production
         - script:
           name: jekyll doctor
