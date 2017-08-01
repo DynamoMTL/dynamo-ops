@@ -4,7 +4,7 @@ build:
     steps:
         - bundle-install
         - bigtruedata/install-node:
-            version: 7.4.0
+            version: 8.1.4
         - npm-install
         - script:
           name: generate production site
