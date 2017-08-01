@@ -9,6 +9,9 @@
   "author": "",
   "license": "ISC",
   "homepage": "https://github.com/dynamomtl/dynamo-ops",
+  "scripts": {
+    "start": "gulp"
+  },
   "devDependencies": {
     "babel-cli": "^6.18.0",
     "babel-core": "latest",
@@ -20,7 +23,7 @@
     "dotenv": "^2.0.0",
     "eslint": "^2.2.0",
     "graceful-fs": "^4.1.10",
-    "gulp": "^3.9.0",
+    "gulp": "^3.9.1",
     "gulp-autoprefixer": "^3.1.1",
     "gulp-babel": "^6.1.2",
     "gulp-environments": "^0.1.1",
