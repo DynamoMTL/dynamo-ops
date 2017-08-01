@@ -1,10 +1,11 @@
 ---
-box: mwallasch/docker-ruby-node
+box: phusion/passenger-ruby22
 build:
     steps:
         - bundle-install
+        - bigtruedata/install-node:
+            version: 7.4.0
         - npm-install
-        - npm-test
         - script:
           name: generate production site
           code: |-
@@ -18,7 +19,6 @@ build:
             url: https://hooks.slack.com/services/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
             channel: dna
             username: wercker-bot
-
 deploy :
   steps :
     - s3sync:
