@@ -19,8 +19,8 @@ build:
             url: https://hooks.slack.com/services/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
             channel: dna
             username: wercker-bot
-deploy :
-  steps :
+deploy:
+  steps:
     - s3sync:
         key_id: $AWS_ACCESS_KEY_ID
         key_secret: $AWS_SECRET_ACCESS_KEY
