@@ -8,10 +8,11 @@ title: House Guidelines
 
 This is a collection of guidelines for the joint spaces of our office. It was built to help newcomers to the company.
 
+
 ###Building information
 
 We are located at 6640 Avenue de l’Esplanade, we currently occupy both the 2nd and 3rd floor.
-The front door is unlocked by the first person to arrive in the morning and relocked by the last one to leave in the evening. The office doors inside the building are automatically unlocked at 8am and relocked at 6pm.
+The front door is unlocked by the first person to arrive in the morning and relocked by the last one to leave in the evening.
 
 
 Some tools you will need:
@@ -20,7 +21,6 @@ Some tools you will need:
 
 **Keys:** You will be given a key to the front door (this door is not on the Kisi network) and a key that will open all the office doors (back up for Kisi or uncharged phones). 
 
-(Note: we have hidden a set of keys in the Bike Room in the basement in case of any key related emergencies. The code to access the Bike Room is ‘1710’, and the keys are hanging on a pipe to the left when you enter the room. 
 
 ###Common Spaces
 
@@ -47,7 +47,7 @@ The pods serve as a private workspace for us to use whenever needed. Whether for
 
 **Locker Room:**  The locker room is located on the 3rd floor facing the main entrance to the office space. You can access the Locker Room by using  Kisi, please note that this door is locked at all times. 
 
-**Bike Room:**  Located in the basement the bike room is a locked space to store your bike. The padlock code is ‘1710’.
+**Bike Room:**  Located in the basement the bike room is a locked space to store your bike. Please ask Sam if you need the code.
 
 **Server Room:**  Located in the back stairwell on the 3rd floor. You can access the Server Room by using Kisi, please note that this door is locked at all times. 
 
@@ -58,6 +58,7 @@ Our main printer can be found in the Server Room, you can print remotely by conn
 Do not allow your pets to run around the office freely.
 
 Animals are not allowed on couches or in conference rooms. 
+
 
 ###Shared Activities
 
@@ -76,13 +77,14 @@ Be sure to email both teams to ensure full building participation!
 
 Don’t discount lunch, breaks, foosball, and any other chance we get, too! 
 
+
 ##Closing the Office
 
 If you are the last one at the office, there are a few office closing tasks you need to do:
 
-**Lights:**Please turn off all the lights on the 2nd and 3rd floors. This includes lights inside conference rooms, bathrooms and phonebooths. The lights for the the 3rd floor are located inside the locker room.
+**Lights:** Please turn off all the lights on the 2nd and 3rd floors. This includes lights inside conference rooms, bathrooms and phonebooths. The lights for the the 3rd floor are located inside the locker room.
 
-**Locks:** The doors for the 2nd and 3rd floor will be locked automatically at 6PM. When you leave through the front door, make sure you lock the main lock.
+**Locks:** If leaving last it is your responsibility to assure the front door is locked. 
 
 
 
