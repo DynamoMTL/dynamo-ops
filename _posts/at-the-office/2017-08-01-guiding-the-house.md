@@ -3,6 +3,7 @@ layout: post
 order: 0
 published: true
 title: House Guidelines
+category: at-the-office
 ---
 ##House Guidelines
 
