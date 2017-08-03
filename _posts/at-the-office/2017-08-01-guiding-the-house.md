@@ -1,7 +1,7 @@
 ---
 layout: post
 order: 0
-published: false
+published: true
 title: House Guidelines
 ---
 ##House Guidelines
