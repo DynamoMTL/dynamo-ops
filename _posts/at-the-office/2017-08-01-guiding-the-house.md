@@ -5,12 +5,12 @@ published: true
 title: House Guidelines
 category: at-the-office
 ---
-##House Guidelines
+## House Guidelines
 
 This is a collection of guidelines for the joint spaces of our office. It was built to help newcomers to the company.
 
 
-###Building information
+### Building information
 
 We are located at 6640 Avenue de l’Esplanade, we currently occupy both the 2nd and 3rd floor.
 The front door is unlocked by the first person to arrive in the morning and relocked by the last one to leave in the evening.
@@ -23,7 +23,7 @@ Some tools you will need:
 **Keys:** You will be given a key to the front door (this door is not on the Kisi network) and a key that will open all the office doors (back up for Kisi or uncharged phones). 
 
 
-###Common Spaces
+### Common Spaces
 
 **Conference Rooms:** Conference rooms are located on both the 2nd and 3rd floors. 
 
@@ -61,7 +61,7 @@ Do not allow your pets to run around the office freely.
 Animals are not allowed on couches or in conference rooms. 
 
 
-###Shared Activities
+### Shared Activities
 
 **Quarterly 6640 Round Table:** These will take place on the last Thursday of March, June, September and December (Dec. subject to change with holiday schedule) from 4-5pm, this is a meeting for us to discuss building wide initiates and issues, followed by snacks and drinks.
 
@@ -79,14 +79,10 @@ Be sure to email both teams to ensure full building participation!
 Don’t discount lunch, breaks, foosball, and any other chance we get, too! 
 
 
-##Closing the Office
+### Closing the Office
 
 If you are the last one at the office, there are a few office closing tasks you need to do:
 
 **Lights:** Please turn off all the lights on the 2nd and 3rd floors. This includes lights inside conference rooms, bathrooms and phonebooths. The lights for the the 3rd floor are located inside the locker room.
 
 **Locks:** If leaving last it is your responsibility to assure the front door is locked. 
-
-
-
-Enter text in [Markdown](http://daringfireball.net/projects/markdown/). Use the toolbar above, or click the **?** button for formatting help.
