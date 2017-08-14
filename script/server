@@ -1,0 +1,6 @@
+#!/bin/sh
+# Start the development server.
+
+cd $(dirname "$0")/..
+
+bundle exec gulp serve
